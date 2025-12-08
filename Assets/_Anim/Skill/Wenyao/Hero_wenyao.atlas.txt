@@ -1,0 +1,174 @@
+
+Hero_wenyao.png
+size: 380,380
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 280, 27
+  size: 52, 52
+  orig: 70, 66
+  offset: 9, 9
+  index: -1
+10
+  rotate: true
+  xy: 313, 81
+  size: 94, 44
+  orig: 94, 44
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 205, 87
+  size: 106, 88
+  orig: 106, 88
+  offset: 0, 0
+  index: -1
+1_1
+  rotate: false
+  xy: 362, 332
+  size: 16, 16
+  orig: 70, 66
+  offset: 27, 25
+  index: -1
+1_2
+  rotate: false
+  xy: 362, 314
+  size: 16, 16
+  orig: 70, 66
+  offset: 27, 25
+  index: -1
+1_3
+  rotate: false
+  xy: 362, 264
+  size: 12, 12
+  orig: 70, 66
+  offset: 29, 27
+  index: -1
+1_4
+  rotate: false
+  xy: 362, 232
+  size: 8, 8
+  orig: 70, 66
+  offset: 31, 29
+  index: -1
+2
+  rotate: true
+  xy: 135, 17
+  size: 90, 66
+  orig: 102, 76
+  offset: 3, 3
+  index: -1
+2_1
+  rotate: true
+  xy: 362, 350
+  size: 28, 12
+  orig: 34, 19
+  offset: 3, 4
+  index: -1
+2_2
+  rotate: false
+  xy: 173, 109
+  size: 28, 20
+  orig: 34, 25
+  offset: 3, 2
+  index: -1
+3
+  rotate: false
+  xy: 173, 179
+  size: 30, 36
+  orig: 36, 52
+  offset: 1, 2
+  index: -1
+3_1
+  rotate: true
+  xy: 362, 294
+  size: 18, 14
+  orig: 22, 20
+  offset: 2, 4
+  index: -1
+3_2
+  rotate: false
+  xy: 362, 278
+  size: 14, 14
+  orig: 17, 16
+  offset: 1, 1
+  index: -1
+4
+  rotate: true
+  xy: 362, 242
+  size: 8, 10
+  orig: 10, 12
+  offset: 1, 1
+  index: -1
+5
+  rotate: true
+  xy: 359, 155
+  size: 20, 18
+  orig: 24, 22
+  offset: 3, 3
+  index: -1
+6
+  rotate: false
+  xy: 173, 131
+  size: 30, 20
+  orig: 36, 24
+  offset: 5, 2
+  index: -1
+7
+  rotate: false
+  xy: 362, 252
+  size: 10, 10
+  orig: 12, 12
+  offset: 1, 1
+  index: -1
+8
+  rotate: false
+  xy: 359, 133
+  size: 18, 20
+  orig: 22, 22
+  offset: 1, 1
+  index: -1
+9
+  rotate: false
+  xy: 173, 153
+  size: 30, 24
+  orig: 40, 30
+  offset: 2, 5
+  index: -1
+eft/sg_00000
+  rotate: false
+  xy: 203, 10
+  size: 75, 75
+  orig: 210, 165
+  offset: 56, 53
+  index: -1
+eft/sg_00001
+  rotate: false
+  xy: 2, 39
+  size: 131, 68
+  orig: 210, 165
+  offset: 28, 60
+  index: -1
+eft/sg_00002
+  rotate: false
+  xy: 2, 109
+  size: 169, 106
+  orig: 210, 165
+  offset: 23, 37
+  index: -1
+eft/sg_00004
+  rotate: true
+  xy: 209, 177
+  size: 201, 151
+  orig: 210, 165
+  offset: 1, 9
+  index: -1
+eft/sg_00005
+  rotate: false
+  xy: 2, 217
+  size: 205, 161
+  orig: 210, 165
+  offset: 3, 0
+  index: -1

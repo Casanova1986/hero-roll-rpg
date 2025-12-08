@@ -1,0 +1,179 @@
+{
+    "skeleton": {
+        "hash": "VLY3xLhMnPy1lJZ353j/jSLjx9c",
+        "spine": "3.8.99",
+        "images": "./images/",
+        "audio": ""
+    },
+    "bones": [
+        {
+            "name": "root"
+        },
+        {
+            "name": "colliderAtk",
+            "parent": "root"
+        }
+    ],
+    "slots": [
+        {
+            "name": "dg_2_01",
+            "bone": "root"
+        },
+        {
+            "name": "colliderAtk",
+            "bone": "colliderAtk",
+            "color": "ff00007e"
+        }
+    ],
+    "skins": [
+        {
+            "name": "default",
+            "attachments": {
+                "colliderAtk": {
+                    "colliderAtk": {
+                        "width": 1,
+                        "height": 1
+                    }
+                },
+                "dg_2_01": {
+                    "dg_2_01": {
+                        "width": 162,
+                        "height": 30
+                    },
+                    "dg_2_02": {
+                        "width": 162,
+                        "height": 30
+                    },
+                    "dg_2_03": {
+                        "width": 162,
+                        "height": 30
+                    },
+                    "dg_2_04": {
+                        "width": 162,
+                        "height": 30
+                    },
+                    "dg_2_05": {
+                        "width": 162,
+                        "height": 30
+                    },
+                    "dg_2_06": {
+                        "width": 162,
+                        "height": 30
+                    },
+                    "dg_2_07": {
+                        "width": 162,
+                        "height": 30
+                    },
+                    "dg_2_08": {
+                        "width": 162,
+                        "height": 30
+                    },
+                    "dg_2_09": {
+                        "width": 162,
+                        "height": 30
+                    },
+                    "dg_2_10": {
+                        "width": 162,
+                        "height": 30
+                    },
+                    "dg_2_11": {
+                        "width": 162,
+                        "height": 30
+                    },
+                    "dg_2_12": {
+                        "width": 162,
+                        "height": 30
+                    }
+                }
+            }
+        }
+    ],
+    "events": {
+        "chufa": {}
+    },
+    "animations": {
+        "animation": {
+            "slots": {
+                "dg_2_01": {
+                    "attachment": [
+                        {
+                            "name": "dg_2_01"
+                        },
+                        {
+                            "time": 0.1,
+                            "name": "dg_2_02"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "dg_2_03"
+                        },
+                        {
+                            "time": 0.3,
+                            "name": "dg_2_04"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "dg_2_05"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "dg_2_06"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "dg_2_07"
+                        },
+                        {
+                            "time": 0.7,
+                            "name": "dg_2_08"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "dg_2_09"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "dg_2_10"
+                        },
+                        {
+                            "time": 1,
+                            "name": "dg_2_11"
+                        },
+                        {
+                            "time": 1.1,
+                            "name": "dg_2_12"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": null
+                        }
+                    ]
+                }
+            },
+            "bones": {
+                "root": {
+                    "scale": [
+                        {
+                            "x": 1.168,
+                            "y": 1.168
+                        }
+                    ]
+                },
+                "colliderAtk": {
+                    "scale": [
+                        {
+                            "x": 177.252,
+                            "y": 46.422
+                        }
+                    ]
+                }
+            },
+            "events": [
+                {
+                    "time": 0.0033,
+                    "name": "chufa"
+                }
+            ]
+        }
+    }
+}

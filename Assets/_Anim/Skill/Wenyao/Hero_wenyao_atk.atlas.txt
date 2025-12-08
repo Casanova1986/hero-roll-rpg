@@ -1,0 +1,97 @@
+
+Hero_wenyao_atk.png
+size: 248,248
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+colliderAtk
+  rotate: false
+  xy: 2, 245
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+dg_2_01
+  rotate: false
+  xy: 31, 226
+  size: 26, 20
+  orig: 162, 30
+  offset: 0, 2
+  index: -1
+dg_2_02
+  rotate: false
+  xy: 2, 196
+  size: 82, 28
+  orig: 162, 30
+  offset: 0, 0
+  index: -1
+dg_2_03
+  rotate: false
+  xy: 86, 192
+  size: 110, 28
+  orig: 162, 30
+  offset: 8, 0
+  index: -1
+dg_2_04
+  rotate: false
+  xy: 2, 162
+  size: 128, 28
+  orig: 162, 30
+  offset: 10, 0
+  index: -1
+dg_2_05
+  rotate: false
+  xy: 2, 130
+  size: 128, 30
+  orig: 162, 30
+  offset: 24, 0
+  index: -1
+dg_2_06
+  rotate: false
+  xy: 132, 130
+  size: 114, 30
+  orig: 162, 30
+  offset: 42, 0
+  index: -1
+dg_2_07
+  rotate: false
+  xy: 132, 162
+  size: 112, 28
+  orig: 162, 30
+  offset: 44, 2
+  index: -1
+dg_2_08
+  rotate: false
+  xy: 161, 222
+  size: 80, 24
+  orig: 162, 30
+  offset: 78, 2
+  index: -1
+dg_2_09
+  rotate: false
+  xy: 123, 224
+  size: 36, 22
+  orig: 162, 30
+  offset: 126, 2
+  index: -1
+dg_2_10
+  rotate: false
+  xy: 59, 226
+  size: 34, 20
+  orig: 162, 30
+  offset: 128, 4
+  index: -1
+dg_2_11
+  rotate: false
+  xy: 95, 226
+  size: 26, 20
+  orig: 162, 30
+  offset: 136, 4
+  index: -1
+dg_2_12
+  rotate: false
+  xy: 5, 234
+  size: 24, 12
+  orig: 162, 30
+  offset: 138, 10
+  index: -1

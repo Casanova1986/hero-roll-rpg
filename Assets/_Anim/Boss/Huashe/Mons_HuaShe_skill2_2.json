@@ -1,0 +1,5390 @@
+{
+    "skeleton": {
+        "hash": "sNMe8ZhanE2JLqUAtZ8EbdCDUck",
+        "spine": "3.8.99",
+        "images": "./images/",
+        "audio": ""
+    },
+    "bones": [
+        {
+            "name": "root",
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "name": "Effects",
+            "parent": "root"
+        },
+        {
+            "name": "Effects35",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects36",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects37",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects38",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects39",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects40",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects41",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects42",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects43",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects44",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects45",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects46",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects47",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects48",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects49",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects50",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects51",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects52",
+            "parent": "Effects"
+        },
+        {
+            "name": "Effects53",
+            "parent": "Effects"
+        },
+        {
+            "name": "colliderAtk",
+            "parent": "root"
+        }
+    ],
+    "slots": [
+        {
+            "name": "Effects/shuizhu0001",
+            "bone": "Effects35"
+        },
+        {
+            "name": "Effects/lang0001",
+            "bone": "Effects36"
+        },
+        {
+            "name": "Effects/lang6",
+            "bone": "Effects42"
+        },
+        {
+            "name": "Effects/lang7",
+            "bone": "Effects43"
+        },
+        {
+            "name": "Effects/lang8",
+            "bone": "Effects44"
+        },
+        {
+            "name": "Effects/lang9",
+            "bone": "Effects45"
+        },
+        {
+            "name": "Effects/lang10",
+            "bone": "Effects46"
+        },
+        {
+            "name": "Effects/pengshui6",
+            "bone": "Effects47"
+        },
+        {
+            "name": "Effects/pengshui7",
+            "bone": "Effects48"
+        },
+        {
+            "name": "Effects/pengshui8",
+            "bone": "Effects49"
+        },
+        {
+            "name": "Effects/pengshui9",
+            "bone": "Effects50"
+        },
+        {
+            "name": "Effects/pengshui10",
+            "bone": "Effects51"
+        },
+        {
+            "name": "Effects/lang1",
+            "bone": "Effects37"
+        },
+        {
+            "name": "Effects/lang2",
+            "bone": "Effects38"
+        },
+        {
+            "name": "Effects/lang3",
+            "bone": "Effects39"
+        },
+        {
+            "name": "Effects/lang4",
+            "bone": "Effects40"
+        },
+        {
+            "name": "Effects/lang5",
+            "bone": "Effects41"
+        },
+        {
+            "name": "Effects/xunhuanyanjiang2",
+            "bone": "Effects52",
+            "color": "ffffffe4"
+        },
+        {
+            "name": "Effects/xunhuanyanjiang3",
+            "bone": "Effects53",
+            "color": "ffffffe4"
+        },
+        {
+            "name": "colliderAtk",
+            "bone": "colliderAtk",
+            "color": "ff00008e"
+        }
+    ],
+    "skins": [
+        {
+            "name": "default",
+            "attachments": {
+                "Effects/lang0001": {
+                    "Effects/lang0001": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0002": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0003": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0004": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0005": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0006": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0007": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0008": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0009": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0011": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0013": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0015": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0017": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0018": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0019": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0021": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0023": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0025": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0027": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0029": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0031": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0033": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    }
+                },
+                "Effects/lang1": {
+                    "Effects/lang0001": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0002": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0003": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0004": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0005": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0006": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0007": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0008": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0009": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0011": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0013": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0015": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0017": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0018": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0019": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0021": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0023": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0025": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0027": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0029": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0031": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0033": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    }
+                },
+                "Effects/lang2": {
+                    "Effects/lang0001": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0002": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0003": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0004": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0005": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0006": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0007": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0008": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0009": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0011": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0013": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0015": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0017": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0018": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0019": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0021": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0023": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0025": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0027": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0029": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0031": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0033": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    }
+                },
+                "Effects/lang3": {
+                    "Effects/lang0001": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0002": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0003": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0004": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0005": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0006": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0007": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0008": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0009": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0011": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0013": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0015": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0017": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0018": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0019": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0021": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0023": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0025": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0027": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0029": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0031": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0033": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    }
+                },
+                "Effects/lang4": {
+                    "Effects/lang0001": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0002": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0003": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0004": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0005": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0006": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0007": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0008": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0009": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0011": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0013": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0015": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0017": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0018": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0019": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0021": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0023": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0025": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0027": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0029": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0031": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0033": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    }
+                },
+                "Effects/lang5": {
+                    "Effects/lang0001": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0002": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0003": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0004": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0005": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0006": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0007": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0008": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0009": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0011": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0013": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0015": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0017": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0018": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0019": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0021": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0023": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0025": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0027": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0029": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0031": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0033": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    }
+                },
+                "Effects/lang6": {
+                    "Effects/lang0001": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0002": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0003": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0004": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0005": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0006": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0007": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0008": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0009": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0011": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0013": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0015": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0017": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0018": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0019": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0021": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0023": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0025": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0027": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0029": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0031": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0033": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    }
+                },
+                "Effects/lang7": {
+                    "Effects/lang0001": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0002": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0003": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0004": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0005": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0006": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0007": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0008": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0009": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0011": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0013": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0015": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0017": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0018": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0019": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0021": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0023": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0025": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0027": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0029": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0031": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0033": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    }
+                },
+                "Effects/lang8": {
+                    "Effects/lang0001": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0002": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0003": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0004": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0005": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0006": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0007": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0008": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0009": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0011": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0013": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0015": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0017": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0018": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0019": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0021": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0023": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0025": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0027": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0029": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0031": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0033": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    }
+                },
+                "Effects/lang9": {
+                    "Effects/lang0001": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0002": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0003": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0004": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0005": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0006": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0007": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0008": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0009": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0011": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0013": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0015": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0017": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0018": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0019": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0021": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0023": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0025": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0027": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0029": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0031": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0033": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    }
+                },
+                "Effects/lang10": {
+                    "Effects/lang0001": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0002": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0003": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0004": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0005": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0006": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0007": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0008": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0009": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0011": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0013": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0015": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0017": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0018": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0019": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0021": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0023": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0025": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0027": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0029": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0031": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    },
+                    "Effects/lang0033": {
+                        "x": 419.32,
+                        "y": 284.39,
+                        "width": 1063,
+                        "height": 656
+                    }
+                },
+                "Effects/pengshui6": {
+                    "Effects/pengshui0001": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0002": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0003": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0004": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0005": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0006": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0007": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0008": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0009": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0010": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0011": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0012": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0013": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0014": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0015": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0016": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0017": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0018": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0019": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0020": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0021": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0022": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0023": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0024": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0025": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0026": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    }
+                },
+                "Effects/pengshui7": {
+                    "Effects/pengshui0001": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0002": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0003": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0004": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0005": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0006": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0007": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0008": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0009": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0010": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0011": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0012": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0013": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0014": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0015": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0016": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0017": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0018": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0019": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0020": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0021": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0022": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0023": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0024": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0025": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0026": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    }
+                },
+                "Effects/pengshui8": {
+                    "Effects/pengshui0001": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0002": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0003": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0004": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0005": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0006": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0007": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0008": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0009": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0010": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0011": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0012": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0013": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0014": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0015": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0016": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0017": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0018": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0019": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0020": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0021": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0022": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0023": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0024": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0025": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0026": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    }
+                },
+                "Effects/pengshui9": {
+                    "Effects/pengshui0001": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0002": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0003": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0004": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0005": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0006": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0007": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0008": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0009": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0010": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0011": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0012": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0013": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0014": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0015": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0016": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0017": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0018": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0019": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0020": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0021": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0022": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0023": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0024": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0025": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0026": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    }
+                },
+                "Effects/pengshui10": {
+                    "Effects/pengshui0001": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0002": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0003": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0004": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0005": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0006": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0007": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0008": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0009": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0010": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0011": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0012": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0013": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0014": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0015": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0016": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0017": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0018": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0019": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0020": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0021": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0022": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0023": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0024": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0025": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    },
+                    "Effects/pengshui0026": {
+                        "x": 57.29,
+                        "y": 183.96,
+                        "width": 558,
+                        "height": 526
+                    }
+                },
+                "Effects/shuizhu0001": {
+                    "Effects/shuizhu0001": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0002": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0003": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0004": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0005": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0006": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0007": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0008": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0009": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0010": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0011": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0012": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0013": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0014": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0015": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0016": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0017": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0018": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0019": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0020": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0021": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0022": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0023": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0024": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0025": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0026": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0027": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0028": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0029": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0030": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0031": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0032": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0033": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0034": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0035": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0036": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0037": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0038": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0039": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0040": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0041": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0042": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0043": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0044": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0045": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0046": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0048": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0050": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0052": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    },
+                    "Effects/shuizhu0054": {
+                        "x": 144.68,
+                        "y": -825.22,
+                        "width": 1386,
+                        "height": 1960
+                    }
+                },
+                "Effects/xunhuanyanjiang2": {
+                    "Effects/xunhuanyanjiang0001": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0002": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0003": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0004": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0005": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0006": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0007": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    }
+                },
+                "Effects/xunhuanyanjiang3": {
+                    "Effects/xunhuanyanjiang0001": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0002": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0003": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0004": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0005": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0006": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    },
+                    "Effects/xunhuanyanjiang0007": {
+                        "x": 299.09,
+                        "y": 101.01,
+                        "width": 679,
+                        "height": 260
+                    }
+                },
+                "colliderAtk": {
+                    "colliderAtk": {
+                        "width": 1,
+                        "height": 1
+                    }
+                }
+            }
+        }
+    ],
+    "events": {
+        "chufa": {}
+    },
+    "animations": {
+        "animation": {
+            "slots": {
+                "Effects/lang0001": {
+                    "attachment": [
+                        {
+                            "name": "Effects/lang0001"
+                        },
+                        {
+                            "time": 0.0333,
+                            "name": "Effects/lang0002"
+                        },
+                        {
+                            "time": 0.0667,
+                            "name": "Effects/lang0003"
+                        },
+                        {
+                            "time": 0.1,
+                            "name": "Effects/lang0004"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "Effects/lang0005"
+                        },
+                        {
+                            "time": 0.1667,
+                            "name": "Effects/lang0006"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Effects/lang0007"
+                        },
+                        {
+                            "time": 0.2333,
+                            "name": "Effects/lang0008"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Effects/lang0009"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Effects/lang0011"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Effects/lang0013"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Effects/lang0015"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/lang0017"
+                        },
+                        {
+                            "time": 0.5667,
+                            "name": "Effects/lang0018"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/lang0019"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/lang0021"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/lang0023"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/lang0025"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/lang0027"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/lang0029"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/lang0031"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/lang0033"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/lang1": {
+                    "attachment": [
+                        {
+                            "time": 0.0667,
+                            "name": "Effects/lang0001"
+                        },
+                        {
+                            "time": 0.1,
+                            "name": "Effects/lang0002"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "Effects/lang0003"
+                        },
+                        {
+                            "time": 0.1667,
+                            "name": "Effects/lang0004"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Effects/lang0005"
+                        },
+                        {
+                            "time": 0.2333,
+                            "name": "Effects/lang0006"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Effects/lang0007"
+                        },
+                        {
+                            "time": 0.3,
+                            "name": "Effects/lang0008"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Effects/lang0009"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Effects/lang0011"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Effects/lang0013"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/lang0015"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/lang0017"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Effects/lang0018"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/lang0019"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/lang0021"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/lang0023"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/lang0025"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/lang0027"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/lang0029"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/lang0031"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/lang0033"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/lang2": {
+                    "attachment": [
+                        {
+                            "time": 0.4,
+                            "name": "Effects/lang0001"
+                        },
+                        {
+                            "time": 0.4333,
+                            "name": "Effects/lang0002"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Effects/lang0003"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "Effects/lang0004"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/lang0005"
+                        },
+                        {
+                            "time": 0.5667,
+                            "name": "Effects/lang0006"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/lang0007"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Effects/lang0008"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/lang0009"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/lang0011"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/lang0013"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/lang0015"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/lang0017"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Effects/lang0018"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/lang0019"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/lang0021"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/lang0023"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Effects/lang0025"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Effects/lang0027"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Effects/lang0029"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "Effects/lang0031"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Effects/lang0033"
+                        },
+                        {
+                            "time": 1.5333,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/lang3": {
+                    "attachment": [
+                        {
+                            "time": 0.5,
+                            "name": "Effects/lang0001"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/lang0002"
+                        },
+                        {
+                            "time": 0.5667,
+                            "name": "Effects/lang0003"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/lang0004"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Effects/lang0005"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/lang0006"
+                        },
+                        {
+                            "time": 0.7,
+                            "name": "Effects/lang0007"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/lang0008"
+                        },
+                        {
+                            "time": 0.7667,
+                            "name": "Effects/lang0009"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Effects/lang0011"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "Effects/lang0013"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Effects/lang0015"
+                        },
+                        {
+                            "time": 1.0333,
+                            "name": "Effects/lang0017"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/lang0018"
+                        },
+                        {
+                            "time": 1.1,
+                            "name": "Effects/lang0019"
+                        },
+                        {
+                            "time": 1.1667,
+                            "name": "Effects/lang0021"
+                        },
+                        {
+                            "time": 1.2333,
+                            "name": "Effects/lang0023"
+                        },
+                        {
+                            "time": 1.3,
+                            "name": "Effects/lang0025"
+                        },
+                        {
+                            "time": 1.3667,
+                            "name": "Effects/lang0027"
+                        },
+                        {
+                            "time": 1.4333,
+                            "name": "Effects/lang0029"
+                        },
+                        {
+                            "time": 1.5,
+                            "name": "Effects/lang0031"
+                        },
+                        {
+                            "time": 1.5667,
+                            "name": "Effects/lang0033"
+                        },
+                        {
+                            "time": 1.6333,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/lang4": {
+                    "attachment": [
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/lang0001"
+                        },
+                        {
+                            "time": 0.7,
+                            "name": "Effects/lang0002"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/lang0003"
+                        },
+                        {
+                            "time": 0.7667,
+                            "name": "Effects/lang0004"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/lang0005"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Effects/lang0006"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/lang0007"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "Effects/lang0008"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/lang0009"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/lang0011"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/lang0013"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/lang0015"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Effects/lang0017"
+                        },
+                        {
+                            "time": 1.2333,
+                            "name": "Effects/lang0018"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Effects/lang0019"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Effects/lang0021"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "Effects/lang0023"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Effects/lang0025"
+                        },
+                        {
+                            "time": 1.5333,
+                            "name": "Effects/lang0027"
+                        },
+                        {
+                            "time": 1.6,
+                            "name": "Effects/lang0029"
+                        },
+                        {
+                            "time": 1.6667,
+                            "name": "Effects/lang0031"
+                        },
+                        {
+                            "time": 1.7333,
+                            "name": "Effects/lang0033"
+                        },
+                        {
+                            "time": 1.8,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/lang5": {
+                    "attachment": [
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/lang0001"
+                        },
+                        {
+                            "time": 0.7667,
+                            "name": "Effects/lang0002"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/lang0003"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Effects/lang0004"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/lang0005"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "Effects/lang0006"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/lang0007"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Effects/lang0008"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/lang0009"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/lang0011"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/lang0013"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Effects/lang0015"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Effects/lang0017"
+                        },
+                        {
+                            "time": 1.3,
+                            "name": "Effects/lang0018"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Effects/lang0019"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "Effects/lang0021"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Effects/lang0023"
+                        },
+                        {
+                            "time": 1.5333,
+                            "name": "Effects/lang0025"
+                        },
+                        {
+                            "time": 1.6,
+                            "name": "Effects/lang0027"
+                        },
+                        {
+                            "time": 1.6667,
+                            "name": "Effects/lang0029"
+                        },
+                        {
+                            "time": 1.7333,
+                            "name": "Effects/lang0031"
+                        },
+                        {
+                            "time": 1.8,
+                            "name": "Effects/lang0033"
+                        },
+                        {
+                            "time": 1.8667,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/lang6": {
+                    "attachment": [
+                        {
+                            "time": 0.0667,
+                            "name": "Effects/lang0001"
+                        },
+                        {
+                            "time": 0.1,
+                            "name": "Effects/lang0002"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "Effects/lang0003"
+                        },
+                        {
+                            "time": 0.1667,
+                            "name": "Effects/lang0004"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Effects/lang0005"
+                        },
+                        {
+                            "time": 0.2333,
+                            "name": "Effects/lang0006"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Effects/lang0007"
+                        },
+                        {
+                            "time": 0.3,
+                            "name": "Effects/lang0008"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Effects/lang0009"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Effects/lang0011"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Effects/lang0013"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/lang0015"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/lang0017"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Effects/lang0018"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/lang0019"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/lang0021"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/lang0023"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/lang0025"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/lang0027"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/lang0029"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/lang0031"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/lang0033"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/lang7": {
+                    "attachment": [
+                        {
+                            "time": 0.1667,
+                            "name": "Effects/lang0001"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Effects/lang0002"
+                        },
+                        {
+                            "time": 0.2333,
+                            "name": "Effects/lang0003"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Effects/lang0004"
+                        },
+                        {
+                            "time": 0.3,
+                            "name": "Effects/lang0005"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Effects/lang0006"
+                        },
+                        {
+                            "time": 0.3667,
+                            "name": "Effects/lang0007"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Effects/lang0008"
+                        },
+                        {
+                            "time": 0.4333,
+                            "name": "Effects/lang0009"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "Effects/lang0011"
+                        },
+                        {
+                            "time": 0.5667,
+                            "name": "Effects/lang0013"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Effects/lang0015"
+                        },
+                        {
+                            "time": 0.7,
+                            "name": "Effects/lang0017"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/lang0018"
+                        },
+                        {
+                            "time": 0.7667,
+                            "name": "Effects/lang0019"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Effects/lang0021"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "Effects/lang0023"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Effects/lang0025"
+                        },
+                        {
+                            "time": 1.0333,
+                            "name": "Effects/lang0027"
+                        },
+                        {
+                            "time": 1.1,
+                            "name": "Effects/lang0029"
+                        },
+                        {
+                            "time": 1.1667,
+                            "name": "Effects/lang0031"
+                        },
+                        {
+                            "time": 1.2333,
+                            "name": "Effects/lang0033"
+                        },
+                        {
+                            "time": 1.3,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/lang8": {
+                    "attachment": [
+                        {
+                            "time": 0.4,
+                            "name": "Effects/lang0001"
+                        },
+                        {
+                            "time": 0.4333,
+                            "name": "Effects/lang0002"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Effects/lang0003"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "Effects/lang0004"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/lang0005"
+                        },
+                        {
+                            "time": 0.5667,
+                            "name": "Effects/lang0006"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/lang0007"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Effects/lang0008"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/lang0009"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/lang0011"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/lang0013"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/lang0015"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/lang0017"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Effects/lang0018"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/lang0019"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/lang0021"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/lang0023"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Effects/lang0025"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Effects/lang0027"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Effects/lang0029"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "Effects/lang0031"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Effects/lang0033"
+                        },
+                        {
+                            "time": 1.5333,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/lang9": {
+                    "attachment": [
+                        {
+                            "time": 0.9,
+                            "name": "Effects/lang0001"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/lang0002"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Effects/lang0003"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/lang0004"
+                        },
+                        {
+                            "time": 1.0333,
+                            "name": "Effects/lang0005"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/lang0006"
+                        },
+                        {
+                            "time": 1.1,
+                            "name": "Effects/lang0007"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/lang0008"
+                        },
+                        {
+                            "time": 1.1667,
+                            "name": "Effects/lang0009"
+                        },
+                        {
+                            "time": 1.2333,
+                            "name": "Effects/lang0011"
+                        },
+                        {
+                            "time": 1.3,
+                            "name": "Effects/lang0013"
+                        },
+                        {
+                            "time": 1.3667,
+                            "name": "Effects/lang0015"
+                        },
+                        {
+                            "time": 1.4333,
+                            "name": "Effects/lang0017"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Effects/lang0018"
+                        },
+                        {
+                            "time": 1.5,
+                            "name": "Effects/lang0019"
+                        },
+                        {
+                            "time": 1.5667,
+                            "name": "Effects/lang0021"
+                        },
+                        {
+                            "time": 1.6333,
+                            "name": "Effects/lang0023"
+                        },
+                        {
+                            "time": 1.7,
+                            "name": "Effects/lang0025"
+                        },
+                        {
+                            "time": 1.7667,
+                            "name": "Effects/lang0027"
+                        },
+                        {
+                            "time": 1.8333,
+                            "name": "Effects/lang0029"
+                        },
+                        {
+                            "time": 1.9,
+                            "name": "Effects/lang0031"
+                        },
+                        {
+                            "time": 1.9667,
+                            "name": "Effects/lang0033"
+                        },
+                        {
+                            "time": 2.0333,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/lang10": {
+                    "attachment": [
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/lang0001"
+                        },
+                        {
+                            "time": 1.1667,
+                            "name": "Effects/lang0002"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Effects/lang0003"
+                        },
+                        {
+                            "time": 1.2333,
+                            "name": "Effects/lang0004"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Effects/lang0005"
+                        },
+                        {
+                            "time": 1.3,
+                            "name": "Effects/lang0006"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Effects/lang0007"
+                        },
+                        {
+                            "time": 1.3667,
+                            "name": "Effects/lang0008"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "Effects/lang0009"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Effects/lang0011"
+                        },
+                        {
+                            "time": 1.5333,
+                            "name": "Effects/lang0013"
+                        },
+                        {
+                            "time": 1.6,
+                            "name": "Effects/lang0015"
+                        },
+                        {
+                            "time": 1.6667,
+                            "name": "Effects/lang0017"
+                        },
+                        {
+                            "time": 1.7,
+                            "name": "Effects/lang0018"
+                        },
+                        {
+                            "time": 1.7333,
+                            "name": "Effects/lang0019"
+                        },
+                        {
+                            "time": 1.8,
+                            "name": "Effects/lang0021"
+                        },
+                        {
+                            "time": 1.8667,
+                            "name": "Effects/lang0023"
+                        },
+                        {
+                            "time": 1.9333,
+                            "name": "Effects/lang0025"
+                        },
+                        {
+                            "time": 2,
+                            "name": "Effects/lang0027"
+                        },
+                        {
+                            "time": 2.0667,
+                            "name": "Effects/lang0029"
+                        },
+                        {
+                            "time": 2.1333,
+                            "name": "Effects/lang0031"
+                        },
+                        {
+                            "time": 2.2,
+                            "name": "Effects/lang0033"
+                        },
+                        {
+                            "time": 2.2667,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/pengshui6": {
+                    "attachment": [
+                        {
+                            "name": "Effects/pengshui0001"
+                        },
+                        {
+                            "time": 0.0333,
+                            "name": "Effects/pengshui0002"
+                        },
+                        {
+                            "time": 0.0667,
+                            "name": "Effects/pengshui0003"
+                        },
+                        {
+                            "time": 0.1,
+                            "name": "Effects/pengshui0004"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "Effects/pengshui0005"
+                        },
+                        {
+                            "time": 0.1667,
+                            "name": "Effects/pengshui0006"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Effects/pengshui0007"
+                        },
+                        {
+                            "time": 0.2333,
+                            "name": "Effects/pengshui0008"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Effects/pengshui0009"
+                        },
+                        {
+                            "time": 0.3,
+                            "name": "Effects/pengshui0010"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Effects/pengshui0011"
+                        },
+                        {
+                            "time": 0.3667,
+                            "name": "Effects/pengshui0012"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Effects/pengshui0013"
+                        },
+                        {
+                            "time": 0.4333,
+                            "name": "Effects/pengshui0014"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Effects/pengshui0015"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "Effects/pengshui0016"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/pengshui0017"
+                        },
+                        {
+                            "time": 0.5667,
+                            "name": "Effects/pengshui0018"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/pengshui0019"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Effects/pengshui0020"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/pengshui0021"
+                        },
+                        {
+                            "time": 0.7,
+                            "name": "Effects/pengshui0022"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/pengshui0023"
+                        },
+                        {
+                            "time": 0.7667,
+                            "name": "Effects/pengshui0024"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/pengshui0025"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Effects/pengshui0026"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/pengshui7": {
+                    "attachment": [
+                        {
+                            "time": 0.3,
+                            "name": "Effects/pengshui0001"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Effects/pengshui0002"
+                        },
+                        {
+                            "time": 0.3667,
+                            "name": "Effects/pengshui0003"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Effects/pengshui0004"
+                        },
+                        {
+                            "time": 0.4333,
+                            "name": "Effects/pengshui0005"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Effects/pengshui0006"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "Effects/pengshui0007"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/pengshui0008"
+                        },
+                        {
+                            "time": 0.5667,
+                            "name": "Effects/pengshui0009"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/pengshui0010"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Effects/pengshui0011"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/pengshui0012"
+                        },
+                        {
+                            "time": 0.7,
+                            "name": "Effects/pengshui0013"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/pengshui0014"
+                        },
+                        {
+                            "time": 0.7667,
+                            "name": "Effects/pengshui0015"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/pengshui0016"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Effects/pengshui0017"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/pengshui0018"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "Effects/pengshui0019"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/pengshui0020"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Effects/pengshui0021"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/pengshui0022"
+                        },
+                        {
+                            "time": 1.0333,
+                            "name": "Effects/pengshui0023"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/pengshui0024"
+                        },
+                        {
+                            "time": 1.1,
+                            "name": "Effects/pengshui0025"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/pengshui0026"
+                        },
+                        {
+                            "time": 1.1667,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/pengshui8": {
+                    "attachment": [
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/pengshui0001"
+                        },
+                        {
+                            "time": 0.5667,
+                            "name": "Effects/pengshui0002"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/pengshui0003"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Effects/pengshui0004"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/pengshui0005"
+                        },
+                        {
+                            "time": 0.7,
+                            "name": "Effects/pengshui0006"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/pengshui0007"
+                        },
+                        {
+                            "time": 0.7667,
+                            "name": "Effects/pengshui0008"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/pengshui0009"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Effects/pengshui0010"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/pengshui0011"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "Effects/pengshui0012"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/pengshui0013"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Effects/pengshui0014"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/pengshui0015"
+                        },
+                        {
+                            "time": 1.0333,
+                            "name": "Effects/pengshui0016"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/pengshui0017"
+                        },
+                        {
+                            "time": 1.1,
+                            "name": "Effects/pengshui0018"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/pengshui0019"
+                        },
+                        {
+                            "time": 1.1667,
+                            "name": "Effects/pengshui0020"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Effects/pengshui0021"
+                        },
+                        {
+                            "time": 1.2333,
+                            "name": "Effects/pengshui0022"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Effects/pengshui0023"
+                        },
+                        {
+                            "time": 1.3,
+                            "name": "Effects/pengshui0024"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Effects/pengshui0025"
+                        },
+                        {
+                            "time": 1.3667,
+                            "name": "Effects/pengshui0026"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/pengshui9": {
+                    "attachment": [
+                        {
+                            "time": 0.7667,
+                            "name": "Effects/pengshui0001"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/pengshui0002"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Effects/pengshui0003"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/pengshui0004"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "Effects/pengshui0005"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/pengshui0006"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Effects/pengshui0007"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/pengshui0008"
+                        },
+                        {
+                            "time": 1.0333,
+                            "name": "Effects/pengshui0009"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/pengshui0010"
+                        },
+                        {
+                            "time": 1.1,
+                            "name": "Effects/pengshui0011"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/pengshui0012"
+                        },
+                        {
+                            "time": 1.1667,
+                            "name": "Effects/pengshui0013"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Effects/pengshui0014"
+                        },
+                        {
+                            "time": 1.2333,
+                            "name": "Effects/pengshui0015"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Effects/pengshui0016"
+                        },
+                        {
+                            "time": 1.3,
+                            "name": "Effects/pengshui0017"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Effects/pengshui0018"
+                        },
+                        {
+                            "time": 1.3667,
+                            "name": "Effects/pengshui0019"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "Effects/pengshui0020"
+                        },
+                        {
+                            "time": 1.4333,
+                            "name": "Effects/pengshui0021"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Effects/pengshui0022"
+                        },
+                        {
+                            "time": 1.5,
+                            "name": "Effects/pengshui0023"
+                        },
+                        {
+                            "time": 1.5333,
+                            "name": "Effects/pengshui0024"
+                        },
+                        {
+                            "time": 1.5667,
+                            "name": "Effects/pengshui0025"
+                        },
+                        {
+                            "time": 1.6,
+                            "name": "Effects/pengshui0026"
+                        },
+                        {
+                            "time": 1.6333,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/pengshui10": {
+                    "attachment": [
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/pengshui0001"
+                        },
+                        {
+                            "time": 1.1,
+                            "name": "Effects/pengshui0002"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/pengshui0003"
+                        },
+                        {
+                            "time": 1.1667,
+                            "name": "Effects/pengshui0004"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Effects/pengshui0005"
+                        },
+                        {
+                            "time": 1.2333,
+                            "name": "Effects/pengshui0006"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Effects/pengshui0007"
+                        },
+                        {
+                            "time": 1.3,
+                            "name": "Effects/pengshui0008"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Effects/pengshui0009"
+                        },
+                        {
+                            "time": 1.3667,
+                            "name": "Effects/pengshui0010"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "Effects/pengshui0011"
+                        },
+                        {
+                            "time": 1.4333,
+                            "name": "Effects/pengshui0012"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Effects/pengshui0013"
+                        },
+                        {
+                            "time": 1.5,
+                            "name": "Effects/pengshui0014"
+                        },
+                        {
+                            "time": 1.5333,
+                            "name": "Effects/pengshui0015"
+                        },
+                        {
+                            "time": 1.5667,
+                            "name": "Effects/pengshui0016"
+                        },
+                        {
+                            "time": 1.6,
+                            "name": "Effects/pengshui0017"
+                        },
+                        {
+                            "time": 1.6333,
+                            "name": "Effects/pengshui0018"
+                        },
+                        {
+                            "time": 1.6667,
+                            "name": "Effects/pengshui0019"
+                        },
+                        {
+                            "time": 1.7,
+                            "name": "Effects/pengshui0020"
+                        },
+                        {
+                            "time": 1.7333,
+                            "name": "Effects/pengshui0021"
+                        },
+                        {
+                            "time": 1.7667,
+                            "name": "Effects/pengshui0022"
+                        },
+                        {
+                            "time": 1.8,
+                            "name": "Effects/pengshui0023"
+                        },
+                        {
+                            "time": 1.8333,
+                            "name": "Effects/pengshui0024"
+                        },
+                        {
+                            "time": 1.8667,
+                            "name": "Effects/pengshui0025"
+                        },
+                        {
+                            "time": 1.9,
+                            "name": "Effects/pengshui0026"
+                        },
+                        {
+                            "time": 1.9333,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/shuizhu0001": {
+                    "attachment": [
+                        {
+                            "name": "Effects/shuizhu0001"
+                        },
+                        {
+                            "time": 0.0333,
+                            "name": "Effects/shuizhu0002"
+                        },
+                        {
+                            "time": 0.0667,
+                            "name": "Effects/shuizhu0003"
+                        },
+                        {
+                            "time": 0.1,
+                            "name": "Effects/shuizhu0004"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "Effects/shuizhu0005"
+                        },
+                        {
+                            "time": 0.1667,
+                            "name": "Effects/shuizhu0006"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Effects/shuizhu0007"
+                        },
+                        {
+                            "time": 0.2333,
+                            "name": "Effects/shuizhu0008"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Effects/shuizhu0009"
+                        },
+                        {
+                            "time": 0.3,
+                            "name": "Effects/shuizhu0010"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Effects/shuizhu0011"
+                        },
+                        {
+                            "time": 0.3667,
+                            "name": "Effects/shuizhu0012"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Effects/shuizhu0013"
+                        },
+                        {
+                            "time": 0.4333,
+                            "name": "Effects/shuizhu0014"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Effects/shuizhu0015"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "Effects/shuizhu0016"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/shuizhu0017"
+                        },
+                        {
+                            "time": 0.5667,
+                            "name": "Effects/shuizhu0018"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/shuizhu0019"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Effects/shuizhu0020"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/shuizhu0021"
+                        },
+                        {
+                            "time": 0.7,
+                            "name": "Effects/shuizhu0022"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/shuizhu0023"
+                        },
+                        {
+                            "time": 0.7667,
+                            "name": "Effects/shuizhu0024"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/shuizhu0025"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Effects/shuizhu0026"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/shuizhu0027"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "Effects/shuizhu0028"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/shuizhu0029"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Effects/shuizhu0030"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/shuizhu0031"
+                        },
+                        {
+                            "time": 1.0333,
+                            "name": "Effects/shuizhu0032"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/shuizhu0033"
+                        },
+                        {
+                            "time": 1.1,
+                            "name": "Effects/shuizhu0034"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/shuizhu0035"
+                        },
+                        {
+                            "time": 1.1667,
+                            "name": "Effects/shuizhu0036"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Effects/shuizhu0037"
+                        },
+                        {
+                            "time": 1.2333,
+                            "name": "Effects/shuizhu0038"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Effects/shuizhu0039"
+                        },
+                        {
+                            "time": 1.3,
+                            "name": "Effects/shuizhu0040"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Effects/shuizhu0041"
+                        },
+                        {
+                            "time": 1.3667,
+                            "name": "Effects/shuizhu0042"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "Effects/shuizhu0043"
+                        },
+                        {
+                            "time": 1.4333,
+                            "name": "Effects/shuizhu0044"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Effects/shuizhu0045"
+                        },
+                        {
+                            "time": 1.5,
+                            "name": "Effects/shuizhu0046"
+                        },
+                        {
+                            "time": 1.5667,
+                            "name": "Effects/shuizhu0048"
+                        },
+                        {
+                            "time": 1.6333,
+                            "name": "Effects/shuizhu0050"
+                        },
+                        {
+                            "time": 1.7,
+                            "name": "Effects/shuizhu0052"
+                        },
+                        {
+                            "time": 1.7667,
+                            "name": "Effects/shuizhu0054"
+                        },
+                        {
+                            "time": 1.8333,
+                            "name": null
+                        }
+                    ]
+                },
+                "Effects/xunhuanyanjiang2": {
+                    "color": [
+                        {
+                            "time": 0.9667,
+                            "color": "ffffffe4",
+                            "curve": 0.25,
+                            "c3": 0.824,
+                            "c4": 0.74
+                        },
+                        {
+                            "time": 1.2667,
+                            "color": "ffffff00"
+                        }
+                    ],
+                    "attachment": [
+                        {
+                            "name": "Effects/xunhuanyanjiang0001"
+                        },
+                        {
+                            "time": 0.0667,
+                            "name": "Effects/xunhuanyanjiang0002"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "Effects/xunhuanyanjiang0003"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Effects/xunhuanyanjiang0004"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Effects/xunhuanyanjiang0005"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Effects/xunhuanyanjiang0006"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Effects/xunhuanyanjiang0007"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Effects/xunhuanyanjiang0001"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/xunhuanyanjiang0002"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/xunhuanyanjiang0003"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/xunhuanyanjiang0004"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/xunhuanyanjiang0005"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/xunhuanyanjiang0006"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/xunhuanyanjiang0007"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/xunhuanyanjiang0001"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/xunhuanyanjiang0002"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/xunhuanyanjiang0003"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/xunhuanyanjiang0004"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Effects/xunhuanyanjiang0005"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Effects/xunhuanyanjiang0006"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Effects/xunhuanyanjiang0007"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "Effects/xunhuanyanjiang0001"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Effects/xunhuanyanjiang0002"
+                        },
+                        {
+                            "time": 1.5333,
+                            "name": "Effects/xunhuanyanjiang0003"
+                        },
+                        {
+                            "time": 1.6,
+                            "name": "Effects/xunhuanyanjiang0004"
+                        },
+                        {
+                            "time": 1.6667,
+                            "name": "Effects/xunhuanyanjiang0005"
+                        },
+                        {
+                            "time": 1.7333,
+                            "name": "Effects/xunhuanyanjiang0006"
+                        },
+                        {
+                            "time": 1.8,
+                            "name": "Effects/xunhuanyanjiang0007"
+                        },
+                        {
+                            "time": 1.8667,
+                            "name": "Effects/xunhuanyanjiang0001"
+                        }
+                    ]
+                },
+                "Effects/xunhuanyanjiang3": {
+                    "color": [
+                        {
+                            "time": 1.0333,
+                            "color": "ffffffe4",
+                            "curve": 0.25,
+                            "c3": 0.824,
+                            "c4": 0.74
+                        },
+                        {
+                            "time": 1.3333,
+                            "color": "ffffff00"
+                        }
+                    ],
+                    "attachment": [
+                        {
+                            "time": 0.0667,
+                            "name": "Effects/xunhuanyanjiang0001"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "Effects/xunhuanyanjiang0002"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Effects/xunhuanyanjiang0003"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Effects/xunhuanyanjiang0004"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Effects/xunhuanyanjiang0005"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Effects/xunhuanyanjiang0006"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Effects/xunhuanyanjiang0007"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Effects/xunhuanyanjiang0001"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Effects/xunhuanyanjiang0002"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Effects/xunhuanyanjiang0003"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Effects/xunhuanyanjiang0004"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Effects/xunhuanyanjiang0005"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Effects/xunhuanyanjiang0006"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Effects/xunhuanyanjiang0007"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Effects/xunhuanyanjiang0001"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Effects/xunhuanyanjiang0002"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Effects/xunhuanyanjiang0003"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Effects/xunhuanyanjiang0004"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Effects/xunhuanyanjiang0005"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Effects/xunhuanyanjiang0006"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "Effects/xunhuanyanjiang0007"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Effects/xunhuanyanjiang0001"
+                        },
+                        {
+                            "time": 1.5333,
+                            "name": "Effects/xunhuanyanjiang0002"
+                        },
+                        {
+                            "time": 1.6,
+                            "name": "Effects/xunhuanyanjiang0003"
+                        },
+                        {
+                            "time": 1.6667,
+                            "name": "Effects/xunhuanyanjiang0004"
+                        },
+                        {
+                            "time": 1.7333,
+                            "name": "Effects/xunhuanyanjiang0005"
+                        },
+                        {
+                            "time": 1.8,
+                            "name": "Effects/xunhuanyanjiang0006"
+                        },
+                        {
+                            "time": 1.8667,
+                            "name": "Effects/xunhuanyanjiang0007"
+                        },
+                        {
+                            "time": 1.9333,
+                            "name": "Effects/xunhuanyanjiang0001"
+                        }
+                    ]
+                }
+            },
+            "bones": {
+                "Effects35": {
+                    "rotate": [
+                        {
+                            "angle": 43.53
+                        }
+                    ],
+                    "translate": [
+                        {
+                            "x": 28.73,
+                            "y": 1621.66
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "x": 2,
+                            "y": 2
+                        }
+                    ]
+                },
+                "Effects36": {
+                    "translate": [
+                        {
+                            "x": 1142.35,
+                            "y": 3.68
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "x": 2,
+                            "y": 2
+                        }
+                    ]
+                },
+                "Effects37": {
+                    "translate": [
+                        {
+                            "time": 0.0667,
+                            "x": 1229.54,
+                            "y": -19.3
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.0667,
+                            "x": 3.805,
+                            "y": 3.805
+                        }
+                    ]
+                },
+                "Effects38": {
+                    "translate": [
+                        {
+                            "time": 0.4,
+                            "x": 2255.55,
+                            "y": 1.32
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.4,
+                            "x": 4,
+                            "y": 4
+                        }
+                    ],
+                    "shear": [
+                        {
+                            "time": 0.4,
+                            "y": 13.15
+                        }
+                    ]
+                },
+                "Effects39": {
+                    "translate": [
+                        {
+                            "time": 0.5,
+                            "x": 2095.06,
+                            "y": -10.4
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.5,
+                            "x": 2.693,
+                            "y": 2.693
+                        }
+                    ]
+                },
+                "Effects40": {
+                    "translate": [
+                        {
+                            "time": 0.6667,
+                            "x": 1221,
+                            "y": -31.62
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.6667,
+                            "x": 4.114,
+                            "y": 4.114
+                        }
+                    ],
+                    "shear": [
+                        {
+                            "time": 0.6667,
+                            "y": -10.38
+                        }
+                    ]
+                },
+                "Effects41": {
+                    "translate": [
+                        {
+                            "time": 0.7333,
+                            "x": 1730.16,
+                            "y": -35.86
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.7333,
+                            "x": 2.074,
+                            "y": 2.074
+                        }
+                    ],
+                    "shear": [
+                        {
+                            "time": 0.7333,
+                            "y": 17.65
+                        }
+                    ]
+                },
+                "Effects42": {
+                    "translate": [
+                        {
+                            "time": 0.0667,
+                            "x": 1324.91,
+                            "y": 3.68
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.0667,
+                            "x": -1.544,
+                            "y": 1.544
+                        }
+                    ],
+                    "shear": [
+                        {
+                            "time": 0.0667,
+                            "y": -19.29
+                        }
+                    ]
+                },
+                "Effects43": {
+                    "translate": [
+                        {
+                            "time": 0.1667,
+                            "x": 1957.81,
+                            "y": 3.68
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.1667,
+                            "x": -2.171,
+                            "y": 2.171
+                        }
+                    ]
+                },
+                "Effects44": {
+                    "translate": [
+                        {
+                            "time": 0.4,
+                            "x": 877.13,
+                            "y": 3.68
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.4,
+                            "x": -2.859,
+                            "y": 2.859
+                        }
+                    ],
+                    "shear": [
+                        {
+                            "time": 0.4,
+                            "y": -12.48
+                        }
+                    ]
+                },
+                "Effects45": {
+                    "translate": [
+                        {
+                            "time": 0.9,
+                            "x": 2201.4,
+                            "y": 3.68
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.9,
+                            "x": -2.233,
+                            "y": 2.233
+                        }
+                    ]
+                },
+                "Effects46": {
+                    "translate": [
+                        {
+                            "time": 1.1333,
+                            "x": 1030.54,
+                            "y": 3.68
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 1.1333,
+                            "x": -0.947,
+                            "y": 0.947
+                        }
+                    ],
+                    "shear": [
+                        {
+                            "time": 1.1333,
+                            "y": 18.53
+                        }
+                    ]
+                },
+                "Effects47": {
+                    "translate": [
+                        {
+                            "x": 1423.01,
+                            "y": -38.41
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "x": 4.59,
+                            "y": 4.54
+                        }
+                    ],
+                    "shear": [
+                        {
+                            "y": 4.33
+                        }
+                    ]
+                },
+                "Effects48": {
+                    "translate": [
+                        {
+                            "time": 0.3,
+                            "x": 726.23,
+                            "y": -38.41
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.3,
+                            "x": -2.8,
+                            "y": 2.769
+                        }
+                    ],
+                    "shear": [
+                        {
+                            "time": 0.3,
+                            "y": 4.33
+                        }
+                    ]
+                },
+                "Effects49": {
+                    "translate": [
+                        {
+                            "time": 0.5333,
+                            "x": 2685.67,
+                            "y": 49.07
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.5333,
+                            "x": -6.174,
+                            "y": 6.106
+                        }
+                    ],
+                    "shear": [
+                        {
+                            "time": 0.5333,
+                            "y": 4.33
+                        }
+                    ]
+                },
+                "Effects50": {
+                    "translate": [
+                        {
+                            "time": 0.7667,
+                            "x": 74.05,
+                            "y": 49.07
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.7667,
+                            "x": 2.05,
+                            "y": 2.05
+                        }
+                    ],
+                    "shear": [
+                        {
+                            "time": 0.7667,
+                            "y": 26.39
+                        }
+                    ]
+                },
+                "Effects51": {
+                    "translate": [
+                        {
+                            "time": 1.0667,
+                            "x": 1991.81,
+                            "y": -16.6
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 1.0667,
+                            "x": 2.03,
+                            "y": 2.03
+                        }
+                    ]
+                },
+                "Effects52": {
+                    "translate": [
+                        {
+                            "x": 1067.67,
+                            "y": -25.05
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "x": 1.793,
+                            "y": 1.793,
+                            "curve": 0.253,
+                            "c2": 0.31,
+                            "c3": 0.75
+                        },
+                        {
+                            "time": 0.2333,
+                            "x": 5.501,
+                            "y": 3.399
+                        }
+                    ]
+                },
+                "Effects53": {
+                    "translate": [
+                        {
+                            "time": 0.0667,
+                            "x": 1067.67,
+                            "y": -25.05
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.0667,
+                            "x": -1.165,
+                            "y": 1.793,
+                            "curve": 0.253,
+                            "c2": 0.31,
+                            "c3": 0.75
+                        },
+                        {
+                            "time": 1,
+                            "x": -3.718,
+                            "y": 2.612
+                        }
+                    ]
+                },
+                "colliderAtk": {
+                    "translate": [
+                        {
+                            "x": 826.14,
+                            "y": 1101,
+                            "curve": 0.168,
+                            "c2": 0.31,
+                            "c3": 0.75
+                        },
+                        {
+                            "time": 1.1333,
+                            "x": 1868.86,
+                            "y": 1101
+                        },
+                        {
+                            "time": 1.1667,
+                            "x": 2032.72,
+                            "y": 1101
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "x": 3615.947,
+                            "y": 2625.384,
+                            "curve": 0.168,
+                            "c2": 0.31,
+                            "c3": 0.75
+                        },
+                        {
+                            "time": 1.1333,
+                            "x": 8223.804,
+                            "y": 2625.384
+                        },
+                        {
+                            "time": 1.1667,
+                            "x": 7917.549,
+                            "y": 2625.384
+                        }
+                    ]
+                }
+            },
+            "events": [
+                {
+                    "time": 0.0333,
+                    "name": "chufa"
+                },
+                {
+                    "time": 0.1,
+                    "name": "chufa"
+                },
+                {
+                    "time": 0.3,
+                    "name": "chufa"
+                },
+                {
+                    "time": 0.5333,
+                    "name": "chufa"
+                },
+                {
+                    "time": 0.8667,
+                    "name": "chufa"
+                },
+                {
+                    "time": 1.2667,
+                    "name": "chufa"
+                }
+            ]
+        }
+    }
+}

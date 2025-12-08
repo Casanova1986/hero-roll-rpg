@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: Hero_wenyao_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: fb9364294c2ed7842923db18c6f2e1ec, type: 3}
+  materials:
+  - {fileID: 2100000, guid: c0a24978a165f7d4fa483ab6f9ff40ee, type: 2}
