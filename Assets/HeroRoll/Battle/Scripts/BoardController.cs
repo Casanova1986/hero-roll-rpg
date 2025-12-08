@@ -46,6 +46,7 @@ namespace HeroRoll.Battle
             for (int i = 0; i < total; i++)
             {
                 _lsTextMoveStep[i].gameObject.SetActive(false);
+                ClearTextFocusStep(i);
             }
 
             int step = 1;
@@ -66,9 +67,22 @@ namespace HeroRoll.Battle
             _lsTextMoveStep[index].gameObject.SetActive(true);
             _lsTextMoveStep[index].text = value.ToString();
         }
+        public void SetTextFocusStep(int index)
+        {
+            _lsTextMoveStep[index].color = Color.red;
+        }
+        public void ClearTextFocusStep(int index)
+        {
+            _lsTextMoveStep[index].color = Color.white;
+        }
         #endregion
 
         #region Getter
+        public int GetIndexFocusStep( int numberStep)
+        {
+            int indexFocus = (indexNextMove + numberStep -1) % _lsTextMoveStep.Count;
+            return indexFocus;
+        }
         // public DotItem
         #endregion
 
@@ -79,11 +93,11 @@ namespace HeroRoll.Battle
             for (int i = 0; i < numberStep; i++)
             {
                 int indexMove = i;
-                MoveOneStep(0.4f);
-                yield return new WaitForSeconds(0.4f);
+                MoveOneStep(0.25f);
+                yield return new WaitForSeconds(0.25f);
             }
         }
-        int indexNextMove = 21;
+        int indexNextMove = 1;
         // [Button("Move One Step")]
         public void MoveOneStep(float duration = 0.4f)
         {
@@ -91,17 +105,17 @@ namespace HeroRoll.Battle
             {
                 indexNextMove = 0;
             }
-            PlayerMove(_dotItems[indexNextMove].transform.position, duration);
+            PlayerMove(_dotItems[indexNextMove].transform.position, duration: duration);
             indexNextMove++;
 
         }
-        public void PlayerMove(Vector3 targetPosition, float duration = 0.4f)
+        public void PlayerMove(Vector3 targetPosition, float hight = 0.25f, float duration = 0.4f)
         {
             Vector3 start = _characterController.transform.position;
 
             // Tạo điểm giữa cao lên thành vòng cung
             Vector3 mid = (start + targetPosition) / 2f;
-            mid.y += 0.5f; // độ cao của vòng cung
+            mid.y += hight; // độ cao của vòng cung
 
             Vector3[] path = new Vector3[] { start, mid, targetPosition };
 

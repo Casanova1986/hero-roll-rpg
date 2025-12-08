@@ -29,7 +29,12 @@ namespace HeroRoll.Battle
             {
                 isAnimDiceAndMove = true;
                 //// Animation Roll Dice Here
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.25f);
+                BoardController.instance.SetTextFocusStep(BoardController.instance.GetIndexFocusStep(_valueDice1 + _valueDice2));
+
+
+
+                yield return new WaitForSeconds(0.5f);
 
                 yield return BoardController.instance.MoveMultipleStep(steps);
                 isAnimDiceAndMove = false;
