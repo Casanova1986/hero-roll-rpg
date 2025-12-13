@@ -1,43 +1,65 @@
 using System.Collections;
-using MiniOdin;
+using NTHiep.MiniOdin;
+using Spine.Unity;
 using UnityEngine;
 
 namespace HeroRoll.Battle
 {
     public class DiceController : MonoBehaviour
     {
-        [Header("Var")]
+        [Header("Value")]
         public int _valueDice1, _valueDice2;
-        public bool isAnimDiceAndMove = false;
+        public bool _isAnimDiceAndMove = false;
+
+        [Header("Var")]
+        [SerializeField] SkeletonAnimation diceSke1;
+        [SerializeField] SkeletonAnimation diceSke2;
 
         Coroutine _coroutineDice;
 
         [Button("Roll Dice")]
         public void RollDice()
         {
-            if (isAnimDiceAndMove)
+            if (_isAnimDiceAndMove)
             {
                 return;
             }
-            _valueDice1 = Hiep.Tool.RandomUtil.Range(1, 7);
-            _valueDice2 = Hiep.Tool.RandomUtil.Range(1, 7);
+            _valueDice1 = NTHiep.Tool.RandomUtil.Range(1, 7);
+            _valueDice2 = NTHiep.Tool.RandomUtil.Range(1, 7);
 
-            _coroutineDice = StartCoroutine(WaitAnimRollAndMove(_valueDice1 + _valueDice2));
+            _coroutineDice = StartCoroutine(WaitAnimRollAndMove());
 
 
-            IEnumerator WaitAnimRollAndMove(int steps)
+            IEnumerator WaitAnimRollAndMove()
             {
-                isAnimDiceAndMove = true;
+                _isAnimDiceAndMove = true;
                 //// Animation Roll Dice Here
-                yield return new WaitForSeconds(0.25f);
-                BoardController.instance.SetTextFocusStep(BoardController.instance.GetIndexFocusStep(_valueDice1 + _valueDice2));
 
+                diceSke1.gameObject.SetActive(true);
+                diceSke1.Skeleton.SetSkin(_valueDice1.ToString());
+                diceSke1.Skeleton.SetSlotsToSetupPose();
+                diceSke1.AnimationState.ClearTracks();
+                diceSke1.AnimationState.SetAnimation(0, "animation", false);
+
+
+
+                diceSke2.gameObject.SetActive(true);
+                diceSke2.Skeleton.SetSkin(_valueDice2.ToString());
+                diceSke2.Skeleton.SetSlotsToSetupPose();
+                diceSke2.AnimationState.ClearTracks();
+                diceSke2.AnimationState.SetAnimation(0, "animation", false);
 
 
                 yield return new WaitForSeconds(0.5f);
+                BoardController.instance.SetTextFocusStep(BoardController.instance.GetIndexFocusStep(_valueDice1 + _valueDice2));
 
-                yield return BoardController.instance.MoveMultipleStep(steps);
-                isAnimDiceAndMove = false;
+                yield return new WaitForSeconds(0.5f);
+
+                diceSke1.gameObject.SetActive(false);
+                diceSke2.gameObject.SetActive(false);
+
+                yield return BoardController.instance.MoveMultipleStep(_valueDice1 + _valueDice2);
+                _isAnimDiceAndMove = false;
                 BoardController.instance.SetTextMultiMoveStep(12);
             }
         }

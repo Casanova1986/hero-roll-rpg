@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Hiep.Tool
+namespace NTHiep.Tool
 {
     public class FPSController : MonoBehaviour
     {

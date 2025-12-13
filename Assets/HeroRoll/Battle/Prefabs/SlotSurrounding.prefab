@@ -59,6 +59,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65e1e980cfc928845b1ad062001d7cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _idSlot: 0
+  _itemSubInSlotActive: 0
+  _iconGround: {fileID: 7285069325632153501}
+  _itemSubInSlots:
+  - {fileID: 622148828747067047}
+  - {fileID: 7753328421369277044}
+  - {fileID: 8779799582162891479}
+  - {fileID: 4894034877834928713}
 --- !u!1 &622148828747067047
 GameObject:
   m_ObjectHideFlags: 0

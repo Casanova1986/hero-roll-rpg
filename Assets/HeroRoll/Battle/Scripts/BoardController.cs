@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using MiniOdin;
+using NTHiep.MiniOdin;
 using UnityEngine;
 
 namespace HeroRoll.Battle

@@ -27,7 +27,7 @@ namespace HeroRoll.Battle
                 case TypeDot.DotMain:
                     if (isRandom)
                     {
-                        _BackgroundDotMain.GetComponent<SpriteRenderer>().sprite = Hiep.Tool.RandomUtil.Pick(_dotMainSources);
+                        _BackgroundDotMain.GetComponent<SpriteRenderer>().sprite = NTHiep.Tool.RandomUtil.Pick(_dotMainSources);
                     }
                     else
                     {
@@ -40,7 +40,7 @@ namespace HeroRoll.Battle
                 case TypeDot.DotSub:
                     if (isRandom)
                     {
-                        _BackgroundDotSub.GetComponent<SpriteRenderer>().sprite = Hiep.Tool.RandomUtil.Pick(_dotSubSources);
+                        _BackgroundDotSub.GetComponent<SpriteRenderer>().sprite = NTHiep.Tool.RandomUtil.Pick(_dotSubSources);
                     }
                     else
                     {

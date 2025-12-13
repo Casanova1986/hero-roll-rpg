@@ -3,7 +3,7 @@ using UnityEditor;
 using System.Reflection;
 using System.Linq;
 
-namespace MiniOdin
+namespace NTHiep.MiniOdin
 {
     [CustomEditor(typeof(UnityEngine.Object), true)]
     [CanEditMultipleObjects]
@@ -56,7 +56,7 @@ namespace MiniOdin
                     try
                     {
                         method.Invoke(method.IsStatic ? null : target, null);
-                        
+
                         if (target is UnityEngine.Object uObj)
                         {
                             EditorUtility.SetDirty(uObj);

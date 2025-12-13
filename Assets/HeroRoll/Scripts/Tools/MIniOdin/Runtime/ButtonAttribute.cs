@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace MiniOdin
+namespace NTHiep.MiniOdin
 {
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public class ButtonAttribute : PropertyAttribute

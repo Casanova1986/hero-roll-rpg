@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Hiep.Tool
+namespace NTHiep.Tool
 {
     public class RandomUtil
     {
@@ -52,6 +52,20 @@ namespace Hiep.Tool
             }
             return new string(stringChars);
         }
+
+        /// <summary>
+        /// Trả về số nguyên ngẫu nhiên trong khoảng <b>[0, max)</b> (bao gồm 0, loại trừ max).
+        /// </summary>
+        /// <param name="max">Giá trị lớn nhất (loại trừ)</param>
+        /// <returns>Số nguyên trong khoảng <b>[0, max)</b></returns>
+        public static int Range(int max)
+        {
+            if (0 >= max)
+                throw new ArgumentException("min phải nhỏ hơn max");
+
+            return (int)(NextULong() % (ulong)(max - 0)) + 0;
+        }
+
 
         /// <summary>
         /// Trả về số nguyên ngẫu nhiên trong khoảng <b>[min, max)</b> (bao gồm min, loại trừ max).
@@ -149,6 +163,7 @@ namespace Hiep.Tool
         /// Xáo trộn một List<T>
         /// </summary>
         /// <param name="list">List<T> cần shuffle</param>
+        /// <returns>List<T> đã được xáo trộn</returns>
         public static void Shuffle<T>(List<T> list)
         {
             for (int i = list.Count - 1; i > 0; i--)
@@ -276,6 +291,85 @@ namespace Hiep.Tool
             int index = Range(0, candidates.Count);
             return candidates[index];
         }
+
+        /// <summary>
+        /// Trả về các list<T> đã được chia đều
+        /// </summary>
+        /// <param name="list">Danh sách cần chọn</param>
+        /// <param name="numberOfLists">Số list cần chia</param>
+        /// <returns>các list chia đều có các phần tử ngẫu nhiên</returns>
+        public static List<List<T>> SplitList<T>(List<T> list, int numberOfLists = 2)
+        {
+            if (list == null || list.Count == 0)
+                throw new ArgumentException("List null hoặc rỗng.");
+
+            if (numberOfLists <= 0)
+                throw new ArgumentOutOfRangeException("Số lượng list phải lớn hơn 0.");
+
+            if (numberOfLists > list.Count)
+                throw new ArgumentOutOfRangeException("Số lượng list không được lớn hơn số phần tử trong list.");
+
+            // Shuffle để random các phần tử trước khi chia (nếu cần random)
+            // Nếu không muốn random thì bỏ dòng này đi
+            List<T> temp = new List<T>(list);
+            Shuffle(temp);
+
+            List<List<T>> result = new List<List<T>>();
+
+            int baseSize = list.Count / numberOfLists;
+            int extra = list.Count % numberOfLists; // mấy phần dư chia đều cho các list đầu tiên
+
+            int index = 0;
+
+            for (int i = 0; i < numberOfLists; i++)
+            {
+                int size = baseSize + (i < extra ? 1 : 0);
+                result.Add(temp.GetRange(index, size));
+                index += size;
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Trả về 2 list muốn lấy random phần tử và các phần tử còn lại
+        /// </summary>
+        /// <param name="list">Danh sách cần chọn</param>
+        /// <param name="pickCount">Số phần tử cần chọn trong list</param>
+        /// <returns>1 list cần chọn và 1 list còn lại</returns>
+        public static (List<T> picked, List<T> rest) SplitTwoListRandom<T>(List<T> list, int pickCount)
+        {
+            if (list == null || list.Count == 0)
+                throw new ArgumentException("List null hoặc rỗng.");
+
+            if (pickCount < 0 || pickCount > list.Count)
+                throw new ArgumentOutOfRangeException(nameof(pickCount), "Số phần tử cần chọn không hợp lệ.");
+
+            // copy để không phá list gốc
+            var temp = new List<T>(list);
+
+            // shuffle random
+            FisherYatesShuffle(temp);
+
+            // lấy picked và phần còn lại
+            var picked = temp.GetRange(0, pickCount);
+            var rest = temp.GetRange(pickCount, temp.Count - pickCount);
+            return (picked, rest);
+
+
+            void FisherYatesShuffle(List<T> list)
+            {
+                for (int i = list.Count - 1; i > 0; i--)
+                {
+                    int j = Range(i + 1);
+                    T tmp = list[i];
+                    list[i] = list[j];
+                    list[j] = tmp;
+                }
+            }
+        }
+
+
 
         /// <summary>
         /// Trả về một giá trị enum ngẫu nhiên
