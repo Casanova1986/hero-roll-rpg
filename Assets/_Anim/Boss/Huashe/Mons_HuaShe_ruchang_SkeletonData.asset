@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Mons_HuaShe_ruchang_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 3b70083caef8c784192dbc1f850c4490, type: 2}
+  - {fileID: 11400000, guid: 37d12e84abcccfc499c4317bba74ab50, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: baa1cc00725f7d343bbbebc82dbe60f5, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 9dc0627f09c2a154db2bef25f7a9cd64, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 0

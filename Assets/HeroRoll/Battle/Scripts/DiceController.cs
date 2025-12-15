@@ -51,7 +51,8 @@ namespace HeroRoll.Battle
 
 
                 yield return new WaitForSeconds(0.5f);
-                BoardController.instance.SetTextFocusStep(BoardController.instance.GetIndexFocusStep(_valueDice1 + _valueDice2));
+                int indexFocusStep = BoardController.instance.GetIndexFocusStep(_valueDice1 + _valueDice2);
+                BoardController.instance.SetTextFocusStep(indexFocusStep);
 
                 yield return new WaitForSeconds(0.5f);
 
@@ -59,6 +60,8 @@ namespace HeroRoll.Battle
                 diceSke2.gameObject.SetActive(false);
 
                 yield return BoardController.instance.MoveMultipleStep(_valueDice1 + _valueDice2);
+
+                SurroundingController.instance.UpdateSurrounding(indexFocusStep);
                 _isAnimDiceAndMove = false;
                 BoardController.instance.SetTextMultiMoveStep(12);
             }

@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Mons_HuaShe_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 0c8e21473fc8880499d2df6eb67004b2, type: 2}
+  - {fileID: 11400000, guid: 99ead958677ad6d4bb4f47505e651d72, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: f635abd38ac7cdf4b9873b20aad285da, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: d3a5256333de2c84985cec2392a93ece, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 1
     applyAdditiveMaterial: 1
     additiveMaterials:
     - pageName: Mons_HuaShe.png
-      material: {fileID: 2100000, guid: 438bdbca57dc4ec46b7cca10082f6ad4, type: 2}
+      material: {fileID: 2100000, guid: fae292a214a338042b89a96b99e79318, type: 2}
     multiplyMaterials: []
     screenMaterials: []
   skeletonDataModifiers: []

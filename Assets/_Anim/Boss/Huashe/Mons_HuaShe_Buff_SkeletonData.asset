@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Mons_HuaShe_Buff_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: a05a3efd1f987524b92f9bc3d8e9a714, type: 2}
+  - {fileID: 11400000, guid: 9963cdd2548d45b42b7d9bf7ff469d34, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: e5f1367f6566b3b41b23d9410603acbb, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: d011a8f900c7e4d469c0b27e52ff6cac, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 1
     applyAdditiveMaterial: 1
     additiveMaterials:
     - pageName: Mons_HuaShe_Buff.png
-      material: {fileID: 2100000, guid: 02b2ab3d5d1494746b1a1d825a8e6930, type: 2}
+      material: {fileID: 2100000, guid: 8adfe72216774a342acfa8291243aa7d, type: 2}
     multiplyMaterials: []
     screenMaterials: []
   skeletonDataModifiers: []

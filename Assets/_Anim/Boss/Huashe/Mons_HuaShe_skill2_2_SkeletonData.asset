@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Mons_HuaShe_skill2_2_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: a39c39a8c88169947bc9dcad25445f6a, type: 2}
+  - {fileID: 11400000, guid: a710409a54ca42c4396894dfb9bd7db3, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: a51870fd3570d1c4286200746c8b52b0, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 875c584169690184e815008048b4cd1a, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 0

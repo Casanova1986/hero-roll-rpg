@@ -8,7 +8,8 @@ namespace HeroRoll
     {
         public static AssetLoader instance { get; private set; }
         [Header("Source")]
-        public DictShow<bool, Sprite> _dictItemSlotSubAround = new DictShow<bool, Sprite>();
+        public DictShow<bool, Sprite> _dictGoundSlotSurrounding = new DictShow<bool, Sprite>();
+        public DictShow<int, Sprite> _dictItemSlotSubAround = new DictShow<int, Sprite>();
         void Awake()
         {
             if (AssetLoader.instance != null)
@@ -19,7 +20,8 @@ namespace HeroRoll
         }
         void Start()
         {
-
+            // Debug.Log(_dictGoundSlotSurrounding.Count);
+            // Debug.Log(_dictItemSlotSubAround.Count);
         }
         void InitAssignDict()
         {

@@ -10,11 +10,25 @@ namespace NTHiep.Tool
         public Dictionary<Key, Value> Dictionary = new Dictionary<Key, Value>();
 
         // Chỉ dùng để show lên Inspector
-        [SerializeField] private List<Key> Keys = new List<Key>();
-        [SerializeField] private List<Value> Values = new List<Value>();
+        [SerializeField] List<Key> Keys = new List<Key>();
+        [SerializeField] List<Value> Values = new List<Value>();
 
         public int Count => Dictionary.Count;
-        
+
+        // Inspector → Runtime
+        public void OnAfterDeserialize()
+        {
+            Dictionary.Clear();
+
+            int count = Mathf.Min(Keys.Count, Values.Count);
+            for (int i = 0; i < count; i++)
+            {
+                // Không check null ở generic
+                Dictionary[Keys[i]] = Values[i];
+            }
+        }
+
+        // Runtime → Inspector
         public void OnBeforeSerialize()
         {
             Keys.Clear();
@@ -26,17 +40,7 @@ namespace NTHiep.Tool
                 Values.Add(kv.Value);
             }
         }
-
-        public void OnAfterDeserialize()
-        {
-            Dictionary.Clear();
-
-            int count = Mathf.Min(Keys.Count, Values.Count);
-            for (int i = 0; i < count; i++)
-            {
-                Dictionary[Keys[i]] = Values[i];
-            }
-        }
+        
         /// <summary>
         /// Xóa hết data dictionary
         /// </summary>

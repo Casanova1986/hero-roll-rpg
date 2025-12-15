@@ -21,17 +21,23 @@ namespace HeroRoll.Battle
         }
         void Start()
         {
+            SetUpItemIconSubInSlot();
+        }
+        // bool isOn = false;
+        // [Button]
+        // public void Test()
+        // {
+        //     Debug.Log(AssetLoader.instance._dictItemSlotSubAround.Count);
+        //     _iconGround.sprite = AssetLoader.instance._dictItemSlotSubAround.Get(isOn);
+        //     isOn = !isOn;
+        // }
 
-        }
-        bool isOn = false;
-        [Button]
-        public void Test()
+        public void ActiveSlotSubAround(bool isOn)
         {
-            Debug.Log(AssetLoader.instance._dictItemSlotSubAround.Count);
-            _iconGround.sprite = AssetLoader.instance._dictItemSlotSubAround.Get(isOn);
-            isOn = !isOn;
+            _iconGround.sprite = AssetLoader.instance._dictGoundSlotSurrounding.Get(isOn);
         }
-        public void UpdateItemSubSlot()
+
+        public void UpdateItemSubSlot(System.Action<bool> fullActive)
         {
             // (List<GameObject> listSlotPick, List<GameObject> listSlotRest) = NTHiep.Tool.RandomUtil.SplitTwoListRandom(itemSubInSlot, itemSubInSlotActive);
 
@@ -44,9 +50,18 @@ namespace HeroRoll.Battle
             // {
             //     itemSlotRest.SetActive(false);
             // });
+            if (_itemSubInSlotActive == _itemSubInSlots.Count)
+            {
+                fullActive?.Invoke(true);
+                return;
+            }
+            if (_itemSubInSlotActive == 0)
+            {
+                _itemSubInSlots.ForEach(f => f.SetActive(false));
+                SetUpItemIconSubInSlot(true);
+            }
 
             _itemSubInSlotActive++;
-            _iconGround.sprite = AssetLoader.instance._dictItemSlotSubAround.Get(true);
             List<GameObject> listSlotRest = new List<GameObject>();
             foreach (var item in _itemSubInSlots)
             {
@@ -62,9 +77,25 @@ namespace HeroRoll.Battle
             {
                 item.gameObject.SetActive(false);
             }
-
+            fullActive?.Invoke(false);
         }
-
+        public void SetUpItemIconSubInSlot(bool isHouse = false)
+        {
+            if (isHouse)
+            {
+                _itemSubInSlots.ForEach(f =>
+                {
+                    f.GetComponent<SpriteRenderer>().sprite = AssetLoader.instance._dictItemSlotSubAround.Get(0);
+                });
+            }
+            else
+            {
+                _itemSubInSlots.ForEach(f =>
+                {
+                    f.GetComponent<SpriteRenderer>().sprite = NTHiep.Tool.RandomUtil.PickExclude(AssetLoader.instance._dictItemSlotSubAround.ToList(), new List<Sprite> { AssetLoader.instance._dictItemSlotSubAround.Get(0) });
+                });
+            }
+        }
     }
 
 }

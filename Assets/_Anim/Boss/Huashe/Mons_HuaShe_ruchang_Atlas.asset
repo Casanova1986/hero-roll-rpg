@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: Mons_HuaShe_ruchang_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 90b3fa4cb2041b549a8a10c8eca92e0c, type: 3}
+  atlasFile: {fileID: 4900000, guid: 83cc213d0174eb14a80c07fe94693095, type: 3}
   materials:
-  - {fileID: 2100000, guid: df5520596b1ba1c41b023b2de8a9fecc, type: 2}
+  - {fileID: 2100000, guid: aef6ddfa7a75f15429e45aef5725fba3, type: 2}
