@@ -1,0 +1,45 @@
+using TMPro;
+using UnityEngine;
+
+namespace HeroRoll.Battle
+{
+    public class UIController : MonoBehaviour
+    {
+        public static UIController instace;
+        [Header("Var")]
+        [SerializeField] GameObject _txtTurnBoss;
+        [SerializeField] GameObject _txtCurrentFloor;
+        [SerializeField] GameObject _btnRoll;
+        void Awake()
+        {
+            if (UIController.instace != null)
+            {
+                return;
+            }
+            instace = this;
+        }
+        void Start()
+        {
+            Init();
+        }
+        void Init()
+        {
+            SetTxtTurnBoss(GameController.instace._turnBossAttackLeft);
+            SetTxtCurrentFloor(GameController.instace._currentFloorPlayerStay);
+        }
+        public void SetTxtTurnBoss(int turn)
+        {
+            _txtTurnBoss.GetComponent<TextMeshProUGUI>().text = $"<color=red>Turn left: {turn}</color>";
+        }
+        public void SetTxtCurrentFloor(int value)
+        {
+            _txtCurrentFloor.GetComponent<TextMeshProUGUI>().text = $"<color=green>Current Floor: {value}</color>";
+        }
+
+        public void OnEnableButtonRoll(bool isOn)
+        {
+            _btnRoll.SetActive(isOn);
+        }
+    }
+
+}

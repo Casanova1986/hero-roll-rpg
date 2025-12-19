@@ -64,6 +64,7 @@ namespace HeroRoll.Battle
                 SurroundingController.instance.UpdateSurrounding(indexFocusStep);
                 _isAnimDiceAndMove = false;
                 BoardController.instance.SetTextMultiMoveStep(12);
+                GameController.instace.CountDownTurnAttack();
             }
         }
 

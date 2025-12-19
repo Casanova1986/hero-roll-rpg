@@ -21,6 +21,7 @@ namespace HeroRoll.Battle
         }
         void Start()
         {
+            ActiveSlotSubAround(false);
             SetUpItemIconSubInSlot();
         }
         // bool isOn = false;
@@ -61,6 +62,7 @@ namespace HeroRoll.Battle
                 SetUpItemIconSubInSlot(true);
             }
 
+
             _itemSubInSlotActive++;
             List<GameObject> listSlotRest = new List<GameObject>();
             foreach (var item in _itemSubInSlots)
@@ -78,6 +80,8 @@ namespace HeroRoll.Battle
                 item.gameObject.SetActive(false);
             }
             fullActive?.Invoke(false);
+
+            ActiveSlotSubAround(true);
         }
         public void SetUpItemIconSubInSlot(bool isHouse = false)
         {
