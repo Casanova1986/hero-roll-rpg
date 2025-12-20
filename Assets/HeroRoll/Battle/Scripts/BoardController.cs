@@ -37,6 +37,8 @@ namespace HeroRoll.Battle
         {
             for (int i = 0; i < _dotItems.Count; i++)
             {
+                _dotItems[i]._idDot = i;
+                _dotItems[i].name = $"Dot {i}";
                 _dotItems[i].SetBackgroundDot(isRandom: true);
             }
             SetTextMultiMoveStep(12);

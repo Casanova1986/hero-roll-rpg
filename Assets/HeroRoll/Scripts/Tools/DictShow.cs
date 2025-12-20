@@ -31,16 +31,25 @@ namespace NTHiep.Tool
         // Runtime → Inspector
         public void OnBeforeSerialize()
         {
-            Keys.Clear();
-            Values.Clear();
+            // Keys.Clear();
+            // Values.Clear();
 
-            foreach (var kv in Dictionary)
-            {
-                Keys.Add(kv.Key);
-                Values.Add(kv.Value);
-            }
+            // foreach (var kv in Dictionary)
+            // {
+            //     Keys.Add(kv.Key);
+            //     Values.Add(kv.Value);
+            // }
         }
-        
+#if UNITY_EDITOR
+        public void EditorRebuild()
+        {
+            Dictionary.Clear();
+            int count = Mathf.Min(Keys.Count, Values.Count);
+            for (int i = 0; i < count; i++)
+                Dictionary[Keys[i]] = Values[i];
+        }
+#endif
+
         /// <summary>
         /// Xóa hết data dictionary
         /// </summary>
@@ -91,6 +100,25 @@ namespace NTHiep.Tool
 
             return default;
         }
+
+        /// <summary>
+        /// Lấy key theo value
+        /// </summary>
+        /// <param name="value">Value để lấy key</param>
+        /// <returns>Key</returns>
+        public Key GetKey(Value value)
+        {
+            foreach (var kv in Dictionary)
+            {
+                if (EqualityComparer<Value>.Default.Equals(kv.Value, value))
+                    return kv.Key;
+            }
+
+            return default;
+        }
+
+
+
 
         /// <summary>
         /// Kiểm tra key có tồn tại trong Dict không

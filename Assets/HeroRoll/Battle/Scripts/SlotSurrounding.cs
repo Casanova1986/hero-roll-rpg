@@ -35,7 +35,7 @@ namespace HeroRoll.Battle
 
         public void ActiveSlotSubAround(bool isOn)
         {
-            _iconGround.sprite = AssetLoader.instance._dictGoundSlotSurrounding.Get(isOn);
+            _iconGround.sprite = AssetLoader.instance._dictGroundSlotSurrounding.Get(isOn);
         }
 
         public void UpdateItemSubSlot(System.Action<bool> fullActive)

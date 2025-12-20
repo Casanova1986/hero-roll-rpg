@@ -6,17 +6,15 @@ namespace HeroRoll.Battle
     public class DotItem : MonoBehaviour
     {
         [Header("Var")]
+        public int _idDot;
         public TypeDot _typeDot;
-
-        [Header("Source")]
-        [SerializeField] List<Sprite> _dotMainSources;
-        [SerializeField] List<Sprite> _dotSubSources;
+        public TypeDotSub _typeDotSub;
 
         [Header("Value")]
         [SerializeField] GameObject _dotMain;
         [SerializeField] GameObject _dotSub;
-        [SerializeField] GameObject _BackgroundDotMain;
-        [SerializeField] GameObject _BackgroundDotSub;
+        [SerializeField] GameObject _backgroundDotMain;
+        [SerializeField] GameObject _backgroundDotSub;
 
 
         #region Function
@@ -27,25 +25,44 @@ namespace HeroRoll.Battle
                 case TypeDot.DotMain:
                     if (isRandom)
                     {
-                        _BackgroundDotMain.GetComponent<SpriteRenderer>().sprite = NTHiep.Tool.RandomUtil.Pick(_dotMainSources);
+                        Sprite sprite = NTHiep.Tool.RandomUtil.Pick(AssetLoader.instance._dictDotMainInGame.ToList());
+                        int key = AssetLoader.instance._dictDotMainInGame.GetKey(sprite);
+
+                        _backgroundDotMain.GetComponent<SpriteRenderer>().sprite = sprite;
                     }
                     else
                     {
-                        _BackgroundDotMain.GetComponent<SpriteRenderer>().sprite = _dotMainSources[index];
+                        Sprite sprite = AssetLoader.instance._dictDotMainInGame.Get(index);
+                        int key = index;
+                        _backgroundDotMain.GetComponent<SpriteRenderer>().sprite = AssetLoader.instance._dictDotMainInGame.Get(index);
                     }
 
                     _dotSub.SetActive(false);
                     _dotMain.SetActive(true);
                     break;
+
                 case TypeDot.DotSub:
+
                     if (isRandom)
                     {
-                        _BackgroundDotSub.GetComponent<SpriteRenderer>().sprite = NTHiep.Tool.RandomUtil.Pick(_dotSubSources);
+                        Sprite sprite = NTHiep.Tool.RandomUtil.Pick(AssetLoader.instance._dictDotSubInGame.ToList());
+                        TypeDotSub key = AssetLoader.instance._dictDotSubInGame.GetKey(sprite);
+                        _typeDotSub = key;
+
+
+                        _backgroundDotSub.GetComponent<SpriteRenderer>().sprite = sprite;
                     }
                     else
                     {
-                        _BackgroundDotSub.GetComponent<SpriteRenderer>().sprite = _dotSubSources[index];
+                        Sprite sprite = AssetLoader.instance._dictDotSubInGame.Get((TypeDotSub)index);
+                        TypeDotSub key = (TypeDotSub)index;
+                        _typeDotSub = key;
+
+
+                        _backgroundDotSub.GetComponent<SpriteRenderer>().sprite = sprite;
                     }
+
+
                     _dotSub.SetActive(true);
                     _dotMain.SetActive(false);
                     break;
@@ -58,5 +75,14 @@ namespace HeroRoll.Battle
     {
         DotMain = 0,
         DotSub = 1
+    }
+
+    public enum TypeDotSub
+    {
+        Empty = 0,
+        Buff = 1,
+        DeBuff = 2,
+        AttackEnemy = 3,
+
     }
 }

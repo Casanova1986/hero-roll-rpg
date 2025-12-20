@@ -3835,18 +3835,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9070391c56ec954c823a2df9ebb92e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dictGoundSlotSurrounding:
+  _dictGroundSlotSurrounding:
     Keys: 0001
     Values:
     - {fileID: 21300000, guid: 043ade01982e7df489a77355de9d675c, type: 3}
     - {fileID: 21300000, guid: 92b3c45d634830645af6e7cf8bb3e042, type: 3}
   _dictItemSlotSubAround:
-    Keys: 00000000010000000200000003000000
+    Keys: 00000000000000000000000000000000
     Values:
     - {fileID: 21300000, guid: 2cfd68a6d99760743a2e376458ccb864, type: 3}
     - {fileID: 21300000, guid: 20d7e8073e359b145865477131061875, type: 3}
     - {fileID: 21300000, guid: 8c1b0e95e6447544ca32e954570ed5df, type: 3}
     - {fileID: 21300000, guid: 86492743c0817b94c924a2628a373a6c, type: 3}
+  _dictDotMainInGame:
+    Keys: 00000000
+    Values:
+    - {fileID: 21300000, guid: d01ce0abce49b6943bf9fc339d33892f, type: 3}
+  _dictDotSubInGame:
+    Keys: 000000000100000003000000
+    Values:
+    - {fileID: 21300000, guid: ca078e92bc5535a41b7302ca1aefd8c7, type: 3}
+    - {fileID: 21300000, guid: e71e2e9ec06d43d47b241936795aeaf0, type: 3}
+    - {fileID: 21300000, guid: 4d282e889090cc546882831f95b4c076, type: 3}
 --- !u!4 &803353443
 Transform:
   m_ObjectHideFlags: 0
