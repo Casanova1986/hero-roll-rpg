@@ -34,20 +34,22 @@ namespace HeroRoll.Battle
             {
                 _isAnimDiceAndMove = true;
                 //// Animation Roll Dice Here
+                {
+                    diceSke1.gameObject.SetActive(true);
+                    diceSke1.Skeleton.SetSkin(_valueDice1.ToString());
+                    diceSke1.Skeleton.SetSlotsToSetupPose();
+                    diceSke1.AnimationState.ClearTracks();
+                    diceSke1.AnimationState.SetAnimation(0, "animation", false);
 
-                diceSke1.gameObject.SetActive(true);
-                diceSke1.Skeleton.SetSkin(_valueDice1.ToString());
-                diceSke1.Skeleton.SetSlotsToSetupPose();
-                diceSke1.AnimationState.ClearTracks();
-                diceSke1.AnimationState.SetAnimation(0, "animation", false);
 
 
+                    diceSke2.gameObject.SetActive(true);
+                    diceSke2.Skeleton.SetSkin(_valueDice2.ToString());
+                    diceSke2.Skeleton.SetSlotsToSetupPose();
+                    diceSke2.AnimationState.ClearTracks();
+                    diceSke2.AnimationState.SetAnimation(0, "animation", false);
+                }
 
-                diceSke2.gameObject.SetActive(true);
-                diceSke2.Skeleton.SetSkin(_valueDice2.ToString());
-                diceSke2.Skeleton.SetSlotsToSetupPose();
-                diceSke2.AnimationState.ClearTracks();
-                diceSke2.AnimationState.SetAnimation(0, "animation", false);
 
 
                 yield return new WaitForSeconds(0.5f);
@@ -59,12 +61,14 @@ namespace HeroRoll.Battle
                 diceSke1.gameObject.SetActive(false);
                 diceSke2.gameObject.SetActive(false);
 
+                //// Affter Animation Done
                 yield return BoardController.instance.MoveMultipleStep(_valueDice1 + _valueDice2);
 
                 SurroundingController.instance.UpdateSurrounding(indexFocusStep);
-                _isAnimDiceAndMove = false;
                 BoardController.instance.SetTextMultiMoveStep(12);
+                BoardController.instance.AssignCharacter(indexFocusStep);
                 GameController.instace.CountDownTurnAttack();
+                _isAnimDiceAndMove = false;
             }
         }
 

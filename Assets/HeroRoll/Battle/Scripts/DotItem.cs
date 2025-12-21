@@ -5,16 +5,19 @@ namespace HeroRoll.Battle
 {
     public class DotItem : MonoBehaviour
     {
-        [Header("Var")]
+        [Header("Value")]
         public int _idDot;
         public TypeDot _typeDot;
         public TypeDotSub _typeDotSub;
 
-        [Header("Value")]
+
+        [Header("Var")]
         [SerializeField] GameObject _dotMain;
         [SerializeField] GameObject _dotSub;
         [SerializeField] GameObject _backgroundDotMain;
         [SerializeField] GameObject _backgroundDotSub;
+        [SerializeField] List<GameObject> _lsItemDotMain;
+        [SerializeField] List<GameObject> _lsItemDotSub;
 
 
         #region Function

@@ -86,9 +86,10 @@ namespace HeroRoll.Battle
         }
 
         //// Character
-        public void AssignCharacter()
+        public void AssignCharacter(int index)
         {
-
+            DotItem dotItem = GetDotItem(index);
+            _characterController._dotItemStay = dotItem;
         }
 
 
@@ -100,7 +101,10 @@ namespace HeroRoll.Battle
             int indexFocus = (indexNextMove + numberStep - 1) % _lsTextMoveStep.Count;
             return indexFocus;
         }
-        // public DotItem
+        public DotItem GetDotItem(int index)
+        {
+            return _dotItems[index];
+        }
         // public bool 
         #endregion
 

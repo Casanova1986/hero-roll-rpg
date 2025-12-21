@@ -30,7 +30,7 @@ namespace HeroRoll
         }
         void Start()
         {
-            // Debug.Log(_dictGoundSlotSurrounding.Count);
+            // Debug.Log(_dictGroundSlotSurrounding.Count);
             // Debug.Log(_dictItemSlotSubAround.Count);
 
         }

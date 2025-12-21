@@ -1,15 +1,10 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
 namespace HeroRoll.Battle
 {
-    public enum StatePlayerStay
-    {
-        Start = 0,
-        Buff = 1,
-        Debuff = 2,
-        Attack = 3
-    }
+
     public class CharacterController : MonoBehaviour
     {
         [Header("Var")]
@@ -17,8 +12,13 @@ namespace HeroRoll.Battle
 
 
         [Header("Value")]
-        public StatePlayerStay _statePlayerStay;
-
+        public DotItem _dotItemStay;
+        public CharacterInfo _characterInfo = new CharacterInfo
+        {
+            hp = 30,
+            def = 0,
+            atk = 10
+        };
 
 
 
@@ -41,5 +41,13 @@ namespace HeroRoll.Battle
             );
         }
         #endregion
+    }
+
+    [Serializable]
+    public class CharacterInfo
+    {
+        public int hp;
+        public int def;
+        public int atk;
     }
 }
