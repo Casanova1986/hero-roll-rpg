@@ -1,0 +1,510 @@
+
+Mons_menghuai.png
+size: 1777,1777
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Mons_menghuai-atk_00
+  rotate: false
+  xy: 230, 1062
+  size: 234, 168
+  orig: 455, 333
+  offset: 74, 61
+  index: -1
+Mons_menghuai-atk_02
+  rotate: false
+  xy: 737, 1423
+  size: 229, 166
+  orig: 455, 333
+  offset: 71, 61
+  index: -1
+Mons_menghuai-atk_04
+  rotate: true
+  xy: 371, 251
+  size: 222, 169
+  orig: 455, 333
+  offset: 69, 61
+  index: -1
+Mons_menghuai-atk_06
+  rotate: true
+  xy: 864, 858
+  size: 214, 173
+  orig: 455, 333
+  offset: 68, 61
+  index: -1
+Mons_menghuai-atk_08
+  rotate: false
+  xy: 1046, 643
+  size: 203, 173
+  orig: 455, 333
+  offset: 71, 61
+  index: -1
+Mons_menghuai-atk_10
+  rotate: false
+  xy: 875, 260
+  size: 194, 167
+  orig: 455, 333
+  offset: 71, 61
+  index: -1
+Mons_menghuai-atk_12
+  rotate: false
+  xy: 1071, 273
+  size: 191, 160
+  orig: 455, 333
+  offset: 66, 61
+  index: -1
+Mons_menghuai-atk_14
+  rotate: true
+  xy: 1252, 632
+  size: 184, 156
+  orig: 455, 333
+  offset: 74, 61
+  index: -1
+Mons_menghuai-atk_16
+  rotate: true
+  xy: 697, 884
+  size: 188, 165
+  orig: 455, 333
+  offset: 95, 61
+  index: -1
+Mons_menghuai-atk_18
+  rotate: false
+  xy: 2, 1575
+  size: 276, 200
+  orig: 455, 333
+  offset: 99, 58
+  index: -1
+Mons_menghuai-atk_20
+  rotate: false
+  xy: 2, 1375
+  size: 252, 198
+  orig: 455, 333
+  offset: 163, 66
+  index: -1
+Mons_menghuai-atk_22
+  rotate: false
+  xy: 512, 1582
+  size: 223, 193
+  orig: 455, 333
+  offset: 166, 83
+  index: -1
+Mons_menghuai-atk_24
+  rotate: false
+  xy: 737, 1248
+  size: 232, 173
+  orig: 455, 333
+  offset: 169, 76
+  index: -1
+Mons_menghuai-atk_26
+  rotate: true
+  xy: 2, 3
+  size: 243, 167
+  orig: 455, 333
+  offset: 170, 62
+  index: -1
+Mons_menghuai-atk_28
+  rotate: false
+  xy: 1207, 1619
+  size: 251, 156
+  orig: 455, 333
+  offset: 171, 61
+  index: -1
+Mons_menghuai-atk_30
+  rotate: false
+  xy: 1460, 1625
+  size: 250, 150
+  orig: 455, 333
+  offset: 174, 61
+  index: -1
+Mons_menghuai-atk_32
+  rotate: true
+  xy: 171, 3
+  size: 243, 154
+  orig: 455, 333
+  offset: 176, 61
+  index: -1
+Mons_menghuai-atk_34
+  rotate: false
+  xy: 1207, 1466
+  size: 242, 151
+  orig: 455, 333
+  offset: 179, 61
+  index: -1
+Mons_menghuai-atk_36
+  rotate: false
+  xy: 1207, 1308
+  size: 240, 156
+  orig: 455, 333
+  offset: 181, 60
+  index: -1
+Mons_menghuai-atk_38
+  rotate: false
+  xy: 256, 1232
+  size: 236, 159
+  orig: 455, 333
+  offset: 181, 61
+  index: -1
+Mons_menghuai-atk_40
+  rotate: false
+  xy: 1206, 982
+  size: 232, 165
+  orig: 455, 333
+  offset: 178, 61
+  index: -1
+Mons_menghuai-atk_42
+  rotate: false
+  xy: 466, 1045
+  size: 229, 169
+  orig: 455, 333
+  offset: 172, 61
+  index: -1
+Mons_menghuai-atk_44
+  rotate: false
+  xy: 203, 711
+  size: 231, 179
+  orig: 455, 333
+  offset: 165, 61
+  index: -1
+Mons_menghuai-atk_46
+  rotate: false
+  xy: 1442, 1105
+  size: 231, 172
+  orig: 455, 333
+  offset: 158, 61
+  index: -1
+Mons_menghuai-atk_48
+  rotate: false
+  xy: 445, 884
+  size: 229, 159
+  orig: 455, 333
+  offset: 153, 62
+  index: -1
+Mons_menghuai-atk_50
+  rotate: true
+  xy: 1039, 868
+  size: 222, 161
+  orig: 455, 333
+  offset: 148, 62
+  index: -1
+Mons_menghuai-atk_52
+  rotate: false
+  xy: 1202, 818
+  size: 221, 162
+  orig: 455, 333
+  offset: 136, 62
+  index: -1
+Mons_menghuai-atk_54
+  rotate: true
+  xy: 707, 258
+  size: 222, 166
+  orig: 455, 333
+  offset: 122, 61
+  index: -1
+Mons_menghuai-atk_56
+  rotate: true
+  xy: 542, 251
+  size: 227, 163
+  orig: 455, 333
+  offset: 105, 61
+  index: -1
+Mons_menghuai-atk_58
+  rotate: false
+  xy: 1440, 938
+  size: 231, 165
+  orig: 455, 333
+  offset: 89, 61
+  index: -1
+Mons_menghuai-death_00
+  rotate: false
+  xy: 209, 892
+  size: 234, 168
+  orig: 522, 366
+  offset: 284, 94
+  index: -1
+Mons_menghuai-death_03
+  rotate: false
+  xy: 1458, 349
+  size: 204, 194
+  orig: 522, 366
+  offset: 244, 104
+  index: -1
+Mons_menghuai-death_06
+  rotate: false
+  xy: 194, 475
+  size: 181, 226
+  orig: 522, 366
+  offset: 238, 108
+  index: -1
+Mons_menghuai-death_09
+  rotate: false
+  xy: 1458, 545
+  size: 201, 205
+  orig: 522, 366
+  offset: 154, 151
+  index: -1
+Mons_menghuai-death_12
+  rotate: false
+  xy: 280, 1575
+  size: 230, 200
+  orig: 522, 366
+  offset: 110, 162
+  index: -1
+Mons_menghuai-death_15
+  rotate: false
+  xy: 2, 1158
+  size: 226, 215
+  orig: 522, 366
+  offset: 77, 84
+  index: -1
+Mons_menghuai-death_18
+  rotate: false
+  xy: 256, 1393
+  size: 238, 180
+  orig: 522, 366
+  offset: 29, 16
+  index: -1
+Mons_menghuai-death_21
+  rotate: true
+  xy: 327, 2
+  size: 244, 130
+  orig: 522, 366
+  offset: 4, 51
+  index: -1
+Mons_menghuai-death_24
+  rotate: false
+  xy: 968, 1435
+  size: 237, 164
+  orig: 522, 366
+  offset: 14, 8
+  index: -1
+Mons_menghuai-death_27
+  rotate: true
+  xy: 377, 475
+  size: 234, 157
+  orig: 522, 366
+  offset: 14, 4
+  index: -1
+Mons_menghuai-death_30
+  rotate: false
+  xy: 1207, 1149
+  size: 233, 157
+  orig: 522, 366
+  offset: 14, 3
+  index: -1
+Mons_menghuai-move_00
+  rotate: true
+  xy: 536, 480
+  size: 229, 159
+  orig: 243, 234
+  offset: 7, 3
+  index: -1
+Mons_menghuai-move_02
+  rotate: false
+  xy: 968, 1601
+  size: 237, 174
+  orig: 243, 234
+  offset: 2, 2
+  index: -1
+Mons_menghuai-move_04
+  rotate: true
+  xy: 2, 924
+  size: 232, 205
+  orig: 243, 234
+  offset: 3, 2
+  index: -1
+Mons_menghuai-move_06
+  rotate: true
+  xy: 2, 703
+  size: 219, 199
+  orig: 243, 234
+  offset: 6, 30
+  index: -1
+Mons_menghuai-move_08
+  rotate: true
+  xy: 1047, 435
+  size: 206, 203
+  orig: 243, 234
+  offset: 16, 13
+  index: -1
+Mons_menghuai-move_10
+  rotate: false
+  xy: 1252, 435
+  size: 204, 195
+  orig: 243, 234
+  offset: 17, 12
+  index: -1
+Mons_menghuai-move_12
+  rotate: false
+  xy: 1425, 752
+  size: 218, 184
+  orig: 243, 234
+  offset: 6, 8
+  index: -1
+Mons_menghuai-move_14
+  rotate: true
+  xy: 629, 20
+  size: 229, 174
+  orig: 243, 234
+  offset: 1, 4
+  index: -1
+Mons_menghuai-stun_00
+  rotate: true
+  xy: 805, 42
+  size: 214, 170
+  orig: 223, 191
+  offset: 2, 5
+  index: -1
+Mons_menghuai-stun_05
+  rotate: false
+  xy: 436, 711
+  size: 212, 171
+  orig: 223, 191
+  offset: 2, 5
+  index: -1
+Mons_menghuai-stun_10
+  rotate: true
+  xy: 977, 51
+  size: 207, 173
+  orig: 223, 191
+  offset: 4, 5
+  index: -1
+Mons_menghuai-stun_15
+  rotate: true
+  xy: 1532, 145
+  size: 202, 176
+  orig: 223, 191
+  offset: 7, 5
+  index: -1
+Mons_menghuai-stun_20
+  rotate: false
+  xy: 536, 1400
+  size: 199, 180
+  orig: 223, 191
+  offset: 11, 5
+  index: -1
+Mons_menghuai-stun_25
+  rotate: false
+  xy: 536, 1216
+  size: 198, 182
+  orig: 223, 191
+  offset: 14, 5
+  index: -1
+Mons_menghuai-stun_30
+  rotate: false
+  xy: 1328, 169
+  size: 202, 178
+  orig: 223, 191
+  offset: 14, 5
+  index: -1
+Mons_menghuai-stun_35
+  rotate: true
+  xy: 1152, 65
+  size: 206, 174
+  orig: 223, 191
+  offset: 13, 5
+  index: -1
+Mons_menghuai-stun_40
+  rotate: false
+  xy: 650, 711
+  size: 210, 171
+  orig: 223, 191
+  offset: 9, 5
+  index: -1
+Mons_menghuai-stun_45
+  rotate: true
+  xy: 875, 429
+  size: 212, 170
+  orig: 223, 191
+  offset: 6, 5
+  index: -1
+Mons_menghuai-stun_50
+  rotate: true
+  xy: 875, 643
+  size: 213, 169
+  orig: 223, 191
+  offset: 3, 5
+  index: -1
+Mons_menghuai-wait_00
+  rotate: true
+  xy: 459, 15
+  size: 234, 168
+  orig: 241, 197
+  offset: 3, 3
+  index: -1
+Mons_menghuai-wait_05
+  rotate: false
+  xy: 1460, 1452
+  size: 232, 171
+  orig: 241, 197
+  offset: 2, 3
+  index: -1
+Mons_menghuai-wait_10
+  rotate: false
+  xy: 737, 1591
+  size: 229, 184
+  orig: 241, 197
+  offset: 1, 3
+  index: -1
+Mons_menghuai-wait_15
+  rotate: true
+  xy: 2, 475
+  size: 226, 190
+  orig: 241, 197
+  offset: 2, 3
+  index: -1
+Mons_menghuai-wait_20
+  rotate: true
+  xy: 2, 248
+  size: 225, 187
+  orig: 241, 197
+  offset: 3, 3
+  index: -1
+Mons_menghuai-wait_25
+  rotate: true
+  xy: 191, 248
+  size: 225, 178
+  orig: 241, 197
+  offset: 4, 3
+  index: -1
+Mons_menghuai-wait_30
+  rotate: true
+  xy: 697, 482
+  size: 227, 176
+  orig: 241, 197
+  offset: 5, 3
+  index: -1
+Mons_menghuai-wait_35
+  rotate: false
+  xy: 736, 1074
+  size: 229, 172
+  orig: 241, 197
+  offset: 6, 3
+  index: -1
+Mons_menghuai-wait_40
+  rotate: false
+  xy: 1449, 1279
+  size: 232, 171
+  orig: 241, 197
+  offset: 5, 3
+  index: -1
+Mons_menghuai-wait_45
+  rotate: false
+  xy: 971, 1092
+  size: 233, 170
+  orig: 241, 197
+  offset: 4, 3
+  index: -1
+Mons_menghuai-wait_50
+  rotate: false
+  xy: 971, 1264
+  size: 234, 169
+  orig: 241, 197
+  offset: 3, 3
+  index: -1
+colliderAtk
+  rotate: false
+  xy: 371, 248
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,160 @@
+
+Hero_gange_skill4.png
+size: 2001,2001
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+colliderAtk
+  rotate: false
+  xy: 1551, 1737
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+effect/baodian_2
+  rotate: true
+  xy: 885, 259
+  size: 545, 310
+  orig: 625, 335
+  offset: 40, 0
+  index: -1
+effect/bd_00
+  rotate: true
+  xy: 1566, 1404
+  size: 595, 410
+  orig: 875, 621
+  offset: 118, 46
+  index: -1
+effect/bd_01
+  rotate: true
+  xy: 1551, 827
+  size: 575, 400
+  orig: 875, 620
+  offset: 130, 45
+  index: -1
+effect/bd_02
+  rotate: false
+  xy: 2, 790
+  size: 680, 465
+  orig: 875, 620
+  offset: 80, 45
+  index: -1
+effect/bd_03
+  rotate: false
+  xy: 799, 1243
+  size: 750, 495
+  orig: 875, 620
+  offset: 50, 50
+  index: -1
+effect/bd_04
+  rotate: false
+  xy: 2, 1509
+  size: 795, 490
+  orig: 875, 620
+  offset: 30, 80
+  index: -1
+effect/bd_05
+  rotate: false
+  xy: 1378, 83
+  size: 590, 275
+  orig: 875, 620
+  offset: 115, 105
+  index: -1
+effect/bd_06
+  rotate: false
+  xy: 1378, 540
+  size: 605, 285
+  orig: 875, 620
+  offset: 110, 100
+  index: -1
+effect/bd_08
+  rotate: true
+  xy: 588, 158
+  size: 630, 295
+  orig: 875, 620
+  offset: 100, 100
+  index: -1
+effect/bd_10
+  rotate: true
+  xy: 276, 138
+  size: 650, 310
+  orig: 875, 620
+  offset: 90, 100
+  index: -1
+effect/dadajian
+  rotate: false
+  xy: 2, 121
+  size: 272, 667
+  orig: 274, 692
+  offset: 1, 4
+  index: -1
+effect/dajian
+  rotate: true
+  xy: 276, 2
+  size: 134, 580
+  orig: 212, 618
+  offset: 39, 19
+  index: -1
+effect/dc_0
+  rotate: false
+  xy: 684, 1051
+  size: 85, 204
+  orig: 284, 833
+  offset: 14, 12
+  index: -1
+effect/dc_1
+  rotate: true
+  xy: 684, 806
+  size: 197, 468
+  orig: 284, 833
+  offset: 9, 10
+  index: -1
+effect/dc_2
+  rotate: true
+  xy: 771, 1005
+  size: 236, 680
+  orig: 284, 833
+  offset: 12, 14
+  index: -1
+effect/dc_3
+  rotate: true
+  xy: 2, 1257
+  size: 250, 740
+  orig: 284, 833
+  offset: 16, 18
+  index: -1
+effect/dc_4
+  rotate: true
+  xy: 799, 1740
+  size: 259, 765
+  orig: 284, 833
+  offset: 17, 33
+  index: -1
+effect/dc_5
+  rotate: true
+  xy: 1378, 360
+  size: 178, 592
+  orig: 284, 833
+  offset: 74, 116
+  index: -1
+effect/dc_6
+  rotate: true
+  xy: 858, 23
+  size: 133, 518
+  orig: 284, 833
+  offset: 100, 131
+  index: -1
+effect/dc_7
+  rotate: true
+  xy: 858, 23
+  size: 133, 518
+  orig: 284, 833
+  offset: 100, 131
+  index: -1
+effect/tuowei
+  rotate: true
+  xy: 1154, 828
+  size: 175, 250
+  orig: 255, 300
+  offset: 50, 15
+  index: -1

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: Mons_menghuai_2_Atlas
+  m_EditorClassIdentifier: spine-unity::Spine.Unity.SpineAtlasAsset
+  atlasFile: {fileID: 4900000, guid: 056362957b00b284cab3fd94f5734d68, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 0d140c75035dc6141815ec4a29e59ce6, type: 2}
+  - {fileID: 2100000, guid: ea05bd3cf1cf1ba4b964af011013bbc5, type: 2}
+  - {fileID: 2100000, guid: 5aa96a0132cb9a54b896d798d4569981, type: 2}

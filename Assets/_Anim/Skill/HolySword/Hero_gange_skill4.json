@@ -1,0 +1,591 @@
+{
+    "skeleton": {
+        "hash": "UIyS++HwFV032e60eF1b7VAkGF4",
+        "spine": "3.8.99",
+        "images": "./images/",
+        "audio": ""
+    },
+    "bones": [
+        {
+            "name": "root"
+        },
+        {
+            "name": "X",
+            "parent": "root"
+        },
+        {
+            "name": "Y",
+            "parent": "X"
+        },
+        {
+            "name": "dajian",
+            "parent": "Y"
+        },
+        {
+            "name": "jian",
+            "parent": "dajian"
+        },
+        {
+            "name": "tuowei",
+            "parent": "dajian"
+        },
+        {
+            "name": "skill_1",
+            "parent": "Y"
+        },
+        {
+            "name": "baodian_2",
+            "parent": "skill_1"
+        },
+        {
+            "name": "colliderAtk",
+            "parent": "root"
+        },
+        {
+            "name": "jian2",
+            "parent": "dajian"
+        },
+        {
+            "name": "dc",
+            "parent": "Y"
+        },
+        {
+            "name": "bd",
+            "parent": "skill_1"
+        }
+    ],
+    "slots": [
+        {
+            "name": "effect/dajian",
+            "bone": "jian"
+        },
+        {
+            "name": "effect/dajian2",
+            "bone": "jian2"
+        },
+        {
+            "name": "effect/tuowei",
+            "bone": "tuowei"
+        },
+        {
+            "name": "effect/baodian_2",
+            "bone": "baodian_2"
+        },
+        {
+            "name": "colliderAtk",
+            "bone": "colliderAtk",
+            "color": "ff00009a"
+        },
+        {
+            "name": "effect/dc_0",
+            "bone": "dc"
+        },
+        {
+            "name": "effect/bd_00",
+            "bone": "bd"
+        }
+    ],
+    "skins": [
+        {
+            "name": "default",
+            "attachments": {
+                "colliderAtk": {
+                    "colliderAtk": {
+                        "width": 1,
+                        "height": 1
+                    }
+                },
+                "effect/baodian_2": {
+                    "effect/baodian_2": {
+                        "y": 123.42,
+                        "width": 625,
+                        "height": 335
+                    }
+                },
+                "effect/bd_00": {
+                    "effect/bd_00": {
+                        "x": 4.49,
+                        "y": 190.16,
+                        "width": 875,
+                        "height": 621
+                    },
+                    "effect/bd_01": {
+                        "x": 4.49,
+                        "y": 190.16,
+                        "width": 875,
+                        "height": 620
+                    },
+                    "effect/bd_02": {
+                        "x": 4.49,
+                        "y": 190.16,
+                        "width": 875,
+                        "height": 620
+                    },
+                    "effect/bd_03": {
+                        "x": 4.49,
+                        "y": 190.16,
+                        "width": 875,
+                        "height": 620
+                    },
+                    "effect/bd_04": {
+                        "x": 4.49,
+                        "y": 190.16,
+                        "width": 875,
+                        "height": 620
+                    },
+                    "effect/bd_05": {
+                        "x": 4.49,
+                        "y": 190.16,
+                        "width": 875,
+                        "height": 620
+                    },
+                    "effect/bd_06": {
+                        "x": 4.49,
+                        "y": 190.16,
+                        "width": 875,
+                        "height": 620
+                    },
+                    "effect/bd_08": {
+                        "x": 4.49,
+                        "y": 190.16,
+                        "width": 875,
+                        "height": 620
+                    },
+                    "effect/bd_10": {
+                        "x": 4.49,
+                        "y": 190.16,
+                        "width": 875,
+                        "height": 620
+                    }
+                },
+                "effect/dajian": {
+                    "effect/dajian": {
+                        "y": 293.05,
+                        "width": 212,
+                        "height": 618
+                    }
+                },
+                "effect/dajian2": {
+                    "effect/dadajian": {
+                        "y": 293.05,
+                        "width": 274,
+                        "height": 692
+                    }
+                },
+                "effect/dc_0": {
+                    "effect/dc_0": {
+                        "width": 284,
+                        "height": 833
+                    },
+                    "effect/dc_1": {
+                        "width": 284,
+                        "height": 833
+                    },
+                    "effect/dc_2": {
+                        "width": 284,
+                        "height": 833
+                    },
+                    "effect/dc_3": {
+                        "width": 284,
+                        "height": 833
+                    },
+                    "effect/dc_4": {
+                        "width": 284,
+                        "height": 833
+                    },
+                    "effect/dc_5": {
+                        "width": 284,
+                        "height": 833
+                    },
+                    "effect/dc_6": {
+                        "width": 284,
+                        "height": 833
+                    },
+                    "effect/dc_7": {
+                        "width": 284,
+                        "height": 833
+                    }
+                },
+                "effect/tuowei": {
+                    "effect/tuowei": {
+                        "y": 84.74,
+                        "width": 255,
+                        "height": 300
+                    }
+                }
+            }
+        }
+    ],
+    "events": {
+        "chufa": {}
+    },
+    "animations": {
+        "skill4": {
+            "slots": {
+                "colliderAtk": {
+                    "attachment": [
+                        {
+                            "name": null
+                        }
+                    ]
+                },
+                "effect/baodian_2": {
+                    "color": [
+                        {
+                            "color": "ffffff00",
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.1333,
+                            "color": "ffffffff"
+                        },
+                        {
+                            "time": 0.3667,
+                            "color": "ffffff00"
+                        }
+                    ],
+                    "attachment": [
+                        {
+                            "time": 0.0667,
+                            "name": "effect/baodian_2"
+                        }
+                    ]
+                },
+                "effect/bd_00": {
+                    "attachment": [
+                        {
+                            "time": 0.0667,
+                            "name": "effect/bd_00"
+                        },
+                        {
+                            "time": 0.1,
+                            "name": "effect/bd_01"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "effect/bd_02"
+                        },
+                        {
+                            "time": 0.1667,
+                            "name": "effect/bd_03"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "effect/bd_04"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "effect/bd_06"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "effect/bd_08"
+                        },
+                        {
+                            "time": 0.3667,
+                            "name": "effect/bd_10"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": null
+                        }
+                    ]
+                },
+                "effect/dajian": {
+                    "color": [
+                        {
+                            "color": "ffffff00",
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0333,
+                            "color": "ffffff8f"
+                        },
+                        {
+                            "time": 0.0667,
+                            "color": "ffffffff",
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.4333,
+                            "color": "ffffffff",
+                            "curve": 0.25,
+                            "c3": 0.775,
+                            "c4": 0.69
+                        },
+                        {
+                            "time": 0.5333,
+                            "color": "ffffff00"
+                        }
+                    ],
+                    "attachment": [
+                        {
+                            "name": "effect/dajian"
+                        },
+                        {
+                            "time": 0.0333,
+                            "name": "effect/dajian"
+                        }
+                    ]
+                },
+                "effect/tuowei": {
+                    "color": [
+                        {
+                            "color": "ffffff00",
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0333,
+                            "color": "ffffffff",
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0667,
+                            "color": "ffffffff",
+                            "curve": 0.25,
+                            "c3": 0.76,
+                            "c4": 0.7
+                        },
+                        {
+                            "time": 0.2333,
+                            "color": "ffffff00"
+                        }
+                    ],
+                    "attachment": [
+                        {
+                            "name": "effect/tuowei"
+                        },
+                        {
+                            "time": 0.0333,
+                            "name": "effect/tuowei"
+                        }
+                    ]
+                }
+            },
+            "bones": {
+                "jian": {
+                    "rotate": [
+                        {
+                            "time": 0.0333,
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0667
+                        },
+                        {
+                            "time": 0.1,
+                            "angle": -1.98
+                        },
+                        {
+                            "time": 0.1333,
+                            "angle": 1.97
+                        },
+                        {
+                            "time": 0.1667,
+                            "angle": -0.69
+                        },
+                        {
+                            "time": 0.2
+                        }
+                    ],
+                    "translate": [
+                        {
+                            "time": 0.0333
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "x": 0.89,
+                            "y": 0.89,
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0333,
+                            "x": 0.89,
+                            "y": 0.89
+                        }
+                    ]
+                },
+                "X": {
+                    "translate": [
+                        {
+                            "x": 699.72
+                        }
+                    ]
+                },
+                "dajian": {
+                    "rotate": [
+                        {
+                            "angle": 51.26,
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0333,
+                            "angle": 51.26
+                        }
+                    ],
+                    "translate": [
+                        {
+                            "x": 51.39,
+                            "y": -41.39,
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0333,
+                            "x": -374.82,
+                            "y": 321.17,
+                            "curve": 0.25,
+                            "c3": 0.74,
+                            "c4": 0.65
+                        },
+                        {
+                            "time": 0.0667,
+                            "x": 51.39,
+                            "y": -41.39
+                        }
+                    ]
+                },
+                "tuowei": {
+                    "rotate": [
+                        {
+                            "time": 0.2333
+                        }
+                    ],
+                    "translate": [
+                        {
+                            "x": -4.41,
+                            "y": 78.8,
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0333,
+                            "x": -4.41,
+                            "y": 78.8,
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.2333,
+                            "x": -4.41,
+                            "y": 78.8
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "x": 1.446,
+                            "y": 2.726,
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0333,
+                            "x": 1.323,
+                            "y": 3.962
+                        },
+                        {
+                            "time": 0.0667,
+                            "x": 1.487,
+                            "y": 7.128,
+                            "curve": 0.25,
+                            "c3": 0.76,
+                            "c4": 0.7
+                        },
+                        {
+                            "time": 0.2333,
+                            "x": 1.446,
+                            "y": 2.726
+                        }
+                    ]
+                },
+                "baodian_2": {
+                    "scale": [
+                        {
+                            "x": 1.04,
+                            "y": 1.04,
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0667,
+                            "x": 0.684,
+                            "y": 0.684
+                        },
+                        {
+                            "time": 0.1333,
+                            "x": 0.876,
+                            "y": 0.876
+                        },
+                        {
+                            "time": 0.3667,
+                            "x": 1.04,
+                            "y": 1.04
+                        }
+                    ]
+                },
+                "skill_1": {
+                    "translate": [
+                        {
+                            "x": -24.19,
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0667,
+                            "x": -24.19
+                        }
+                    ]
+                },
+                "colliderAtk": {
+                    "translate": [
+                        {
+                            "time": 0.0667,
+                            "x": -11.45,
+                            "y": 164.09
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.0667,
+                            "x": 758.103,
+                            "y": 332.783
+                        }
+                    ],
+                    "shear": [
+                        {
+                            "time": 0.0667,
+                            "y": -1.2
+                        }
+                    ]
+                },
+                "Y": {
+                    "translate": [
+                        {
+                            "x": -671.02,
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0333,
+                            "x": -671.02
+                        }
+                    ]
+                },
+                "bd": {
+                    "translate": [
+                        {
+                            "x": 8.82,
+                            "y": -11.02,
+                            "curve": "stepped"
+                        },
+                        {
+                            "time": 0.0667,
+                            "x": 8.82,
+                            "y": -11.02
+                        }
+                    ]
+                }
+            },
+            "events": [
+                {
+                    "time": 0.1,
+                    "name": "chufa"
+                }
+            ]
+        }
+    }
+}

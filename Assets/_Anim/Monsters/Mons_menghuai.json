@@ -1,0 +1,767 @@
+{
+    "skeleton": {
+        "hash": "DFkLh16u0sEkAMPUBi2AdKe5kxU",
+        "spine": "3.8.99",
+        "images": "./images/png/",
+        "audio": ""
+    },
+    "bones": [
+        {
+            "name": "root"
+        },
+        {
+            "name": "colliderAtk",
+            "parent": "root"
+        },
+        {
+            "name": "atk",
+            "parent": "root",
+            "x": 33.48,
+            "y": 101.81
+        },
+        {
+            "name": "death",
+            "parent": "root",
+            "x": -143.03,
+            "y": 84.99
+        },
+        {
+            "name": "move",
+            "parent": "root",
+            "x": 13.29,
+            "y": 110.31
+        },
+        {
+            "name": "stun",
+            "parent": "root",
+            "x": -10.81,
+            "y": 87.14
+        },
+        {
+            "name": "wait",
+            "parent": "root",
+            "x": -23.84,
+            "y": 198.93
+        }
+    ],
+    "slots": [
+        {
+            "name": "colliderAtk",
+            "bone": "colliderAtk",
+            "color": "ff00007d"
+        },
+        {
+            "name": "Mons_menghuai-atk_00",
+            "bone": "atk"
+        },
+        {
+            "name": "Mons_menghuai-death_00",
+            "bone": "death"
+        },
+        {
+            "name": "Mons_menghuai-move_00",
+            "bone": "move"
+        },
+        {
+            "name": "Mons_menghuai-stun_00",
+            "bone": "stun"
+        },
+        {
+            "name": "Mons_menghuai-wait_00",
+            "bone": "wait"
+        }
+    ],
+    "skins": [
+        {
+            "name": "default",
+            "attachments": {
+                "Mons_menghuai-atk_00": {
+                    "Mons_menghuai-atk_00": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_02": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_04": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_06": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_08": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_10": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_12": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_14": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_16": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_18": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_20": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_22": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_24": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_26": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_28": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_30": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_32": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_34": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_36": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_38": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_40": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_42": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_44": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_46": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_48": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_50": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_52": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_54": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_56": {
+                        "width": 455,
+                        "height": 333
+                    },
+                    "Mons_menghuai-atk_58": {
+                        "width": 455,
+                        "height": 333
+                    }
+                },
+                "Mons_menghuai-death_00": {
+                    "Mons_menghuai-death_00": {
+                        "width": 522,
+                        "height": 366
+                    },
+                    "Mons_menghuai-death_03": {
+                        "width": 522,
+                        "height": 366
+                    },
+                    "Mons_menghuai-death_06": {
+                        "width": 522,
+                        "height": 366
+                    },
+                    "Mons_menghuai-death_09": {
+                        "width": 522,
+                        "height": 366
+                    },
+                    "Mons_menghuai-death_12": {
+                        "width": 522,
+                        "height": 366
+                    },
+                    "Mons_menghuai-death_15": {
+                        "width": 522,
+                        "height": 366
+                    },
+                    "Mons_menghuai-death_18": {
+                        "width": 522,
+                        "height": 366
+                    },
+                    "Mons_menghuai-death_21": {
+                        "width": 522,
+                        "height": 366
+                    },
+                    "Mons_menghuai-death_24": {
+                        "width": 522,
+                        "height": 366
+                    },
+                    "Mons_menghuai-death_27": {
+                        "width": 522,
+                        "height": 366
+                    },
+                    "Mons_menghuai-death_30": {
+                        "width": 522,
+                        "height": 366
+                    }
+                },
+                "Mons_menghuai-move_00": {
+                    "Mons_menghuai-move_00": {
+                        "width": 243,
+                        "height": 234
+                    },
+                    "Mons_menghuai-move_02": {
+                        "width": 243,
+                        "height": 234
+                    },
+                    "Mons_menghuai-move_04": {
+                        "width": 243,
+                        "height": 234
+                    },
+                    "Mons_menghuai-move_06": {
+                        "width": 243,
+                        "height": 234
+                    },
+                    "Mons_menghuai-move_08": {
+                        "width": 243,
+                        "height": 234
+                    },
+                    "Mons_menghuai-move_10": {
+                        "width": 243,
+                        "height": 234
+                    },
+                    "Mons_menghuai-move_12": {
+                        "width": 243,
+                        "height": 234
+                    },
+                    "Mons_menghuai-move_14": {
+                        "width": 243,
+                        "height": 234
+                    }
+                },
+                "Mons_menghuai-stun_00": {
+                    "Mons_menghuai-stun_00": {
+                        "width": 223,
+                        "height": 191
+                    },
+                    "Mons_menghuai-stun_05": {
+                        "width": 223,
+                        "height": 191
+                    },
+                    "Mons_menghuai-stun_10": {
+                        "width": 223,
+                        "height": 191
+                    },
+                    "Mons_menghuai-stun_15": {
+                        "width": 223,
+                        "height": 191
+                    },
+                    "Mons_menghuai-stun_20": {
+                        "width": 223,
+                        "height": 191
+                    },
+                    "Mons_menghuai-stun_25": {
+                        "width": 223,
+                        "height": 191
+                    },
+                    "Mons_menghuai-stun_30": {
+                        "width": 223,
+                        "height": 191
+                    },
+                    "Mons_menghuai-stun_35": {
+                        "width": 223,
+                        "height": 191
+                    },
+                    "Mons_menghuai-stun_40": {
+                        "width": 223,
+                        "height": 191
+                    },
+                    "Mons_menghuai-stun_45": {
+                        "width": 223,
+                        "height": 191
+                    },
+                    "Mons_menghuai-stun_50": {
+                        "width": 223,
+                        "height": 191
+                    }
+                },
+                "Mons_menghuai-wait_00": {
+                    "Mons_menghuai-wait_00": {
+                        "x": 21.04,
+                        "y": -106.91,
+                        "width": 241,
+                        "height": 197
+                    },
+                    "Mons_menghuai-wait_05": {
+                        "x": 21.04,
+                        "y": -106.91,
+                        "width": 241,
+                        "height": 197
+                    },
+                    "Mons_menghuai-wait_10": {
+                        "x": 21.04,
+                        "y": -106.91,
+                        "width": 241,
+                        "height": 197
+                    },
+                    "Mons_menghuai-wait_15": {
+                        "x": 21.04,
+                        "y": -106.91,
+                        "width": 241,
+                        "height": 197
+                    },
+                    "Mons_menghuai-wait_20": {
+                        "x": 21.04,
+                        "y": -106.91,
+                        "width": 241,
+                        "height": 197
+                    },
+                    "Mons_menghuai-wait_25": {
+                        "x": 21.04,
+                        "y": -106.91,
+                        "width": 241,
+                        "height": 197
+                    },
+                    "Mons_menghuai-wait_30": {
+                        "x": 21.04,
+                        "y": -106.91,
+                        "width": 241,
+                        "height": 197
+                    },
+                    "Mons_menghuai-wait_35": {
+                        "x": 21.04,
+                        "y": -106.91,
+                        "width": 241,
+                        "height": 197
+                    },
+                    "Mons_menghuai-wait_40": {
+                        "x": 21.04,
+                        "y": -106.91,
+                        "width": 241,
+                        "height": 197
+                    },
+                    "Mons_menghuai-wait_45": {
+                        "x": 21.04,
+                        "y": -106.91,
+                        "width": 241,
+                        "height": 197
+                    },
+                    "Mons_menghuai-wait_50": {
+                        "x": 21.04,
+                        "y": -106.91,
+                        "width": 241,
+                        "height": 197
+                    }
+                },
+                "colliderAtk": {
+                    "colliderAtk": {
+                        "width": 1,
+                        "height": 1
+                    }
+                }
+            }
+        }
+    ],
+    "events": {
+        "chufa": {}
+    },
+    "animations": {
+        "atk": {
+            "slots": {
+                "Mons_menghuai-atk_00": {
+                    "attachment": [
+                        {
+                            "name": "Mons_menghuai-atk_00"
+                        },
+                        {
+                            "time": 0.0667,
+                            "name": "Mons_menghuai-atk_02"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "Mons_menghuai-atk_04"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Mons_menghuai-atk_06"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Mons_menghuai-atk_08"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Mons_menghuai-atk_10"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Mons_menghuai-atk_12"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Mons_menghuai-atk_14"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Mons_menghuai-atk_16"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Mons_menghuai-atk_18"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Mons_menghuai-atk_20"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Mons_menghuai-atk_22"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Mons_menghuai-atk_24"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Mons_menghuai-atk_26"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Mons_menghuai-atk_28"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Mons_menghuai-atk_30"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "Mons_menghuai-atk_32"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "Mons_menghuai-atk_34"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "Mons_menghuai-atk_36"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "Mons_menghuai-atk_38"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Mons_menghuai-atk_40"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "Mons_menghuai-atk_42"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "Mons_menghuai-atk_44"
+                        },
+                        {
+                            "time": 1.5333,
+                            "name": "Mons_menghuai-atk_46"
+                        },
+                        {
+                            "time": 1.6,
+                            "name": "Mons_menghuai-atk_48"
+                        },
+                        {
+                            "time": 1.6667,
+                            "name": "Mons_menghuai-atk_50"
+                        },
+                        {
+                            "time": 1.7333,
+                            "name": "Mons_menghuai-atk_52"
+                        },
+                        {
+                            "time": 1.8,
+                            "name": "Mons_menghuai-atk_54"
+                        },
+                        {
+                            "time": 1.8667,
+                            "name": "Mons_menghuai-atk_56"
+                        },
+                        {
+                            "time": 1.9333,
+                            "name": "Mons_menghuai-atk_58"
+                        },
+                        {
+                            "time": 2,
+                            "name": "Mons_menghuai-atk_00"
+                        }
+                    ]
+                }
+            },
+            "bones": {
+                "colliderAtk": {
+                    "translate": [
+                        {
+                            "time": 0.5667,
+                            "x": 96.13,
+                            "y": 106.6
+                        }
+                    ],
+                    "scale": [
+                        {
+                            "time": 0.5667,
+                            "x": 264.07,
+                            "y": 228.281
+                        }
+                    ]
+                }
+            },
+            "events": [
+                {
+                    "time": 0.6333,
+                    "name": "chufa"
+                }
+            ]
+        },
+        "death": {
+            "slots": {
+                "Mons_menghuai-death_00": {
+                    "attachment": [
+                        {
+                            "name": "Mons_menghuai-death_00"
+                        },
+                        {
+                            "time": 0.1,
+                            "name": "Mons_menghuai-death_03"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Mons_menghuai-death_06"
+                        },
+                        {
+                            "time": 0.3,
+                            "name": "Mons_menghuai-death_09"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Mons_menghuai-death_12"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "Mons_menghuai-death_15"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Mons_menghuai-death_18"
+                        },
+                        {
+                            "time": 0.7,
+                            "name": "Mons_menghuai-death_21"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Mons_menghuai-death_24"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "Mons_menghuai-death_27"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Mons_menghuai-death_30"
+                        }
+                    ]
+                }
+            }
+        },
+        "move": {
+            "slots": {
+                "Mons_menghuai-move_00": {
+                    "attachment": [
+                        {
+                            "name": "Mons_menghuai-move_00"
+                        },
+                        {
+                            "time": 0.0667,
+                            "name": "Mons_menghuai-move_02"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "Mons_menghuai-move_04"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Mons_menghuai-move_06"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Mons_menghuai-move_08"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Mons_menghuai-move_10"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Mons_menghuai-move_12"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Mons_menghuai-move_14"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Mons_menghuai-move_00"
+                        }
+                    ]
+                }
+            }
+        },
+        "stun": {
+            "slots": {
+                "Mons_menghuai-stun_00": {
+                    "attachment": [
+                        {
+                            "name": "Mons_menghuai-stun_00"
+                        },
+                        {
+                            "time": 0.1667,
+                            "name": "Mons_menghuai-stun_05"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Mons_menghuai-stun_10"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "Mons_menghuai-stun_15"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Mons_menghuai-stun_20"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Mons_menghuai-stun_25"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Mons_menghuai-stun_30"
+                        },
+                        {
+                            "time": 1.1667,
+                            "name": "Mons_menghuai-stun_35"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Mons_menghuai-stun_40"
+                        },
+                        {
+                            "time": 1.5,
+                            "name": "Mons_menghuai-stun_45"
+                        },
+                        {
+                            "time": 1.6667,
+                            "name": "Mons_menghuai-stun_50"
+                        },
+                        {
+                            "time": 1.8333,
+                            "name": "Mons_menghuai-stun_00"
+                        }
+                    ]
+                }
+            }
+        },
+        "wait": {
+            "slots": {
+                "Mons_menghuai-wait_00": {
+                    "attachment": [
+                        {
+                            "name": "Mons_menghuai-wait_00"
+                        },
+                        {
+                            "time": 0.1667,
+                            "name": "Mons_menghuai-wait_05"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Mons_menghuai-wait_10"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "Mons_menghuai-wait_15"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Mons_menghuai-wait_20"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Mons_menghuai-wait_25"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Mons_menghuai-wait_30"
+                        },
+                        {
+                            "time": 1.1667,
+                            "name": "Mons_menghuai-wait_35"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "Mons_menghuai-wait_40"
+                        },
+                        {
+                            "time": 1.5,
+                            "name": "Mons_menghuai-wait_45"
+                        },
+                        {
+                            "time": 1.6667,
+                            "name": "Mons_menghuai-wait_50"
+                        },
+                        {
+                            "time": 1.8333,
+                            "name": "Mons_menghuai-wait_00"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
