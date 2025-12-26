@@ -5,7 +5,7 @@ using UnityEngine;
 namespace HeroRoll.Battle
 {
 
-    public class CharacterController : MonoBehaviour
+    public class CharacterMoveController : MonoBehaviour
     {
         [Header("Var")]
         [SerializeField] GameObject _characterIcon;
@@ -13,12 +13,6 @@ namespace HeroRoll.Battle
 
         [Header("Value")]
         public DotItem _dotItemStay;
-        public CharacterInfo _characterInfo = new CharacterInfo
-        {
-            hp = 30,
-            def = 0,
-            atk = 10
-        };
 
 
 
@@ -41,13 +35,5 @@ namespace HeroRoll.Battle
             );
         }
         #endregion
-    }
-
-    [Serializable]
-    public class CharacterInfo
-    {
-        public int hp;
-        public int def;
-        public int atk;
     }
 }

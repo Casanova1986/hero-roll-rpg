@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,19 +9,23 @@ namespace HeroRoll.Battle
         [Header("Value")]
         public int _idDot;
         public TypeDot _typeDot;
-        public TypeDotSub _typeDotSub;
+        public InfoDotItem _infoDotItem;
+
 
 
         [Header("Var")]
+        //// Dot Main
         [SerializeField] GameObject _dotMain;
-        [SerializeField] GameObject _dotSub;
         [SerializeField] GameObject _backgroundDotMain;
-        [SerializeField] GameObject _backgroundDotSub;
         [SerializeField] List<GameObject> _lsItemDotMain;
+
+        //// Dot Sub
+        [SerializeField] GameObject _dotSub;
+        [SerializeField] GameObject _backgroundDotSub;
         [SerializeField] List<GameObject> _lsItemDotSub;
 
 
-        #region Function
+        #region Setter
         public void SetBackgroundDot(int index = 0, bool isRandom = true)
         {
             switch (_typeDot)
@@ -50,7 +55,7 @@ namespace HeroRoll.Battle
                     {
                         Sprite sprite = NTHiep.Tool.RandomUtil.Pick(AssetLoader.instance._dictDotSubInGame.ToList());
                         TypeDotSub key = AssetLoader.instance._dictDotSubInGame.GetKey(sprite);
-                        _typeDotSub = key;
+                        _infoDotItem._typeDotSub = key;
 
 
                         _backgroundDotSub.GetComponent<SpriteRenderer>().sprite = sprite;
@@ -59,7 +64,7 @@ namespace HeroRoll.Battle
                     {
                         Sprite sprite = AssetLoader.instance._dictDotSubInGame.Get((TypeDotSub)index);
                         TypeDotSub key = (TypeDotSub)index;
-                        _typeDotSub = key;
+                        _infoDotItem._typeDotSub = key;
 
 
                         _backgroundDotSub.GetComponent<SpriteRenderer>().sprite = sprite;
@@ -71,8 +76,55 @@ namespace HeroRoll.Battle
                     break;
             }
         }
+        public void AddRandom()
+        {
+
+        }
+
+        public void SetUpItemDotMain()
+        {
+            switch (_infoDotItem._typeDotMain)
+            {
+                case TypeDotMain.Buff:
+
+                    break;
+            }
+        }
+
+        public void SetUpItemDotSub()
+        {
+            switch (_infoDotItem._typeDotSub)
+            {
+                case TypeDotSub.Buff:
+
+                    break;
+
+                case TypeDotSub.DeBuff:
+
+                    break;
+
+                case TypeDotSub.AttackEnemy:
+                    for (int i = 0; i < _infoDotItem.numberEnemy; i++)
+                    {
+                        _lsItemDotSub[i].SetActive(true);
+                    }
+
+                    break;
+
+                default:
+
+                    break;
+            }
+        }
 
         #endregion
+    }
+    [Serializable]
+    public class InfoDotItem
+    {
+        public TypeDotMain _typeDotMain;
+        public TypeDotSub _typeDotSub;
+        public int numberEnemy;
     }
     public enum TypeDot
     {
@@ -86,6 +138,11 @@ namespace HeroRoll.Battle
         Buff = 1,
         DeBuff = 2,
         AttackEnemy = 3,
-
+    }
+    public enum TypeDotMain
+    {
+        Empty = 0,
+        Buff = 1,
+        DeBuff = 2
     }
 }

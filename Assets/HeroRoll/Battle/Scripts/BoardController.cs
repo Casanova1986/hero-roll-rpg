@@ -11,7 +11,7 @@ namespace HeroRoll.Battle
         [Header("Var")]
         [SerializeField] List<DotItem> _dotItems;
         [SerializeField] List<TextMesh> _lsTextMoveStep;
-        [SerializeField] CharacterController _characterController;
+        [SerializeField] CharacterMoveController _characterMoveController;
 
 
         [Header("Value")]
@@ -89,7 +89,7 @@ namespace HeroRoll.Battle
         public void AssignCharacter(int index)
         {
             DotItem dotItem = GetDotItem(index);
-            _characterController._dotItemStay = dotItem;
+            _characterMoveController._dotItemStay = dotItem;
         }
 
 
@@ -132,7 +132,7 @@ namespace HeroRoll.Battle
             {
                 indexNextMove = 0;
             }
-            _characterController.PlayerMove(_dotItems[indexNextMove].transform.position, duration: duration);
+            _characterMoveController.PlayerMove(_dotItems[indexNextMove].transform.position, duration: duration);
 
 
 
