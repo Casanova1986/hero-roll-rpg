@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78826a864579e0d4498a62841dd5f2f7, type: 3}
   m_Name: Menghuai
   m_EditorClassIdentifier: 
-  _skeletonDataAsset: {fileID: 11400000, guid: b4154a3befa429c45b28078885af5955, type: 2}
+  _skeletonDataAsset: {fileID: 11400000, guid: c55a91bd081f35947aff434083120e74, type: 2}
   _idCharacter: Menghuai
   _characterType: 1
-  _atk: 0
-  _hp: 0
-  _def: 0
+  _atk: 10
+  _hp: 50
+  _def: 5
   _accuracy: 0
   _trueDamage: 0
   _critRate: 0
