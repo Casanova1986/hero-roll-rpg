@@ -56,32 +56,74 @@ namespace HeroRoll.Battle
                 hpRegen = characterDataAsset._hpRegen,
             };
         }
+        public virtual int UpdateHeath(int value)
+        {
+            _infoCharacterBase.hp += value;
+            if (_infoCharacterBase.hp < 0)
+            {
+                return -_infoCharacterBase.hp;
+            }
+            return 0;
+        }
+
+
         #endregion
 
         #region Getter
         public virtual int CalculateDame(int atk, int def)
         {
-            return atk - def;
+            if (atk <= def)
+            {
+                return 0;
+            }
+            else
+            {
+                return atk - def;
+            }
         }
         #endregion
 
         #region Animation
-        protected virtual void AttackAnim(System.Action completeAttack)
+        protected virtual void AttackAnim(bool isHero, System.Action completeAttack)
         {
             int originSorttingLayer = this.GetComponent<SortingGroup>().sortingOrder;
             this.GetComponent<SortingGroup>().sortingOrder = 2;
-            CharacterAssetLoader.instance.SetAnimationAttack(_skeletonAnimation, complete: (duration) =>
+            if (isHero)
             {
-                DOVirtual.DelayedCall(duration, () =>
+                CharacterAssetLoader.instance.SetAnimationHeroAttack(_skeletonAnimation, complete: (duration) =>
                 {
-                    this.GetComponent<SortingGroup>().sortingOrder = originSorttingLayer;
-                    completeAttack?.Invoke();
+                    DOVirtual.DelayedCall(duration, () =>
+                    {
+                        this.GetComponent<SortingGroup>().sortingOrder = originSorttingLayer;
+                        completeAttack?.Invoke();
+                    });
                 });
-            });
+            }
+            else
+            {
+                CharacterAssetLoader.instance.SetAnimationMonsterAttack(_skeletonAnimation, complete: (duration) =>
+                {
+                    DOVirtual.DelayedCall(duration, () =>
+                    {
+                        this.GetComponent<SortingGroup>().sortingOrder = originSorttingLayer;
+                        completeAttack?.Invoke();
+                    });
+                });
+            }
         }
         public virtual void IdleAnim()
         {
             CharacterAssetLoader.instance.SetAnimationWait(_skeletonAnimation);
+        }
+        protected virtual void DeathAnim(System.Action completeDeath)
+        {
+            CharacterAssetLoader.instance.SetAnimationDeath(_skeletonAnimation, complete: (duration) =>
+            {
+                DOVirtual.DelayedCall(duration, () =>
+                {
+                    completeDeath?.Invoke();
+                });
+            });
         }
 
         #endregion

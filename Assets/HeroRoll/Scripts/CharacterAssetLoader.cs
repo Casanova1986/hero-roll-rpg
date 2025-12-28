@@ -52,14 +52,26 @@ namespace HeroRoll
             }
             complete?.Invoke(state.TimeScale);
         }
-        public void SetAnimationAttack(SkeletonAnimation skeletonAnimation, int index = 1, System.Action<float> complete = null)
+        public void SetAnimationHeroAttack(SkeletonAnimation skeletonAnimation, int index = 1, System.Action<float> complete = null)
         {
             var state = skeletonAnimation.AnimationState;
             state.SetAnimation(0, $"atk{index}", false);
             state.AddAnimation(0, "wait", true, 0);
             complete?.Invoke(state.TimeScale);
         }
-
+        public void SetAnimationMonsterAttack(SkeletonAnimation skeletonAnimation, System.Action<float> complete = null)
+        {
+            var state = skeletonAnimation.AnimationState;
+            state.SetAnimation(0, "atk", false);
+            state.AddAnimation(0, "wait", true, 0);
+            complete?.Invoke(state.TimeScale);
+        }
+        public void SetAnimationDeath(SkeletonAnimation skeletonAnimation, System.Action<float> complete = null)
+        {
+            var state = skeletonAnimation.AnimationState;
+            state.SetAnimation(0, "death", false);
+            complete?.Invoke(state.TimeScale);
+        }
         #endregion
     }
 }

@@ -10,7 +10,14 @@ namespace HeroRoll.Battle
 
         public void StartAttack(System.Action onComplete)
         {
-            base.AttackAnim(() =>
+            base.AttackAnim(true, () =>
+            {
+                onComplete?.Invoke();
+            });
+        }
+        public void StartDeath(System.Action onComplete)
+        {
+            base.DeathAnim(() =>
             {
                 onComplete?.Invoke();
             });
