@@ -57,7 +57,7 @@ namespace HeroRoll
             var state = skeletonAnimation.AnimationState;
             state.SetAnimation(0, $"atk{index}", false);
             state.AddAnimation(0, "wait", true, 0);
-            complete?.Invoke(state.TimeScale);
+            complete?.Invoke(state.TimeScale - state.TimeScale * 0.5f);
         }
         public void SetAnimationMonsterAttack(SkeletonAnimation skeletonAnimation, System.Action<float> complete = null)
         {

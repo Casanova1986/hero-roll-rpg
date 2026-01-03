@@ -70,9 +70,14 @@ namespace HeroRoll.Battle
 
             if (CheckEndGame())
             {
+                ResultBattleController.instance.ShowPopup();
                 if (IsHeroWin())
                 {
-
+                    ResultBattleController.instance.ShowResult(true);
+                }
+                else
+                {
+                    ResultBattleController.instance.ShowResult(false);
                 }
                 yield break;
             }
@@ -270,9 +275,9 @@ namespace HeroRoll.Battle
             HeroModelController heroModelController = _hero.GetComponent<HeroModelController>();
             if (heroModelController._infoCharacterBase.hp <= 0)
             {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
         // public GameObject SpawnCharacter(bool isSpawnHero = true)
         // {
