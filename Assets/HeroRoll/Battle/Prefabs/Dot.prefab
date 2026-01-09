@@ -149,13 +149,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _idDot: 0
   _typeDot: 1
-  _typeDotSub: 0
+  _infoDotItem:
+    _typeDotMain: 0
+    _typeDotSub: 0
+    numberEnemy: 0
   _dotMain: {fileID: 8691475142829365249}
-  _dotSub: {fileID: 4216137560709755642}
   _backgroundDotMain: {fileID: 6133396198824985258}
-  _backgroundDotSub: {fileID: 5182366496143180411}
   _lsItemDotMain:
   - {fileID: 2641538716862600645}
+  _dotSub: {fileID: 4216137560709755642}
+  _backgroundDotSub: {fileID: 5182366496143180411}
   _lsItemDotSub:
   - {fileID: 6867582932952438211}
   - {fileID: 2124861782115039498}
@@ -484,7 +487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2128372142642867595
 Transform:
   m_ObjectHideFlags: 0

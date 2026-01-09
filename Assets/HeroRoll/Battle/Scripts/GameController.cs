@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
@@ -23,25 +24,29 @@ namespace HeroRoll.Battle
         }
 
 
-        public void CountDownTurnAttack()
+        public IEnumerator CountDownTurnAttack()
         {
+            bool finishAnim = false;
             _turnBossAttackLeft--;
             UIController.instace.SetTxtTurnBoss(_turnBossAttackLeft);
             if (_turnBossAttackLeft <= 0)
             {
-                UIController.instace.OnEnableButtonRoll(false);
-
                 _bossController.SetAnimationAttack((duration) =>
                 {
                     DOVirtual.DelayedCall(duration, () =>
                     {
-                        _turnBossAttackLeft = 3;
-                        UIController.instace.SetTxtTurnBoss(_turnBossAttackLeft);
-                        UIController.instace.OnEnableButtonRoll(true);
+                        finishAnim = true;
                     });
                 });
-
             }
+            else
+            {
+                finishAnim = true;
+            }
+
+            yield return new WaitUntil(() => finishAnim);
+            _turnBossAttackLeft = 3;
+            UIController.instace.SetTxtTurnBoss(_turnBossAttackLeft);
         }
 
         public void UpCurrentFloorPlayerStay()

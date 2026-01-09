@@ -16,8 +16,8 @@ MonoBehaviour:
   _idCharacter: Menghuai
   _characterType: 1
   _atk: 10
-  _hp: 50
-  _def: 5
+  _hp: 30
+  _def: 0
   _accuracy: 0
   _trueDamage: 0
   _critRate: 0

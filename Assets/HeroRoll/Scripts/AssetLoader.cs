@@ -16,7 +16,7 @@ namespace HeroRoll
         [Header("Value")]
         public DictShow<bool, Sprite> _dictGroundSlotSurrounding = new DictShow<bool, Sprite>();
         public DictShow<int, Sprite> _dictItemSlotSubAround = new DictShow<int, Sprite>();
-        public DictShow<int, Sprite> _dictDotMainInGame = new DictShow<int, Sprite>();
+        public DictShow<HeroRoll.Battle.TypeDotMain, Sprite> _dictDotMainInGame = new DictShow<HeroRoll.Battle.TypeDotMain, Sprite>();
         public DictShow<HeroRoll.Battle.TypeDotSub, Sprite> _dictDotSubInGame = new DictShow<HeroRoll.Battle.TypeDotSub, Sprite>();
 
         void Awake()

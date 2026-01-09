@@ -39,7 +39,7 @@ namespace HeroRoll.Battle
             {
                 _dotItems[i]._idDot = i;
                 _dotItems[i].name = $"Dot {i}";
-                _dotItems[i].SetBackgroundDot(isRandom: true);
+                _dotItems[i].SetBackgroundDot(0);
             }
             SetTextMultiMoveStep(12);
         }
@@ -115,27 +115,60 @@ namespace HeroRoll.Battle
             for (int i = 0; i < numberStep; i++)
             {
                 int indexMove = i;
-                MoveOneStep(0.25f);
-                yield return new WaitForSeconds(0.25f);
+                yield return MoveOneStep(0.25f);
 
                 if (indexNextMove - 1 == 0)
                 {
+                    //// Thread return main dot start
+                    yield return new WaitForSeconds(0.5f);
+
+
                     GameController.instace.UpCurrentFloorPlayerStay();
+
+
                     yield return new WaitForSeconds(0.5f);
                 }
+                // else if (indexNextMove - 1 == 10)
+                // {
+                //     //// Thread main dot 1
+                //     yield return new WaitForSeconds(0.5f);
+
+
+
+
+                //     yield return new WaitForSeconds(0.5f);
+                // }
+                // else if (indexNextMove - 1 == 20)
+                // {
+                //     //// Thread main dot 2
+                //     yield return new WaitForSeconds(0.5f);
+
+
+
+
+                //     yield return new WaitForSeconds(0.5f);
+                // }
+                // else if (indexNextMove - 1 == 30)
+                // {
+                //     //// Thread main dot 3
+                //     yield return new WaitForSeconds(0.5f);
+
+
+
+
+                //     yield return new WaitForSeconds(0.5f);
+                // }
             }
         }
         // [Button("Move One Step")]
-        public void MoveOneStep(float duration = 0.4f)
+        public IEnumerator MoveOneStep(float duration = 0.4f)
         {
             if (indexNextMove >= _dotItems.Count)
             {
                 indexNextMove = 0;
             }
-            _characterMoveController.PlayerMove(_dotItems[indexNextMove].transform.position, duration: duration);
 
-
-
+            yield return StartCoroutine(_characterMoveController.PlayerMove(_dotItems[indexNextMove].transform.position, duration: duration));
             indexNextMove++;
 
 

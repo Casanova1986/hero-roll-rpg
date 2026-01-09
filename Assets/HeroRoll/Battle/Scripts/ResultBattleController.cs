@@ -32,18 +32,21 @@ namespace HeroRoll.Battle
         public void ShowPopup()
         {
             _dimmer.SetActive(true);
-            _dimmer.GetComponent<Image>().DOFade(0.6f, 0.5f).OnComplete(() =>
-            {
-                _panel.SetActive(true);
-            });
+            _panel.SetActive(true);
+
+            _dimmer.GetComponent<Image>().DOFade(0.6f, 0.5f);
+            _panel.transform.DOScale(1f, 0.5f);
 
         }
         public void HidePopup()
         {
-            _panel.SetActive(false);
             _dimmer.GetComponent<Image>().DOFade(0f, 0.5f).OnComplete(() =>
             {
                 _dimmer.SetActive(false);
+            });
+            _panel.transform.DOScale(0f, 0.5f).OnComplete(() =>
+            {
+                _panel.SetActive(false);
             });
         }
     }

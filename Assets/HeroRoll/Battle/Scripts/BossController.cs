@@ -17,7 +17,13 @@ namespace HeroRoll.Battle
 
         void Start()
         {
-            SetAnimationStart();
+            SetAnimationStart((duration) =>
+            {
+                DOVirtual.DelayedCall(duration, () =>
+                {
+                    UIController.instace.OnEnableButtonRoll(true);
+                });
+            });
         }
 
 
@@ -31,12 +37,13 @@ namespace HeroRoll.Battle
             state.SetAnimation(0, "wait", true);
         }
         [Button]
-        public void SetAnimationStart()
+        public void SetAnimationStart(System.Action<float> complete)
         {
             var state = _skeletonAnimationBoss.AnimationState;
 
             state.SetAnimation(0, "ruchang", false);
             state.AddAnimation(0, "wait", true, 0);
+            complete?.Invoke(state.TimeScale);
         }
         public void SetAnimationAttack(System.Action<float> complete)
         {

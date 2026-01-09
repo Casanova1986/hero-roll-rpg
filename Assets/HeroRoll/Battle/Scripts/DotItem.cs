@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NTHiep.MiniOdin;
 using UnityEngine;
 
 namespace HeroRoll.Battle
@@ -26,61 +27,31 @@ namespace HeroRoll.Battle
 
 
         #region Setter
-        public void SetBackgroundDot(int index = 0, bool isRandom = true)
+        public void SetBackgroundDot(int index = 0)
         {
+            int key;
             switch (_typeDot)
             {
                 case TypeDot.DotMain:
-                    if (isRandom)
-                    {
-                        Sprite sprite = NTHiep.Tool.RandomUtil.Pick(AssetLoader.instance._dictDotMainInGame.ToList());
-                        int key = AssetLoader.instance._dictDotMainInGame.GetKey(sprite);
-
-                        _backgroundDotMain.GetComponent<SpriteRenderer>().sprite = sprite;
-                    }
-                    else
-                    {
-                        Sprite sprite = AssetLoader.instance._dictDotMainInGame.Get(index);
-                        int key = index;
-                        _backgroundDotMain.GetComponent<SpriteRenderer>().sprite = AssetLoader.instance._dictDotMainInGame.Get(index);
-                    }
+                    key = index;
+                    _infoDotItem._typeDotMain = (TypeDotMain)key;
+                    _backgroundDotMain.GetComponent<SpriteRenderer>().sprite = AssetLoader.instance._dictDotMainInGame.Get((TypeDotMain)index);
 
                     _dotSub.SetActive(false);
                     _dotMain.SetActive(true);
                     break;
 
                 case TypeDot.DotSub:
+                    key = index;
 
-                    if (isRandom)
-                    {
-                        Sprite sprite = NTHiep.Tool.RandomUtil.Pick(AssetLoader.instance._dictDotSubInGame.ToList());
-                        TypeDotSub key = AssetLoader.instance._dictDotSubInGame.GetKey(sprite);
-                        _infoDotItem._typeDotSub = key;
-
-
-                        _backgroundDotSub.GetComponent<SpriteRenderer>().sprite = sprite;
-                    }
-                    else
-                    {
-                        Sprite sprite = AssetLoader.instance._dictDotSubInGame.Get((TypeDotSub)index);
-                        TypeDotSub key = (TypeDotSub)index;
-                        _infoDotItem._typeDotSub = key;
-
-
-                        _backgroundDotSub.GetComponent<SpriteRenderer>().sprite = sprite;
-                    }
-
+                    _infoDotItem._typeDotSub = (TypeDotSub)key;
+                    _backgroundDotSub.GetComponent<SpriteRenderer>().sprite = AssetLoader.instance._dictDotSubInGame.Get((TypeDotSub)index);
 
                     _dotSub.SetActive(true);
                     _dotMain.SetActive(false);
                     break;
             }
         }
-        public void AddRandom()
-        {
-
-        }
-
         public void SetUpItemDotMain()
         {
             switch (_infoDotItem._typeDotMain)
@@ -119,10 +90,14 @@ namespace HeroRoll.Battle
 
         #endregion
     }
+
+
     [Serializable]
     public class InfoDotItem
     {
+        [ShowIf(nameof(TypeDot), (int)TypeDot.DotMain)]
         public TypeDotMain _typeDotMain;
+        [ShowIf(nameof(TypeDot), (int)TypeDot.DotSub)]
         public TypeDotSub _typeDotSub;
         public int numberEnemy;
     }

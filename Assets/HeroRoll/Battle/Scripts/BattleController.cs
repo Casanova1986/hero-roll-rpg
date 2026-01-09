@@ -32,7 +32,6 @@ namespace HeroRoll.Battle
         {
             Init();
         }
-        #region Funtion
         void Init()
         {
             SeCharacterBattle("Xihe", new List<string>
@@ -42,6 +41,13 @@ namespace HeroRoll.Battle
                 "Menghuai"
             });
         }
+
+        #region ThreadBattle
+
+        #endregion
+        
+        #region Funtion
+
         [Button]
         void OnClickStart()
         {

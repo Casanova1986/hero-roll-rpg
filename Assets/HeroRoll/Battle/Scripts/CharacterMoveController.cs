@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
@@ -18,8 +19,9 @@ namespace HeroRoll.Battle
 
 
         #region Animation
-        public void PlayerMove(Vector3 targetPosition, float hight = 0.25f, float duration = 0.4f)
+        public IEnumerator PlayerMove(Vector3 targetPosition, float hight = 0.25f, float duration = 0.4f)
         {
+            bool finishAnim = false;
             Vector3 start = this.transform.position;
 
             // Tạo điểm giữa cao lên thành vòng cung
@@ -32,7 +34,9 @@ namespace HeroRoll.Battle
                 path,
                 duration,        // thời gian
                 PathType.CatmullRom
-            );
+            ).OnComplete(() => { finishAnim = true; });
+
+            yield return new WaitUntil(() => finishAnim);
         }
         #endregion
     }
