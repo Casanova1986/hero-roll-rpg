@@ -10,9 +10,7 @@ namespace HeroRoll.Battle
 {
     public class BattleController : MonoBehaviour
     {
-        [Header("Var")]
-        // [SerializeField] Transform _posHero;
-        // [SerializeField] List<Transform> _posMonster;
+        [ColorHeader("<color=red>Var")]
         public GameObject _hero;
         public List<GameObject> _lsMonster;
         public GameObject _sliderHpHero;
@@ -20,7 +18,7 @@ namespace HeroRoll.Battle
         public GameObject _sliderHpMonster;
         public GameObject _sliderHpMonsterDelay;
 
-        [Header("Value")]
+        [ColorHeader("<color=red>Value")]
         public int _totalHealthMonster = 0;
         public int _totalMaxHealthMonster = 0;
         public int _totalHealthHero = 0;
@@ -45,7 +43,7 @@ namespace HeroRoll.Battle
         #region ThreadBattle
 
         #endregion
-        
+
         #region Funtion
 
         [Button]

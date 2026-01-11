@@ -1,51 +1,48 @@
 using System;
 using System.Collections.Generic;
-using NTHiep.MiniOdin;
 using UnityEngine;
+using NTHiep.MiniOdin;
 
 namespace HeroRoll.Battle
 {
     public class DotItem : MonoBehaviour
     {
-        [Header("Value")]
-        public int _idDot;
-        public TypeDot _typeDot;
-        public InfoDotItem _infoDotItem;
-
-
-
-        [Header("Var")]
+        [ColorHeader("<color=red>Var")]
         //// Dot Main
         [SerializeField] GameObject _dotMain;
         [SerializeField] GameObject _backgroundDotMain;
         [SerializeField] List<GameObject> _lsItemDotMain;
-
+        [Space(5)]
         //// Dot Sub
         [SerializeField] GameObject _dotSub;
         [SerializeField] GameObject _backgroundDotSub;
         [SerializeField] List<GameObject> _lsItemDotSub;
 
 
+
+        [ColorHeader("<color=red>Value")]
+        public int _idDot;
+        public TypeDot _typeDot;
+        public InfoDotItem _infoDotItem;
+
+
+
+
+
         #region Setter
-        public void SetBackgroundDot(int index = 0)
+        public void SetBackgroundDot()
         {
-            int key;
             switch (_typeDot)
             {
                 case TypeDot.DotMain:
-                    key = index;
-                    _infoDotItem._typeDotMain = (TypeDotMain)key;
-                    _backgroundDotMain.GetComponent<SpriteRenderer>().sprite = AssetLoader.instance._dictDotMainInGame.Get((TypeDotMain)index);
+                    _backgroundDotMain.GetComponent<SpriteRenderer>().sprite = AssetLoader.instance._dictDotMainInGame.Get(_infoDotItem._typeDotMain);
 
                     _dotSub.SetActive(false);
                     _dotMain.SetActive(true);
                     break;
 
                 case TypeDot.DotSub:
-                    key = index;
-
-                    _infoDotItem._typeDotSub = (TypeDotSub)key;
-                    _backgroundDotSub.GetComponent<SpriteRenderer>().sprite = AssetLoader.instance._dictDotSubInGame.Get((TypeDotSub)index);
+                    _backgroundDotSub.GetComponent<SpriteRenderer>().sprite = AssetLoader.instance._dictDotSubInGame.Get(_infoDotItem._typeDotSub);
 
                     _dotSub.SetActive(true);
                     _dotMain.SetActive(false);
@@ -77,7 +74,10 @@ namespace HeroRoll.Battle
                 case TypeDotSub.AttackEnemy:
                     for (int i = 0; i < _infoDotItem.numberEnemy; i++)
                     {
-                        _lsItemDotSub[i].SetActive(true);
+                        if (i < _lsItemDotSub.Count)
+                        {
+                            _lsItemDotSub[i].SetActive(true);
+                        }
                     }
 
                     break;
@@ -95,10 +95,15 @@ namespace HeroRoll.Battle
     [Serializable]
     public class InfoDotItem
     {
-        [ShowIf(nameof(TypeDot), (int)TypeDot.DotMain)]
+        TypeDot _typeDot;
+        //// Dot main
+        [ShowIf(nameof(_typeDot), (int)TypeDot.DotMain)]
         public TypeDotMain _typeDotMain;
-        [ShowIf(nameof(TypeDot), (int)TypeDot.DotSub)]
+
+        //// Dot sub
+        [ShowIf(nameof(_typeDot), (int)TypeDot.DotSub)]
         public TypeDotSub _typeDotSub;
+        [ShowIf(nameof(_typeDot), (int)TypeDot.DotSub)]
         public int numberEnemy;
     }
     public enum TypeDot

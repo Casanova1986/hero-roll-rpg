@@ -22,10 +22,10 @@ namespace HeroRoll.Battle
 
     public class CharacterModelController : MonoBehaviour
     {
-        [Header("Var")]
+        [ColorHeader("<color=red>Var")]
         [SerializeField] SkeletonAnimation _skeletonAnimation;
 
-        [Header("Value")]
+        [ColorHeader("<color=red>Value")]
         public string _idCharacter;
         public CharacterType _characterType;
         public InfoCharacterBase _infoCharacterBase = new InfoCharacterBase

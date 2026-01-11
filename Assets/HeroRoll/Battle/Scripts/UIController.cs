@@ -1,3 +1,4 @@
+using NTHiep.MiniOdin;
 using TMPro;
 using UnityEngine;
 
@@ -6,7 +7,7 @@ namespace HeroRoll.Battle
     public class UIController : MonoBehaviour
     {
         public static UIController instace;
-        [Header("Var")]
+        [ColorHeader("<color=red>Var")]
         [SerializeField] GameObject _txtTurnBoss;
         [SerializeField] GameObject _txtCurrentFloor;
         [SerializeField] GameObject _btnRoll;

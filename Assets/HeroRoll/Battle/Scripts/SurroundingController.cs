@@ -6,7 +6,7 @@ namespace HeroRoll.Battle
 {
     public class SurroundingController : MonoBehaviour
     {
-        [Header("Var")]
+        [Header("<color=red>Var")]
         [SerializeField] List<SlotSurrounding> _slotSurroundingLevel1;
         [SerializeField] List<SlotSurrounding> _slotSurroundingLevel2;
         [SerializeField] List<SlotSurrounding> _slotSurroundingLevel3;

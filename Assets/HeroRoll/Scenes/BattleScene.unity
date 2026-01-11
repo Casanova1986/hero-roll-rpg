@@ -1161,6 +1161,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6073405164195194393, guid: 5fbd7b7080cf8724792a60706ffed64a, type: 3}
+      propertyPath: _typeDot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8691475142829365249, guid: 5fbd7b7080cf8724792a60706ffed64a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3082,7 +3086,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: wait
+  _animationName: ruchang
   loop: 1
   timeScale: 1
 --- !u!23 &483704571
@@ -5004,10 +5008,11 @@ MonoBehaviour:
     Values:
     - {fileID: 21300000, guid: d01ce0abce49b6943bf9fc339d33892f, type: 3}
   _dictDotSubInGame:
-    Keys: 000000000100000003000000
+    Keys: 00000000010000000300000002000000
     Values:
     - {fileID: 21300000, guid: ca078e92bc5535a41b7302ca1aefd8c7, type: 3}
     - {fileID: 21300000, guid: e71e2e9ec06d43d47b241936795aeaf0, type: 3}
+    - {fileID: 21300000, guid: 4d282e889090cc546882831f95b4c076, type: 3}
     - {fileID: 21300000, guid: 4d282e889090cc546882831f95b4c076, type: 3}
 --- !u!4 &803353443
 Transform:
@@ -5513,7 +5518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &869896429
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11549,6 +11554,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panel: {fileID: 1424300764}
   _dimmer: {fileID: 1904726658}
+  _typePopup: 0
+  _durationShowPopup: 0.5
+  _durationHidePopup: 0.5
   _resultText: {fileID: 1249470241}
 --- !u!210 &1883701813
 SortingGroup:
@@ -13089,11 +13097,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783055a3106519f42bcffaa6be02e572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSke1: {fileID: 111369502}
+  diceSke2: {fileID: 1337400251}
   _valueDice1: 6
   _valueDice2: 4
   indexFocusStep: 0
-  diceSke1: {fileID: 111369502}
-  diceSke2: {fileID: 1337400251}
 --- !u!210 &2080870853
 SortingGroup:
   m_ObjectHideFlags: 0

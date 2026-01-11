@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using NTHiep.MiniOdin;
+using NTHiep.Tool;
 using UnityEngine;
 
 namespace HeroRoll.Battle
 {
     public class BoardController : MonoBehaviour
     {
-        [Header("Var")]
+        [ColorHeader("<color=red>Var")]
         [SerializeField] List<DotItem> _dotItems;
         [SerializeField] List<TextMesh> _lsTextMoveStep;
-        [SerializeField] CharacterMoveController _characterMoveController;
+        public CharacterMoveController _characterMoveController;
 
 
-        [Header("Value")]
+        [ColorHeader("<color=red>Value")]
         int indexNextMove = 1;
 
 
@@ -29,23 +30,53 @@ namespace HeroRoll.Battle
         }
         void Start()
         {
-            SetUpBoard();
+
         }
 
+
+
+        #region Setter
+        //// Board
         [Button("Set Up Board")]
         public void SetUpBoard()
         {
             for (int i = 0; i < _dotItems.Count; i++)
             {
+                _dotItems[i].name = $"Dot_{i}";
                 _dotItems[i]._idDot = i;
-                _dotItems[i].name = $"Dot {i}";
-                _dotItems[i].SetBackgroundDot(0);
             }
             SetTextMultiMoveStep(12);
         }
+        public void SetUpDotMainRandom()
+        {
+
+        }
+        [SerializeField] List<InfoDotItem> _random = new List<InfoDotItem>();
+        public void SetUpInfoDotSubRandom()
+        {
+            List<InfoDotItem> infoDotItemRandoms = GetInfoDotSubRandom();
+            _random = infoDotItemRandoms;
+            for (int i = 0; i < _dotItems.Count; i++)
+            {
+                if (_dotItems[i]._typeDot == TypeDot.DotSub)
+                {
+                    if (infoDotItemRandoms[i]._typeDotSub != TypeDotSub.Empty)
+                    {
+                        _dotItems[i]._infoDotItem._typeDotSub = infoDotItemRandoms[i]._typeDotSub;
+                    }
+                    _dotItems[i]._infoDotItem._typeDotMain = infoDotItemRandoms[i]._typeDotMain;
+                    switch (_dotItems[i]._infoDotItem._typeDotSub)
+                    {
+                        case TypeDotSub.AttackEnemy:
+                            _dotItems[i]._infoDotItem.numberEnemy += infoDotItemRandoms[i].numberEnemy;
+                            break;
+                    }
+                }
+            }
+
+        }
 
 
-        #region Setter
         //// Text Slot Board
         public void SetTextMultiMoveStep(int numberStep)
         {
@@ -70,11 +101,6 @@ namespace HeroRoll.Battle
 
                 step++;
             }
-        }
-        public void SetTextMoveStep(int index, int value)
-        {
-            _lsTextMoveStep[index].gameObject.SetActive(true);
-            _lsTextMoveStep[index].text = value.ToString();
         }
         public void SetTextFocusStep(int index)
         {
@@ -106,6 +132,43 @@ namespace HeroRoll.Battle
             return _dotItems[index];
         }
         // public bool 
+        public List<InfoDotItem> GetInfoDotSubRandom()
+        {
+            List<InfoDotItem> infoDotItemsResult = new List<InfoDotItem>();
+
+            for (int i = 0; i < _dotItems.Count; i++)
+            {
+                InfoDotItem infoDotItem = new InfoDotItem();
+
+                if (_dotItems[i]._typeDot == TypeDot.DotSub)
+                {
+                    switch (_dotItems[i]._infoDotItem._typeDotSub)
+                    {
+                        case TypeDotSub.Empty:
+                            infoDotItem._typeDotSub = RandomUtil.RandomEnum<TypeDotSub>();
+
+                            switch (infoDotItem._typeDotSub)
+                            {
+                                case TypeDotSub.AttackEnemy:
+                                    infoDotItem.numberEnemy = 1;
+                                    break;
+                            }
+                            break;
+
+                        case TypeDotSub.AttackEnemy:
+                            infoDotItem._typeDotSub = TypeDotSub.AttackEnemy;
+                            if (_dotItems[i]._infoDotItem.numberEnemy < 5)
+                            {
+                                infoDotItem.numberEnemy = 1;
+                            }
+                            break;
+                    }
+                }
+
+                infoDotItemsResult.Add(infoDotItem);
+            }
+            return infoDotItemsResult;
+        }
         #endregion
 
 
@@ -125,6 +188,17 @@ namespace HeroRoll.Battle
 
                     GameController.instace.UpCurrentFloorPlayerStay();
 
+
+
+                    {
+                        //// RandomDotItem
+                        yield return new WaitForSeconds(0.1f);
+                        BoardController.instance.SetUpInfoDotSubRandom();
+                        BoardController.instance.SetUpDotMainRandom();
+
+                        yield return new WaitForSeconds(0.1f);
+                        yield return BoardController.instance.AnimDisplayDotItem();
+                    }
 
                     yield return new WaitForSeconds(0.5f);
                 }
@@ -171,8 +245,26 @@ namespace HeroRoll.Battle
             yield return StartCoroutine(_characterMoveController.PlayerMove(_dotItems[indexNextMove].transform.position, duration: duration));
             indexNextMove++;
 
+        }
+        public IEnumerator AnimDisplayDotItem()
+        {
+            for (int i = 0; i < _dotItems.Count; i++)
+            {
+                if (i == _dotItems.Count - 1)
+                {
+                    _dotItems[i].SetBackgroundDot();
+                    _dotItems[i].SetUpItemDotMain();
+                    _dotItems[i].SetUpItemDotSub();
+                    yield return new WaitForSeconds(0);
+                }
+                else
+                {
+                    _dotItems[i].SetBackgroundDot();
+                    _dotItems[i].SetUpItemDotMain();
+                    _dotItems[i].SetUpItemDotSub();
+                }
 
-
+            }
         }
         #endregion
     }

@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace NTHiep.MiniOdin
 {
-    [CustomPropertyDrawer(typeof(ShowIf))]
-    public class ShowIfDrawer : PropertyDrawer
+    [CustomPropertyDrawer(typeof(ShowIfAttribute))]
+    public class ShowIfAttributeDrawer : PropertyDrawer
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            ShowIf showIf = (ShowIf)attribute;
+            ShowIfAttribute showIf = (ShowIfAttribute)attribute;
 
             SerializedProperty conditionProp =
                 property.serializedObject.FindProperty(showIf.fieldName);
@@ -28,7 +28,7 @@ namespace NTHiep.MiniOdin
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
-            ShowIf showIf = (ShowIf)attribute;
+            ShowIfAttribute showIf = (ShowIfAttribute)attribute;
             SerializedProperty conditionProp =
                 property.serializedObject.FindProperty(showIf.fieldName);
 

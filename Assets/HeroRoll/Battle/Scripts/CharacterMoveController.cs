@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using DG.Tweening;
+using NTHiep.MiniOdin;
 using UnityEngine;
 
 namespace HeroRoll.Battle
@@ -8,11 +9,11 @@ namespace HeroRoll.Battle
 
     public class CharacterMoveController : MonoBehaviour
     {
-        [Header("Var")]
+        [ColorHeader("<color=red>Var")]
         [SerializeField] GameObject _characterIcon;
 
 
-        [Header("Value")]
+        [ColorHeader("<color=red>Value")]
         public DotItem _dotItemStay;
 
 

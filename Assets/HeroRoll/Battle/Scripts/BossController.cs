@@ -7,10 +7,10 @@ namespace HeroRoll.Battle
 {
     public class BossController : MonoBehaviour
     {
-        [Header("Var")]
+        [ColorHeader("<color=red>Var")]
         [SerializeField] SkeletonAnimation _skeletonAnimationBoss;
 
-        [Header("Value")]
+        [ColorHeader("<color=red>Value")]
         public int _timeTurnBossAttack;
 
         // public void 

@@ -6,13 +6,16 @@ namespace HeroRoll.Battle
 {
     public class SlotSurrounding : MonoBehaviour
     {
-        [Header("Value")]
+        [Header("<color=red>Var")]
+        [SerializeField] SpriteRenderer _iconGround;
+        [SerializeField] List<GameObject> _itemSubInSlots;
+
+        
+        [Header("<color=red>Value")]
         public int _idSlot = 0;
         public int _itemSubInSlotActive = 0;
 
-        [Header("Var")]
-        [SerializeField] SpriteRenderer _iconGround;
-        [SerializeField] List<GameObject> _itemSubInSlots;
+
 
 
         void Awake()

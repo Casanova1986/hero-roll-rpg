@@ -7,26 +7,33 @@ namespace HeroRoll.Battle
 {
     public class DiceController : MonoBehaviour
     {
-        [Header("<color=red>Value")]
+        [ColorHeader("<color=red>Var")]
+        [SerializeField] SkeletonAnimation diceSke1;
+        [SerializeField] SkeletonAnimation diceSke2;
+
+
+        [ColorHeader("<color=red>Value")]
         public int _valueDice1;
         public int _valueDice2;
         [SerializeField] int indexFocusStep;
 
-        [Header("<color=red>Var")]
-        [SerializeField] SkeletonAnimation diceSke1;
-        [SerializeField] SkeletonAnimation diceSke2;
+
 
         Coroutine _coroutineDice;
 
         public void StartRollDice()
         {
-            StartCoroutine(ThreadDice());
+            if (_coroutineDice != null)
+            {
+                return;
+            }
+            _coroutineDice = StartCoroutine(ThreadDice());
         }
 
         public IEnumerator ThreadDice()
         {
             UIController.instace.OnEnableButtonRoll(false);
-            
+
             //// Thread 1
             yield return StartCoroutine(Thread_1());
 
@@ -36,11 +43,14 @@ namespace HeroRoll.Battle
             //// Thread 3
             yield return StartCoroutine(Thread_3());
 
+            //// Thread 4
+            yield return StartCoroutine(Thread_4());
 
             //// Thread end
             yield return StartCoroutine(Thread_end());
 
             UIController.instace.OnEnableButtonRoll(true);
+            _coroutineDice = null;
         }
 
         IEnumerator Thread_1()
@@ -49,7 +59,7 @@ namespace HeroRoll.Battle
             SetPlayDice();
             indexFocusStep = BoardController.instance.GetIndexFocusStep(_valueDice1 + _valueDice2);
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             OffDice();
             BoardController.instance.SetTextFocusStep(indexFocusStep);
 
@@ -68,6 +78,18 @@ namespace HeroRoll.Battle
             SurroundingController.instance.UpdateSurrounding(indexFocusStep);
 
         }
+        IEnumerator Thread_4()
+        {
+            //// Player Battle
+            if (BoardController.instance._characterMoveController._dotItemStay._infoDotItem._typeDotSub == TypeDotSub.AttackEnemy)
+            {
+                GameController.instace._isBattle = true;
+                GameController.instace.EnableDisplayBattle(true);
+
+                yield return new WaitUntil(() => !GameController.instace._isBattle);
+            }
+        }
+
         IEnumerator Thread_end()
         {
             BoardController.instance.SetTextMultiMoveStep(12);
