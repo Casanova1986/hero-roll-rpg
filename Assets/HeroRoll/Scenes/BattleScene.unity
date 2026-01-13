@@ -6398,6 +6398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _idCharacter: 
+  playerMaxHP: 0
   _infoCharacterBase:
     atk: 10
     hp: 20
@@ -8723,6 +8724,7 @@ GameObject:
   - component: {fileID: 1400413096}
   - component: {fileID: 1400413095}
   - component: {fileID: 1400413094}
+  - component: {fileID: 1400413098}
   m_Layer: 5
   m_Name: CanvasBattleUI
   m_TagString: Untagged
@@ -8814,6 +8816,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1400413098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400413093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6391775ec0e00947b5a84a920b7403c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sliderHpHero: {fileID: 1662870810}
+  _sliderHpHeroDelay: {fileID: 50531613}
+  _sliderHpMonster: {fileID: 1489312250}
+  _sliderHpMonsterDelay: {fileID: 879762677}
 --- !u!1 &1420386445
 GameObject:
   m_ObjectHideFlags: 0
@@ -10314,16 +10332,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c48fee6ab05b70d45be02ca6a921b71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _UIBattleController: {fileID: 1400413098}
   _hero: {fileID: 622662934}
   _lsMonster:
   - {fileID: 1836162885}
   - {fileID: 1148352206}
   - {fileID: 1227439811}
   - {fileID: 352211512}
-  _sliderHpHero: {fileID: 1662870810}
-  _sliderHpHeroDelay: {fileID: 50531613}
-  _sliderHpMonster: {fileID: 1489312250}
-  _sliderHpMonsterDelay: {fileID: 879762677}
   _totalHealthMonster: 0
   _totalMaxHealthMonster: 0
   _totalHealthHero: 0
