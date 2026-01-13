@@ -11,12 +11,9 @@ namespace HeroRoll.Battle
     public class BattleController : MonoBehaviour
     {
         [ColorHeader("<color=red>Var")]
+        public UIBattleController _UIBattleController;
         public GameObject _hero;
         public List<GameObject> _lsMonster;
-        public GameObject _sliderHpHero;
-        public GameObject _sliderHpHeroDelay;
-        public GameObject _sliderHpMonster;
-        public GameObject _sliderHpMonsterDelay;
 
         [ColorHeader("<color=red>Value")]
         public int _totalHealthMonster = 0;
@@ -26,21 +23,105 @@ namespace HeroRoll.Battle
         public bool isTurnHero = true;
 
 
+
+        void OnEnable()
+        {
+            StartCoroutine(StartThread());
+        }
+        void OnDisable()
+        {
+            ResetGame();
+        }
         void Start()
         {
-            Init();
+
         }
         void Init()
         {
-            SeCharacterBattle("Xihe", new List<string>
+            int numberMonster = 0;
+            numberMonster = BoardController.instance._characterMoveController._dotItemStay._infoDotItem.numberEnemy;
+            if (numberMonster == 1)
             {
-                "Menghuai",
-                "Menghuai",
-                "Menghuai"
-            });
+                SetCharacterBattle(new List<string>
+                {
+                    "Menghuai",
+                });
+            }
+            else if (numberMonster == 2)
+            {
+                SetCharacterBattle(new List<string>
+                {
+                    "Menghuai",
+                    "Menghuai",
+                });
+            }
+            else if (numberMonster == 3)
+            {
+                SetCharacterBattle(new List<string>
+                {
+                    "Menghuai",
+                    "Menghuai",
+                    "Menghuai"
+                });
+            }
+            else
+            {
+                SetCharacterBattle(new List<string>
+                {
+                    "Menghuai",
+                    "Menghuai",
+                    "Menghuai",
+                    "Menghuai"
+                });
+
+            }
         }
 
         #region ThreadBattle
+
+        IEnumerator StartThread()
+        {
+            Init();
+            yield return new WaitForSeconds(1f);
+
+
+            //// Thread 1
+            yield return StartCoroutine(Thread_1());
+
+            //// Thread 2
+            yield return StartCoroutine(Thread_2());
+
+            //// Thread 3
+            yield return StartCoroutine(Thread_3());
+
+            //// Thread 4
+            yield return StartCoroutine(Thread_4());
+
+            //// Thread end
+            yield return StartCoroutine(Thread_end());
+        }
+        IEnumerator Thread_1()
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+        IEnumerator Thread_2()
+        {
+            yield break;
+        }
+        IEnumerator Thread_3()
+        {
+            yield return StartCoroutine(StartAttack());
+            Debug.Log("______");
+        }
+        IEnumerator Thread_4()
+        {
+            yield break;
+        }
+
+        IEnumerator Thread_end()
+        {
+            yield break;
+        }
 
         #endregion
 
@@ -87,7 +168,7 @@ namespace HeroRoll.Battle
             }
 
             isTurnHero = !isTurnHero;
-            StartCoroutine(StartAttack());
+            yield return StartCoroutine(StartAttack());
         }
         void TestHeroAttack(System.Action completeTurn)
         {
@@ -103,7 +184,7 @@ namespace HeroRoll.Battle
                 Calculate();
 
                 float value = _totalHealthMonster / (float)_totalMaxHealthMonster;
-                UpdateHeath(value, isHero: false);
+                _UIBattleController.UpdateDisplayHeath(value, isHero: false);
             }, () =>
             {
                 completeTurn?.Invoke();
@@ -140,7 +221,7 @@ namespace HeroRoll.Battle
                 Calculate();
 
                 float value = _totalHealthHero / (float)_totalMaxHealthHero;
-                UpdateHeath(value, isHero: true);
+                _UIBattleController.UpdateDisplayHeath(value, isHero: true);
             }, () =>
             {
                 completeTurn?.Invoke();
@@ -150,11 +231,10 @@ namespace HeroRoll.Battle
             {
                 int dameAtk = monster.CalculateDame(monster._infoCharacterBase.atk, hero._infoCharacterBase.def);
                 int dameRemain = hero.UpdateHeath(-dameAtk);
-
+                PlayerController.instance.UpdateHp(-dameAtk);
                 if (dameRemain > 0)
                 {
                     dameAtk -= dameRemain;
-
                 }
                 if (hero._infoCharacterBase.hp <= 0)
                 {
@@ -196,19 +276,7 @@ namespace HeroRoll.Battle
             });
         }
 
-        void UpdateHeath(float value, bool isHero)
-        {
-            if (isHero)
-            {
-                _sliderHpHero.GetComponent<Slider>().DOValue(value, 0.15f);
-                _sliderHpHeroDelay.GetComponent<Slider>().DOValue(value, 0.15f).SetDelay(0.15f);
-            }
-            else
-            {
-                _sliderHpMonster.GetComponent<Slider>().DOValue(value, 0.15f);
-                _sliderHpMonsterDelay.GetComponent<Slider>().DOValue(value, 0.15f).SetDelay(0.15f);
-            }
-        }
+
 
         #endregion
 
@@ -217,15 +285,25 @@ namespace HeroRoll.Battle
         #endregion
 
         #region Setter
-        public void SeCharacterBattle(string idHero, List<string> lsIdMonster)
+        public void SetCharacterBattle(List<string> lsIdMonster)
         {
             HeroModelController hero = _hero.GetComponent<HeroModelController>();
-            hero._idCharacter = idHero;
-            hero.SetInfoData();
+            hero._idCharacter = PlayerController.instance._idCharacter;
+            hero.SetInfoCharacterBase(new InfoCharacterBase
+            {
+                hp = PlayerController.instance._infoCharacterBase.hp,
+                atk = PlayerController.instance._infoCharacterBase.atk,
+                accuracy = PlayerController.instance._infoCharacterBase.accuracy,
+                critRate = PlayerController.instance._infoCharacterBase.critRate,
+                def = PlayerController.instance._infoCharacterBase.def,
+                eva = PlayerController.instance._infoCharacterBase.eva,
+                hpRegen = PlayerController.instance._infoCharacterBase.hpRegen,
+                trueDamage = PlayerController.instance._infoCharacterBase.trueDamage
+            });
             hero.SetSkeletonData();
             hero.IdleAnim();
             _totalHealthHero += hero._infoCharacterBase.hp;
-            _totalMaxHealthHero += hero._infoCharacterBase.hp;
+            _totalMaxHealthHero += PlayerController.instance.playerMaxHP;
 
 
             for (int i = 0; i < _lsMonster.Count; i++)
@@ -244,13 +322,22 @@ namespace HeroRoll.Battle
             }
 
 
-            UpdateHeath(1f, true);
-            UpdateHeath(1f, false);
+            _UIBattleController.UpdateDisplayHeath(PlayerController.instance._infoCharacterBase.hp / (float)_totalMaxHealthHero, true);
+            _UIBattleController.UpdateDisplayHeath(1f, false);
         }
 
         public void SetHpTotal()
         {
 
+        }
+
+        void ResetGame()
+        {
+            _totalHealthMonster = 0;
+            _totalMaxHealthMonster = 0;
+            _totalHealthHero = 0;
+            _totalMaxHealthHero = 0;
+            isTurnHero = true;
         }
         #endregion
 

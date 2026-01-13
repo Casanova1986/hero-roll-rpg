@@ -61,15 +61,17 @@ namespace HeroRoll.Battle
                         finishAnim = true;
                     });
                 });
+
+                yield return new WaitUntil(() => finishAnim);
+                _turnBossAttackLeft = 3;
+                UIController.instace.SetTxtTurnBoss(_turnBossAttackLeft);
             }
             else
             {
                 finishAnim = true;
             }
 
-            yield return new WaitUntil(() => finishAnim);
-            _turnBossAttackLeft = 3;
-            UIController.instace.SetTxtTurnBoss(_turnBossAttackLeft);
+
         }
 
         public void UpCurrentFloorPlayerStay()

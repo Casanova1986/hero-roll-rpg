@@ -76,6 +76,7 @@ namespace HeroRoll.Battle
             //// Player move
             yield return BoardController.instance.MoveMultipleStep(_valueDice1 + _valueDice2);
             SurroundingController.instance.UpdateSurrounding(indexFocusStep);
+            BoardController.instance.AssignCharacter(indexFocusStep);
 
         }
         IEnumerator Thread_4()
@@ -93,7 +94,6 @@ namespace HeroRoll.Battle
         IEnumerator Thread_end()
         {
             BoardController.instance.SetTextMultiMoveStep(12);
-            BoardController.instance.AssignCharacter(indexFocusStep);
             yield return StartCoroutine(GameController.instace.CountDownTurnAttack());
         }
 

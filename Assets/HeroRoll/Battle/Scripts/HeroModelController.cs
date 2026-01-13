@@ -22,5 +22,9 @@ namespace HeroRoll.Battle
                 onComplete?.Invoke();
             });
         }
+        public void SetInfoCharacterBase(InfoCharacterBase infoCharacterBase)
+        {
+            this._infoCharacterBase = infoCharacterBase;
+        }
     }
 }

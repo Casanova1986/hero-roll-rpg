@@ -7,19 +7,6 @@ using UnityEngine.Rendering;
 
 namespace HeroRoll.Battle
 {
-    [Serializable]
-    public class InfoCharacterBase
-    {
-        public int atk;
-        public int hp;
-        public int def;
-        public int accuracy;
-        public int trueDamage;
-        public int critRate;
-        public int eva;
-        public int hpRegen;
-    }
-
     public class CharacterModelController : MonoBehaviour
     {
         [ColorHeader("<color=red>Var")]
