@@ -1,0 +1,111 @@
+
+Mons_shangzhang_atk1.png
+size: 2020,2020
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+atk1_texiao0004
+  rotate: false
+  xy: 501, 57
+  size: 271, 418
+  orig: 272, 418
+  offset: 0, 0
+  index: -1
+atk1_texiao0005
+  rotate: false
+  xy: 494, 477
+  size: 391, 434
+  orig: 391, 434
+  offset: 0, 0
+  index: -1
+atk1_texiao0006
+  rotate: true
+  xy: 2, 2
+  size: 445, 497
+  orig: 445, 497
+  offset: 0, 0
+  index: -1
+atk1_texiao0007
+  rotate: false
+  xy: 2, 913
+  size: 498, 521
+  orig: 498, 521
+  offset: 0, 0
+  index: -1
+atk1_texiao0008
+  rotate: false
+  xy: 2, 1436
+  size: 508, 582
+  orig: 508, 582
+  offset: 0, 0
+  index: -1
+atk1_texiao0009
+  rotate: true
+  xy: 2, 449
+  size: 462, 490
+  orig: 462, 490
+  offset: 0, 0
+  index: -1
+atk1_texiao0010
+  rotate: true
+  xy: 2, 449
+  size: 462, 490
+  orig: 462, 490
+  offset: 0, 0
+  index: -1
+atk1_texiao0011
+  rotate: false
+  xy: 512, 1715
+  size: 138, 303
+  orig: 138, 303
+  offset: 0, 0
+  index: -1
+atk1_texiao0012
+  rotate: false
+  xy: 502, 1194
+  size: 262, 240
+  orig: 262, 240
+  offset: 0, 0
+  index: -1
+atk1_texiao0013
+  rotate: false
+  xy: 512, 1454
+  size: 146, 110
+  orig: 146, 110
+  offset: 0, 0
+  index: -1
+atk1_texiao0014
+  rotate: false
+  xy: 512, 1566
+  size: 150, 147
+  orig: 150, 147
+  offset: 0, 0
+  index: -1
+atk1_texiao0015
+  rotate: false
+  xy: 502, 1008
+  size: 262, 184
+  orig: 262, 184
+  offset: 0, 0
+  index: -1
+atk1_texiao0016
+  rotate: false
+  xy: 501, 15
+  size: 63, 40
+  orig: 63, 40
+  offset: 0, 0
+  index: -1
+atk1_texiao0017
+  rotate: false
+  xy: 774, 401
+  size: 90, 74
+  orig: 90, 74
+  offset: 0, 0
+  index: -1
+atk1_texiao0018
+  rotate: false
+  xy: 652, 1924
+  size: 91, 94
+  orig: 91, 94
+  offset: 0, 0
+  index: -1
