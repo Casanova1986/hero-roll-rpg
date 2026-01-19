@@ -54,6 +54,7 @@ namespace HeroRoll.Battle
                 hpRegen = characterDataAsset._hpRegen,
             };
             playerMaxHP = characterDataAsset._hp;
+            UIController.instace.SetUpHpBar(_infoCharacterBase.hp, playerMaxHP);
         }
         public void UpdateAtk(int value)
         {
@@ -70,6 +71,7 @@ namespace HeroRoll.Battle
             {
                 _infoCharacterBase.hp = 0;
             }
+            UIController.instace.SetUpHpBar(_infoCharacterBase.hp, playerMaxHP);
         }
         public void UpdateDef(int value)
         {

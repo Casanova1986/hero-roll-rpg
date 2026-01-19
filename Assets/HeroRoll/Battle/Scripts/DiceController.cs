@@ -90,7 +90,7 @@ namespace HeroRoll.Battle
                 yield return new WaitUntil(() => !GameController.instace._isBattle);
             }
         }
-
+        //// Cần phải thêm Thread của player khi đặt xuống dot
         IEnumerator Thread_end()
         {
             BoardController.instance.SetTextMultiMoveStep(12);

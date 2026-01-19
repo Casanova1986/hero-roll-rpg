@@ -11,6 +11,8 @@ namespace HeroRoll.Battle
         [SerializeField] GameObject _txtTurnBoss;
         [SerializeField] GameObject _txtCurrentFloor;
         [SerializeField] GameObject _btnRoll;
+        [SerializeField] GameObject _hpBar;
+        [SerializeField] GameObject _itemBar;
         void Awake()
         {
             if (UIController.instace != null)
@@ -35,6 +37,10 @@ namespace HeroRoll.Battle
         public void SetTxtCurrentFloor(int value)
         {
             _txtCurrentFloor.GetComponent<TextMeshProUGUI>().text = $"<color=green>Current Floor: {value}</color>";
+        }
+        public void SetUpHpBar(float value, float maxValue)
+        {
+            _hpBar.GetComponent<DisplayBar>().SetValueSlider(value, maxValue, duration: 0.2f);
         }
 
         public void OnEnableButtonRoll(bool isOn)

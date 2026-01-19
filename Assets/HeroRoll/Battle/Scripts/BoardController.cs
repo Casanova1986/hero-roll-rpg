@@ -187,9 +187,6 @@ namespace HeroRoll.Battle
 
 
                     GameController.instace.UpCurrentFloorPlayerStay();
-
-
-
                     {
                         //// RandomDotItem
                         yield return new WaitForSeconds(0.1f);
