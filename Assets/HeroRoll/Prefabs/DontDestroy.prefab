@@ -170,3 +170,19 @@ MonoBehaviour:
     - {fileID: 21300000, guid: e71e2e9ec06d43d47b241936795aeaf0, type: 3}
     - {fileID: 21300000, guid: 4d282e889090cc546882831f95b4c076, type: 3}
     - {fileID: 21300000, guid: 4d282e889090cc546882831f95b4c076, type: 3}
+  _dictItemBuffDotSubInGame:
+    Keys: 0000000001000000
+    Values:
+    - {fileID: 21300000, guid: fc0eaeeebd4ba4eb5ac216e2fbd400e6, type: 3}
+    - {fileID: 21300000, guid: 496c615a90bc04a768ae7f4e1ebb5b46, type: 3}
+  _dictItemBuffDotMainInGame:
+    Keys: 
+    Values: []
+  _dictItemDeBuffDotSubInGame:
+    Keys: 0000000001000000
+    Values:
+    - {fileID: 21300000, guid: 8a4fcfe9bd5b04d508b111dc7a4a7f15, type: 3}
+    - {fileID: 21300000, guid: e57af1c86f5bb4626bb02f240edb11b6, type: 3}
+  _dictItemDeBuffDotMainInGame:
+    Keys: 
+    Values: []

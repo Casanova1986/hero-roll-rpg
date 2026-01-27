@@ -1,9 +1,9 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 
 namespace NTHiep.MiniOdin
 {
-    [AttributeUsage(AttributeTargets.Field, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
     public class ShowIfAttribute : PropertyAttribute
     {
         public string fieldName;

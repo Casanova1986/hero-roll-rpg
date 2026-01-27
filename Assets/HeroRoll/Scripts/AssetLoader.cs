@@ -18,6 +18,10 @@ namespace HeroRoll
         public DictShow<int, Sprite> _dictItemSlotSubAround = new DictShow<int, Sprite>();
         public DictShow<HeroRoll.Battle.TypeDotMain, Sprite> _dictDotMainInGame = new DictShow<HeroRoll.Battle.TypeDotMain, Sprite>();
         public DictShow<HeroRoll.Battle.TypeDotSub, Sprite> _dictDotSubInGame = new DictShow<HeroRoll.Battle.TypeDotSub, Sprite>();
+        public DictShow<HeroRoll.Battle.TypeBuffDotSub, Sprite> _dictItemBuffDotSubInGame = new DictShow<HeroRoll.Battle.TypeBuffDotSub, Sprite>();
+        public DictShow<HeroRoll.Battle.TypeBuffDotMain, Sprite> _dictItemBuffDotMainInGame = new DictShow<HeroRoll.Battle.TypeBuffDotMain, Sprite>();
+        public DictShow<HeroRoll.Battle.TypeDeBuffDotSub, Sprite> _dictItemDeBuffDotSubInGame = new DictShow<HeroRoll.Battle.TypeDeBuffDotSub, Sprite>();
+        public DictShow<HeroRoll.Battle.TypeDeBuffDotMain, Sprite> _dictItemDeBuffDotMainInGame = new DictShow<HeroRoll.Battle.TypeDeBuffDotMain, Sprite>();
 
         void Awake()
         {

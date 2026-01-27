@@ -17,6 +17,7 @@ namespace HeroRoll.Battle
         [SerializeField] GameObject _dotSub;
         [SerializeField] GameObject _backgroundDotSub;
         [SerializeField] List<GameObject> _lsItemDotSub;
+        [SerializeField] GameObject _itemDotSub;
 
 
 
@@ -110,20 +111,35 @@ namespace HeroRoll.Battle
     }
 
 
-    [Serializable]
+    [System.Serializable]
     public class InfoDotItem
     {
         TypeDot _typeDot;
+
         //// Dot main
         [ShowIf(nameof(_typeDot), (int)TypeDot.DotMain)]
         public TypeDotMain _typeDotMain;
 
+        [ShowIf(nameof(_typeDot), (int)TypeDot.DotMain)]
+        public TypeBuffDotMain _typeBuffDotMain;
+
+        [ShowIf(nameof(_typeDot), (int)TypeDot.DotMain)]
+        public TypeDeBuffDotMain _typeDeBuffDotMain;
+
         //// Dot sub
         [ShowIf(nameof(_typeDot), (int)TypeDot.DotSub)]
         public TypeDotSub _typeDotSub;
+
+        [ShowIf(nameof(_typeDot), (int)TypeDot.DotSub)]
+        public TypeBuffDotSub _typeBuffDotSub;
+
+        [ShowIf(nameof(_typeDot), (int)TypeDot.DotSub)]
+        public TypeDeBuffDotSub _typeDeBuffDotSub;
+
         [ShowIf(nameof(_typeDot), (int)TypeDot.DotSub)]
         public int numberEnemy;
     }
+
     public enum TypeDot
     {
         DotMain = 0,
@@ -144,4 +160,24 @@ namespace HeroRoll.Battle
         DeBuff = 2,
         Start = 3
     }
+
+    public enum TypeBuffDotSub
+    {
+        DestroyRowAllEnemy,
+        SubtractAllEnemy
+    }
+    public enum TypeBuffDotMain
+    {
+        none
+    }
+    public enum TypeDeBuffDotSub
+    {
+        AddAllEnemy,
+        AddRowAllEnemy,
+    }
+    public enum TypeDeBuffDotMain
+    {
+        none
+    }
+
 }
