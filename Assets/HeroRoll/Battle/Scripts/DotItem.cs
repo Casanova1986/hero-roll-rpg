@@ -30,6 +30,12 @@ namespace HeroRoll.Battle
 
 
         #region Setter
+        public void SetUp()
+        {
+            SetBackgroundDot();
+            SetUpItemDotMain();
+            SetUpItemDotSub();
+        }
         public void SetBackgroundDot()
         {
             switch (_typeDot)
@@ -63,6 +69,16 @@ namespace HeroRoll.Battle
         {
             switch (_infoDotItem._typeDotSub)
             {
+                case TypeDotSub.Empty:
+                    for (int i = 0; i < _infoDotItem.numberEnemy; i++)
+                    {
+                        if (i < _lsItemDotSub.Count)
+                        {
+                            _lsItemDotSub[i].SetActive(false);
+                        }
+                    }
+
+                    break;
                 case TypeDotSub.Buff:
 
                     break;
@@ -82,12 +98,14 @@ namespace HeroRoll.Battle
 
                     break;
 
-                default:
-
-                    break;
             }
         }
-
+        public void ResetInfo()
+        {
+            BoardController.instance._characterMoveController._dotItemStay._infoDotItem._typeDotMain = TypeDotMain.Empty;
+            BoardController.instance._characterMoveController._dotItemStay._infoDotItem._typeDotSub = TypeDotSub.Empty;
+            BoardController.instance._characterMoveController._dotItemStay._infoDotItem.numberEnemy = 0;
+        }
         #endregion
     }
 
@@ -123,6 +141,7 @@ namespace HeroRoll.Battle
     {
         Empty = 0,
         Buff = 1,
-        DeBuff = 2
+        DeBuff = 2,
+        Start = 3
     }
 }

@@ -73,9 +73,29 @@ namespace HeroRoll.Battle
                     }
                 }
             }
-
         }
-
+        public void SetUpInfoDotSubRandomBossAttack()
+        {
+            List<InfoDotItem> infoDotItemRandoms = GetInfoDotSubRandomBossAttack();
+            _random = infoDotItemRandoms;
+            for (int i = 0; i < _dotItems.Count; i++)
+            {
+                if (_dotItems[i]._typeDot == TypeDot.DotSub)
+                {
+                    if (infoDotItemRandoms[i]._typeDotSub != TypeDotSub.Empty)
+                    {
+                        _dotItems[i]._infoDotItem._typeDotSub = infoDotItemRandoms[i]._typeDotSub;
+                    }
+                    _dotItems[i]._infoDotItem._typeDotMain = infoDotItemRandoms[i]._typeDotMain;
+                    switch (_dotItems[i]._infoDotItem._typeDotSub)
+                    {
+                        case TypeDotSub.AttackEnemy:
+                            _dotItems[i]._infoDotItem.numberEnemy += infoDotItemRandoms[i].numberEnemy;
+                            break;
+                    }
+                }
+            }
+        }
 
         //// Text Slot Board
         public void SetTextMultiMoveStep(int numberStep)
@@ -169,6 +189,37 @@ namespace HeroRoll.Battle
             }
             return infoDotItemsResult;
         }
+        public List<InfoDotItem> GetInfoDotSubRandomBossAttack()
+        {
+            List<InfoDotItem> infoDotItemsResult = new List<InfoDotItem>();
+
+            for (int i = 0; i < _dotItems.Count; i++)
+            {
+                InfoDotItem infoDotItem = new InfoDotItem();
+
+                if (_dotItems[i]._typeDot == TypeDot.DotSub)
+                {
+                    switch (_dotItems[i]._infoDotItem._typeDotSub)
+                    {
+                        case TypeDotSub.Empty:
+                            infoDotItem._typeDotSub = TypeDotSub.AttackEnemy;
+                            infoDotItem.numberEnemy = 1;
+                            break;
+
+                        case TypeDotSub.AttackEnemy:
+                            infoDotItem._typeDotSub = TypeDotSub.AttackEnemy;
+                            if (_dotItems[i]._infoDotItem.numberEnemy < 5)
+                            {
+                                infoDotItem.numberEnemy = 1;
+                            }
+                            break;
+                    }
+                }
+
+                infoDotItemsResult.Add(infoDotItem);
+            }
+            return infoDotItemsResult;
+        }
         #endregion
 
 
@@ -195,6 +246,9 @@ namespace HeroRoll.Battle
 
                         yield return new WaitForSeconds(0.1f);
                         yield return BoardController.instance.AnimDisplayDotItem();
+
+                        //// Healing Player
+                        PlayerController.instance.UpdateHp((int)(0.1f * PlayerController.instance.playerMaxHP));
                     }
 
                     yield return new WaitForSeconds(0.5f);
@@ -249,16 +303,12 @@ namespace HeroRoll.Battle
             {
                 if (i == _dotItems.Count - 1)
                 {
-                    _dotItems[i].SetBackgroundDot();
-                    _dotItems[i].SetUpItemDotMain();
-                    _dotItems[i].SetUpItemDotSub();
+                    _dotItems[i].SetUp();
                     yield return new WaitForSeconds(0);
                 }
                 else
                 {
-                    _dotItems[i].SetBackgroundDot();
-                    _dotItems[i].SetUpItemDotMain();
-                    _dotItems[i].SetUpItemDotSub();
+                    _dotItems[i].SetUp();
                 }
 
             }

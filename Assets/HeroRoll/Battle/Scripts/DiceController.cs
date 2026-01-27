@@ -82,19 +82,43 @@ namespace HeroRoll.Battle
         IEnumerator Thread_4()
         {
             //// Player Battle
-            if (BoardController.instance._characterMoveController._dotItemStay._infoDotItem._typeDotSub == TypeDotSub.AttackEnemy)
+            switch (BoardController.instance._characterMoveController._dotItemStay._infoDotItem._typeDotSub)
             {
-                GameController.instace._isBattle = true;
-                GameController.instace.EnableDisplayBattle(true);
+                case TypeDotSub.AttackEnemy:
 
-                yield return new WaitUntil(() => !GameController.instace._isBattle);
+                    GameController.instace._isBattle = true;
+                    GameController.instace.EnableDisplayBattle(true);
+
+                    yield return new WaitUntil(() => !GameController.instace._isBattle);
+
+                    break;
+
+                case TypeDotSub.DeBuff:
+
+                    break;
+
+                case TypeDotSub.Buff:
+
+                    break;
             }
+
+
+
+
         }
-        //// Cần phải thêm Thread của player khi đặt xuống dot
         IEnumerator Thread_end()
         {
-            BoardController.instance.SetTextMultiMoveStep(12);
-            yield return StartCoroutine(GameController.instace.CountDownTurnAttack());
+            if (PlayerController.instance._infoCharacterBase.hp > 0)
+            {
+                BoardController.instance.SetTextMultiMoveStep(12);
+                yield return StartCoroutine(GameController.instace.CountDownTurnBossAttack());
+                BoardController.instance._characterMoveController._dotItemStay.ResetInfo();
+                BoardController.instance._characterMoveController._dotItemStay.SetUp();
+            }
+            else
+            {
+                Debug.Log("______End___");
+            }
         }
 
         #region Setter

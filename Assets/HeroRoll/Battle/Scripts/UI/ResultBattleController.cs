@@ -9,7 +9,10 @@ namespace HeroRoll.Battle
     public class ResultBattleController : NTHiep.Tool.PopupUI
     {
         [ColorHeader("<Color=red>Var")]
-        [SerializeField] TextMeshProUGUI _resultText;
+        // [SerializeField] TextMeshProUGUI _resultText;
+        [SerializeField] VictoryController _victoryController;
+        [SerializeField] DefeatController _defeatController;
+        [SerializeField] GameObject _btnClose;
 
         public static ResultBattleController instance;
         void Awake()
@@ -20,13 +23,15 @@ namespace HeroRoll.Battle
         {
             if (isWin)
             {
-                _resultText.text = "You Win!";
+                // _resultText.text = "You Win!";
+                _victoryController.ShowDisplay();
             }
             else
             {
-                _resultText.text = "You Lose!";
+                // _resultText.text = "You Lose!";
+                _defeatController.ShowDisplay();
+                _btnClose.SetActive(false);
             }
-            gameObject.SetActive(true);
         }
 
         public void ShowPopup()
@@ -41,9 +46,14 @@ namespace HeroRoll.Battle
         {
             base.HidePopup(() =>
             {
+                _victoryController.HideDisplay();
+                _defeatController.HideDisplay();
+                _btnClose.SetActive(true);
+
                 GameController.instace.EnableDisplayBattle(false);
                 GameController.instace._isBattle = false;
             });
+
         }
     }
 }

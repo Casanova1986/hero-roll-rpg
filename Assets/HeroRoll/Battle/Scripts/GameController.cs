@@ -16,9 +16,11 @@ namespace HeroRoll.Battle
         [SerializeField] GameObject _displayBattle;
 
         [ColorHeader("<color=red>Value")]
-        public int _turnBossAttackLeft = 3;
+        public int _turnBossAttackLeft;
         public int _currentFloorPlayerStay = 0;
         public bool _isBattle = false;
+        public bool _isEndGame = false;
+        public bool _isWin = false;
         void Awake()
         {
             if (GameController.instace != null)
@@ -26,6 +28,8 @@ namespace HeroRoll.Battle
                 return;
             }
             instace = this;
+
+            _turnBossAttackLeft = ConfigBattle.TurnBossAttack;
         }
 
         void Start()
@@ -35,6 +39,8 @@ namespace HeroRoll.Battle
 
         IEnumerator GameStart()
         {
+
+
             yield return new WaitForSeconds(0);
             BoardController.instance.SetUpBoard();
             yield return new WaitForSeconds(0.1f);
@@ -47,7 +53,7 @@ namespace HeroRoll.Battle
 
         }
 
-        public IEnumerator CountDownTurnAttack()
+        public IEnumerator CountDownTurnBossAttack()
         {
             bool finishAnim = false;
             _turnBossAttackLeft--;
@@ -56,6 +62,9 @@ namespace HeroRoll.Battle
             {
                 _bossController.SetAnimationAttack((duration) =>
                 {
+                    BoardController.instance.SetUpInfoDotSubRandomBossAttack();
+                    BoardController.instance.SetUpDotMainRandom();
+
                     DOVirtual.DelayedCall(duration, () =>
                     {
                         finishAnim = true;
@@ -63,8 +72,9 @@ namespace HeroRoll.Battle
                 });
 
                 yield return new WaitUntil(() => finishAnim);
-                _turnBossAttackLeft = 3;
+                _turnBossAttackLeft = ConfigBattle.TurnBossAttack;
                 UIController.instace.SetTxtTurnBoss(_turnBossAttackLeft);
+                yield return BoardController.instance.AnimDisplayDotItem();
             }
             else
             {
