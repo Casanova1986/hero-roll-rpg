@@ -160,8 +160,11 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 20d7e8073e359b145865477131061875, type: 3}
     - {fileID: 21300000, guid: 8c1b0e95e6447544ca32e954570ed5df, type: 3}
   _dictDotMainInGame:
-    Keys: 00000000
+    Keys: 00000000010000000200000003000000
     Values:
+    - {fileID: 21300000, guid: d01ce0abce49b6943bf9fc339d33892f, type: 3}
+    - {fileID: 21300000, guid: d01ce0abce49b6943bf9fc339d33892f, type: 3}
+    - {fileID: 21300000, guid: d01ce0abce49b6943bf9fc339d33892f, type: 3}
     - {fileID: 21300000, guid: d01ce0abce49b6943bf9fc339d33892f, type: 3}
   _dictDotSubInGame:
     Keys: 00000000010000000300000002000000

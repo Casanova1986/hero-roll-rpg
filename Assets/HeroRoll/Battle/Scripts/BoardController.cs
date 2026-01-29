@@ -151,6 +151,39 @@ namespace HeroRoll.Battle
         {
             return _dotItems[index];
         }
+        public List<DotItem> GetAllDotAttack()
+        {
+            return _dotItems.FindAll(f => f.GetComponent<DotItem>()._typeDot == TypeDot.DotSub && f.GetComponent<DotItem>()._infoDotItem._typeDotSub == TypeDotSub.AttackEnemy);
+        }
+        public List<DotItem> GetRowDotAttack(DotItem dotItem)
+        {
+            List<DotItem> dotItemsResult = new List<DotItem>();
+            // _dotItems.FindAll(f => f.GetComponent<DotItem>()._typeDot == TypeDot.DotSub && f.GetComponent<DotItem>()._infoDotItem._typeDotSub == TypeDotSub.AttackEnemy);
+
+            int indexDotCurrent = _dotItems.IndexOf(dotItem);
+            int indexMin = 99;
+            int indexStart = 0;
+
+            List<int> lsIndexRow = new List<int> { 0, 10, 20, 30 };
+            for (int i = 0; i < lsIndexRow.Count; i++)
+            {
+                if (Mathf.Abs(lsIndexRow[i] - indexDotCurrent) < indexMin)
+                {
+                    indexMin = Mathf.Abs(lsIndexRow[i] - indexDotCurrent);
+                    indexStart = lsIndexRow[i];
+                }
+            }
+
+            for (int i = 0; i < _dotItems.Count; i++)
+            {
+                if (_dotItems[i]._typeDot == TypeDot.DotSub && i > indexStart && i < indexStart + 10)
+                {
+                    dotItemsResult.Add(_dotItems[i]);
+                }
+            }
+
+            return dotItemsResult;
+        }
         // public bool 
         public List<InfoDotItem> GetInfoDotSubRandom()
         {
@@ -171,6 +204,12 @@ namespace HeroRoll.Battle
                             {
                                 case TypeDotSub.AttackEnemy:
                                     infoDotItem.numberEnemy = 1;
+                                    break;
+                                case TypeDotSub.Buff:
+                                    infoDotItem._typeBuffDotSub = RandomUtil.RandomEnum<TypeBuffDotSub>();
+                                    break;
+                                case TypeDotSub.DeBuff:
+                                    infoDotItem._typeDeBuffDotSub = RandomUtil.RandomEnum<TypeDeBuffDotSub>();
                                     break;
                             }
                             break;
@@ -202,10 +241,15 @@ namespace HeroRoll.Battle
                     switch (_dotItems[i]._infoDotItem._typeDotSub)
                     {
                         case TypeDotSub.Empty:
-                            infoDotItem._typeDotSub = TypeDotSub.AttackEnemy;
-                            infoDotItem.numberEnemy = 1;
-                            break;
+                            infoDotItem._typeDotSub = RandomUtil.RandomEnumExclude(TypeDotSub.Buff, TypeDotSub.DeBuff);
 
+                            switch (infoDotItem._typeDotSub)
+                            {
+                                case TypeDotSub.AttackEnemy:
+                                    infoDotItem.numberEnemy = 1;
+                                    break;
+                            }
+                            break;
                         case TypeDotSub.AttackEnemy:
                             infoDotItem._typeDotSub = TypeDotSub.AttackEnemy;
                             if (_dotItems[i]._infoDotItem.numberEnemy < 5)
@@ -303,12 +347,12 @@ namespace HeroRoll.Battle
             {
                 if (i == _dotItems.Count - 1)
                 {
-                    _dotItems[i].SetUp();
+                    _dotItems[i].UpdateDisplay();
                     yield return new WaitForSeconds(0);
                 }
                 else
                 {
-                    _dotItems[i].SetUp();
+                    _dotItems[i].UpdateDisplay();
                 }
 
             }

@@ -94,16 +94,13 @@ namespace HeroRoll.Battle
                     break;
 
                 case TypeDotSub.DeBuff:
-
+                    yield return StartCoroutine(DotSubDeBuff(BoardController.instance._characterMoveController._dotItemStay._infoDotItem._typeDeBuffDotSub));
                     break;
 
                 case TypeDotSub.Buff:
-
+                    yield return StartCoroutine(DotSubBuff(BoardController.instance._characterMoveController._dotItemStay._infoDotItem._typeBuffDotSub));
                     break;
             }
-
-
-
 
         }
         IEnumerator Thread_end()
@@ -113,14 +110,57 @@ namespace HeroRoll.Battle
                 BoardController.instance.SetTextMultiMoveStep(12);
                 yield return StartCoroutine(GameController.instace.CountDownTurnBossAttack());
                 BoardController.instance._characterMoveController._dotItemStay.ResetInfo();
-                BoardController.instance._characterMoveController._dotItemStay.SetUp();
+                BoardController.instance._characterMoveController._dotItemStay.UpdateDisplay();
             }
             else
             {
                 Debug.Log("______End___");
             }
         }
+        IEnumerator DotSubDeBuff(TypeDeBuffDotSub typeDeBuffDotSub)
+        {
+            switch (typeDeBuffDotSub)
+            {
+                case TypeDeBuffDotSub.AddAllEnemy:
+                    foreach (DotItem dotItemAttack in BoardController.instance.GetAllDotAttack())
+                    {
+                        dotItemAttack._infoDotItem.numberEnemy++;
+                        dotItemAttack.UpdateDisplay();
+                    }
+                    yield break;
 
+                case TypeDeBuffDotSub.AddRowAllEnemy:
+                    foreach (DotItem dotItemAttack in BoardController.instance.GetRowDotAttack(BoardController.instance._characterMoveController._dotItemStay))
+                    {
+                        dotItemAttack._infoDotItem._typeDotSub = TypeDotSub.AttackEnemy;
+                        dotItemAttack._infoDotItem.numberEnemy++;
+                        dotItemAttack.UpdateDisplay();
+                    }
+                    break;
+            }
+        }
+        IEnumerator DotSubBuff(TypeBuffDotSub typeBuffDotSub)
+        {
+            switch (typeBuffDotSub)
+            {
+                case TypeBuffDotSub.SubtractAllEnemy:
+                    foreach (DotItem dotItemAttack in BoardController.instance.GetAllDotAttack())
+                    {
+                        dotItemAttack._infoDotItem.numberEnemy--;
+                        dotItemAttack.UpdateDisplay();
+                    }
+                    yield break;
+
+                case TypeBuffDotSub.DestroyRowAllEnemy:
+                    foreach (DotItem dotItemAttack in BoardController.instance.GetRowDotAttack(BoardController.instance._characterMoveController._dotItemStay))
+                    {
+                        dotItemAttack._infoDotItem._typeDotSub = TypeDotSub.Empty;
+                        dotItemAttack._infoDotItem.numberEnemy = 0;
+                        dotItemAttack.UpdateDisplay();
+                    }
+                    break;
+            }
+        }
         #region Setter
         void SetPlayDice()
         {

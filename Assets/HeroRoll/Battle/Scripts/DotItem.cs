@@ -31,11 +31,17 @@ namespace HeroRoll.Battle
 
 
         #region Setter
-        public void SetUp()
+        public void UpdateDisplay()
         {
             SetBackgroundDot();
-            SetUpItemDotMain();
-            SetUpItemDotSub();
+            if (_typeDot == TypeDot.DotMain)
+            {
+                SetUpItemDotMain();
+            }
+            else
+            {
+                SetUpItemDotSub();
+            }
         }
         public void SetBackgroundDot()
         {
@@ -68,33 +74,34 @@ namespace HeroRoll.Battle
 
         public void SetUpItemDotSub()
         {
+            _itemDotSub.SetActive(_infoDotItem._typeDotSub == TypeDotSub.Buff || _infoDotItem._typeDotSub == TypeDotSub.DeBuff);
+
             switch (_infoDotItem._typeDotSub)
             {
                 case TypeDotSub.Empty:
-                    for (int i = 0; i < _infoDotItem.numberEnemy; i++)
+
+                    for (int i = 0; i < _lsItemDotSub.Count; i++)
                     {
-                        if (i < _lsItemDotSub.Count)
-                        {
-                            _lsItemDotSub[i].SetActive(false);
-                        }
+                        _lsItemDotSub[i].SetActive(false);
                     }
 
                     break;
                 case TypeDotSub.Buff:
-
+                    _itemDotSub.GetComponent<SpriteRenderer>().sprite = AssetLoader.instance._dictItemBuffDotSubInGame.Get(_infoDotItem._typeBuffDotSub);
                     break;
 
                 case TypeDotSub.DeBuff:
-
+                    _itemDotSub.GetComponent<SpriteRenderer>().sprite = AssetLoader.instance._dictItemDeBuffDotSubInGame.Get(_infoDotItem._typeDeBuffDotSub);
                     break;
 
                 case TypeDotSub.AttackEnemy:
-                    for (int i = 0; i < _infoDotItem.numberEnemy; i++)
+                    if (_infoDotItem.numberEnemy < 0)
                     {
-                        if (i < _lsItemDotSub.Count)
-                        {
-                            _lsItemDotSub[i].SetActive(true);
-                        }
+                        _infoDotItem.numberEnemy = 0;
+                    }
+                    for (int i = 0; i < _lsItemDotSub.Count; i++)
+                    {
+                        _lsItemDotSub[i].SetActive(i < _infoDotItem.numberEnemy);
                     }
 
                     break;
