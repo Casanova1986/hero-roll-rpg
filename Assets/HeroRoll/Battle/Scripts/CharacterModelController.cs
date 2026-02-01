@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using NTHiep.MiniOdin;
 using Spine.Unity;
@@ -28,20 +29,39 @@ namespace HeroRoll.Battle
         {
             CharacterAssetLoader.instance.SetSkeletonData(_skeletonAnimation, _idCharacter);
         }
-        public virtual void SetInfoData()
+        public virtual void SetInfoData(bool isHero)
         {
-            CharacterDataAsset characterDataAsset = CharacterAssetLoader.instance._characterDataAssets.Get(_idCharacter);
-            _infoCharacterBase = new InfoCharacterBase
+            if (isHero)
             {
-                atk = characterDataAsset._atk,
-                hp = characterDataAsset._hp,
-                def = characterDataAsset._def,
-                accuracy = characterDataAsset._accuracy,
-                trueDamage = characterDataAsset._trueDamage,
-                critRate = characterDataAsset._critRate,
-                eva = characterDataAsset._eva,
-                hpRegen = characterDataAsset._hpRegen,
-            };
+                _infoCharacterBase = new InfoCharacterBase
+                {
+                    hp = PlayerController.instance._infoCharacterBase.hp,
+                    atk = PlayerController.instance._infoCharacterBase.atk,
+                    accuracy = PlayerController.instance._infoCharacterBase.accuracy,
+                    critRate = PlayerController.instance._infoCharacterBase.critRate,
+                    def = PlayerController.instance._infoCharacterBase.def,
+                    eva = PlayerController.instance._infoCharacterBase.eva,
+                    hpRegen = PlayerController.instance._infoCharacterBase.hpRegen,
+                    trueDamage = PlayerController.instance._infoCharacterBase.trueDamage,
+                    cooldown = PlayerController.instance._infoCharacterBase.cooldown,
+                };
+            }
+            else
+            {
+                CharacterDataAsset characterDataAsset = CharacterAssetLoader.instance._characterDataAssets.Get(_idCharacter);
+                _infoCharacterBase = new InfoCharacterBase
+                {
+                    atk = characterDataAsset._atk,
+                    hp = characterDataAsset._hp,
+                    def = characterDataAsset._def,
+                    accuracy = characterDataAsset._accuracy,
+                    trueDamage = characterDataAsset._trueDamage,
+                    critRate = characterDataAsset._critRate,
+                    eva = characterDataAsset._eva,
+                    hpRegen = characterDataAsset._hpRegen,
+                    cooldown = characterDataAsset._cooldown,
+                };
+            }
         }
         public virtual int UpdateHeath(int value)
         {
@@ -71,46 +91,114 @@ namespace HeroRoll.Battle
         #endregion
 
         #region Animation
-        protected virtual void AttackAnim(bool isHero, System.Action completeAttack)
+        protected virtual void AttackAnim(bool isHero, System.Action<float> startAnim, System.Action onAttack, System.Action completeAttack)
         {
             int originSorttingLayer = this.GetComponent<SortingGroup>().sortingOrder;
             this.GetComponent<SortingGroup>().sortingOrder = 2;
             if (isHero)
             {
-                CharacterAssetLoader.instance.SetAnimationHeroAttack(_skeletonAnimation, complete: (duration) =>
+                ConfigAnimSkeleton.SetAnimationHeroAttack(_skeletonAnimation, startAnim: startAnim, onAttack: onAttack, complete: () =>
                 {
-                    DOVirtual.DelayedCall(duration, () =>
-                    {
-                        this.GetComponent<SortingGroup>().sortingOrder = originSorttingLayer;
-                        completeAttack?.Invoke();
-                    });
+                    this.GetComponent<SortingGroup>().sortingOrder = originSorttingLayer;
+                    completeAttack?.Invoke();
                 });
             }
             else
             {
-                CharacterAssetLoader.instance.SetAnimationMonsterAttack(_skeletonAnimation, complete: (duration) =>
+                ConfigAnimSkeleton.SetAnimationMonsterAttack(_skeletonAnimation, startAnim: startAnim, onAttack: onAttack, complete: () =>
                 {
-                    DOVirtual.DelayedCall(duration, () =>
-                    {
-                        this.GetComponent<SortingGroup>().sortingOrder = originSorttingLayer;
-                        completeAttack?.Invoke();
-                    });
+                    this.GetComponent<SortingGroup>().sortingOrder = originSorttingLayer;
+                    completeAttack?.Invoke();
                 });
             }
         }
-        public virtual void IdleAnim()
+        public virtual void IdleAnim(bool isHero)
         {
-            CharacterAssetLoader.instance.SetAnimationWait(_skeletonAnimation);
-        }
-        protected virtual void DeathAnim(System.Action completeDeath)
-        {
-            CharacterAssetLoader.instance.SetAnimationDeath(_skeletonAnimation, complete: (duration) =>
+            if (isHero)
             {
-                DOVirtual.DelayedCall(duration, () =>
+                ConfigAnimSkeleton.SetAnimationWait(_skeletonAnimation);
+            }
+            else
+            {
+                ConfigAnimSkeleton.SetAnimationWait(_skeletonAnimation);
+            }
+        }
+        protected virtual void DeathAnim(bool isHero, System.Action completeDeath)
+        {
+            if (isHero)
+            {
+                ConfigAnimSkeleton.SetAnimationDeath(_skeletonAnimation, complete: () =>
                 {
                     completeDeath?.Invoke();
                 });
-            });
+            }
+            else
+            {
+                ConfigAnimSkeleton.SetAnimationDeath(_skeletonAnimation, complete: () =>
+                {
+                    completeDeath?.Invoke();
+                });
+            }
+        }
+        protected virtual void SkillAnim(bool isHero, List<System.Action> lsComplete)
+        {
+            if (isHero)
+            {
+                List<System.Action<Spine.Event>> lsActionComplete = new List<System.Action<Spine.Event>>();
+                for (int i = 0; i < lsComplete.Count; i++)
+                {
+                    int index = i;
+                    bool oneAction = false;
+                    int countTrackAttack = 0;
+                    System.Action<Spine.Event> actionComplete = (Event) =>
+                    {
+                        // Debug.Log("totalDuration: " + CakeDuration);
+                        // Debug.Log("duration: " + duration);
+                        if (index == 0 && Event.Data.Name == "chufa_1" && !oneAction)
+                        {
+                            oneAction = true;
+                            lsComplete[index]?.Invoke();
+                        }
+                        if (index > 0 && Event.Data.Name == "chufa" && !oneAction && countTrackAttack == 3)
+                        {
+                            oneAction = true;
+                            lsComplete[index]?.Invoke();
+                        }
+                        if (index > 0 && Event.Data.Name == "chufa_2" && !oneAction)
+                        {
+                            oneAction = true;
+                            lsComplete[index]?.Invoke();
+                        }
+                        if (Event.Data.Name == "chufa")
+                        {
+                            countTrackAttack++;
+                        }
+                    };
+
+                    lsActionComplete.Add(actionComplete);
+                }
+
+
+                ConfigAnimSkeleton.SetAnimationHeroSkill(_skeletonAnimation, 0, lsComplete: lsActionComplete);
+            }
+            else
+            {
+                // List<System.Action<float>> lsActionComplete = new List<System.Action<float>>();
+                // foreach (System.Action action in lsComplete)
+                // {
+                //     System.Action<float> actionComplete = (duration) =>
+                //     {
+                //         DOVirtual.DelayedCall(duration, () =>
+                //         {
+                //             action?.Invoke();
+                //         });
+                //     };
+
+                //     lsActionComplete.Add(actionComplete);
+                // }
+
+                // ConfigAnimSkeleton.SetAnimationHeroSkill(_skeletonAnimation, 0, lsComplete: lsActionComplete);
+            }
         }
 
         #endregion

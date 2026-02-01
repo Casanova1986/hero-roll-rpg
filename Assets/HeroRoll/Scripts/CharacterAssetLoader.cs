@@ -32,46 +32,6 @@ namespace HeroRoll
             skeletonAnimation.Initialize(true);
         }
 
-        #region SkeletonAnimation
-        public void SetAnimationWait(SkeletonAnimation skeletonAnimation)
-        {
-            var state = skeletonAnimation.AnimationState;
-            state.SetAnimation(0, "wait", true);
-        }
-        public void SetAnimationStart(SkeletonAnimation skeletonAnimation, bool isBoss = false, System.Action<float> complete = null)
-        {
-            var state = skeletonAnimation.AnimationState;
-            if (isBoss)
-            {
-                state.SetAnimation(0, "ruchang", false);
-                state.AddAnimation(0, "wait", true, 0);
-            }
-            else
-            {
-                state.SetAnimation(0, "wait", true);
-            }
-            complete?.Invoke(state.TimeScale);
-        }
-        public void SetAnimationHeroAttack(SkeletonAnimation skeletonAnimation, int index = 1, System.Action<float> complete = null)
-        {
-            var state = skeletonAnimation.AnimationState;
-            state.SetAnimation(0, $"atk{index}", false);
-            state.AddAnimation(0, "wait", true, 0);
-            complete?.Invoke(state.TimeScale - state.TimeScale * 0.5f);
-        }
-        public void SetAnimationMonsterAttack(SkeletonAnimation skeletonAnimation, System.Action<float> complete = null)
-        {
-            var state = skeletonAnimation.AnimationState;
-            state.SetAnimation(0, "atk", false);
-            state.AddAnimation(0, "wait", true, 0);
-            complete?.Invoke(state.TimeScale);
-        }
-        public void SetAnimationDeath(SkeletonAnimation skeletonAnimation, System.Action<float> complete = null)
-        {
-            var state = skeletonAnimation.AnimationState;
-            state.SetAnimation(0, "death", false);
-            complete?.Invoke(state.TimeScale);
-        }
-        #endregion
+      
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace HeroRoll.Battle
@@ -6,25 +7,40 @@ namespace HeroRoll.Battle
     public class HeroModelController : CharacterModelController
     {
 
-
-
-        public void StartAttack(System.Action onComplete)
+        public void StartAttack(Action<float> startAnim, System.Action onAttack, System.Action onComplete)
         {
-            base.AttackAnim(true, () =>
+            base.AttackAnim(true, startAnim, onAttack, onComplete);
+        }
+        public void StartDeath(System.Action onComplete)
+        {
+            base.DeathAnim(true, () =>
             {
                 onComplete?.Invoke();
             });
         }
-        public void StartDeath(System.Action onComplete)
+        public void StartSkill(System.Action onMove, System.Action onAttack, System.Action onComplete)
         {
-            base.DeathAnim(() =>
+            List<System.Action> onCompleteFunc = new List<System.Action>();
+
+            switch (_idCharacter)
             {
-                onComplete?.Invoke();
-            });
+                case "Xihe":
+                    onMove?.Invoke();
+                    onAttack?.Invoke();
+                    onComplete?.Invoke();
+                    break;
+            }
+
+            onCompleteFunc.Add(onMove);
+            onCompleteFunc.Add(onAttack);
+            onCompleteFunc.Add(onComplete);
+
+            base.SkillAnim(true, onCompleteFunc);
         }
         public void SetInfoCharacterBase(InfoCharacterBase infoCharacterBase)
         {
             this._infoCharacterBase = infoCharacterBase;
         }
     }
+
 }

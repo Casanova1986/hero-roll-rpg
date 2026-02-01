@@ -170,8 +170,8 @@ namespace HeroRoll.Battle
 
     public enum TypeBuffDotSub
     {
-        DestroyRowAllEnemy,
-        SubtractAllEnemy
+        DestroyRowAllEnemy = 0,
+        SubtractAllEnemy = 1,
     }
     public enum TypeBuffDotMain
     {
@@ -179,8 +179,8 @@ namespace HeroRoll.Battle
     }
     public enum TypeDeBuffDotSub
     {
-        AddAllEnemy,
-        AddRowAllEnemy,
+        AddAllEnemy = 0,
+        AddRowAllEnemy = 1,
     }
     public enum TypeDeBuffDotMain
     {

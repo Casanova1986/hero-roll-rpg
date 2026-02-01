@@ -47,11 +47,12 @@ namespace HeroRoll.Battle
             }
             SetTextMultiMoveStep(12);
         }
+        [SerializeField] List<InfoDotItem> _random = new List<InfoDotItem>();
         public void SetUpDotMainRandom()
         {
 
         }
-        [SerializeField] List<InfoDotItem> _random = new List<InfoDotItem>();
+
         public void SetUpInfoDotSubRandom()
         {
             List<InfoDotItem> infoDotItemRandoms = GetInfoDotSubRandom();
@@ -64,11 +65,17 @@ namespace HeroRoll.Battle
                     {
                         _dotItems[i]._infoDotItem._typeDotSub = infoDotItemRandoms[i]._typeDotSub;
                     }
-                    _dotItems[i]._infoDotItem._typeDotMain = infoDotItemRandoms[i]._typeDotMain;
+                    // _dotItems[i]._infoDotItem._typeDotMain = infoDotItemRandoms[i]._typeDotMain;
                     switch (_dotItems[i]._infoDotItem._typeDotSub)
                     {
                         case TypeDotSub.AttackEnemy:
                             _dotItems[i]._infoDotItem.numberEnemy += infoDotItemRandoms[i].numberEnemy;
+                            break;
+                        case TypeDotSub.Buff:
+                            _dotItems[i]._infoDotItem._typeBuffDotSub = infoDotItemRandoms[i]._typeBuffDotSub;
+                            break;
+                        case TypeDotSub.DeBuff:
+                            _dotItems[i]._infoDotItem._typeDeBuffDotSub = infoDotItemRandoms[i]._typeDeBuffDotSub;
                             break;
                     }
                 }

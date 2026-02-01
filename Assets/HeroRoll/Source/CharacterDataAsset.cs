@@ -31,6 +31,7 @@ namespace HeroRoll
         public int _critRate;
         public int _eva;
         public int _hpRegen;
+        public float _cooldown;
 
 
 

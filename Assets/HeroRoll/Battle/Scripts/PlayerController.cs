@@ -47,6 +47,7 @@ namespace HeroRoll.Battle
                 critRate = characterDataAsset._critRate,
                 eva = characterDataAsset._eva,
                 hpRegen = characterDataAsset._hpRegen,
+                cooldown = characterDataAsset._cooldown,
             };
             playerMaxHP = characterDataAsset._hp;
             UIController.instace.SetUpHpBar(_infoCharacterBase.hp, playerMaxHP);
@@ -131,5 +132,6 @@ namespace HeroRoll.Battle
         public int critRate;
         public int eva;
         public int hpRegen;
+        public float cooldown;
     }
 }
