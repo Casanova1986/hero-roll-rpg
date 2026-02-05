@@ -37,9 +37,10 @@ namespace HeroRoll
     {
         public const string NameAnim_Idle = "wait";
         public const string NameAnim_Ruchang = "ruchang";
-        public static readonly string[] NameAnimHero_Attack = { "atk1", "atk2", "atk3" };
+        public static readonly string[] NameAnimHero_Attack = { "atk1", "atk2" };
+        public static readonly string[] NameAnimMonter_Attack = { "atk1", "atk2" };
         public static readonly List<List<string>> NameAnimHero_Skill = new List<List<string>> { new List<string> { "skill1_1", "skill1_2", "skill1_3" } };
-        public static readonly string[] NameAnimMonter_Attack = { "atk" };
+        public static readonly List<List<string>> NameAnimMonster_Skill = new List<List<string>> { new List<string> { "skill1_1", "skill1_2", "skill1_3" } };
         public const string NameAnim_Death = "death";
         public const string NameAnim_Stun = "stun";
 
@@ -122,6 +123,7 @@ namespace HeroRoll
         //// Skill
         public static void SetAnimationHeroSkill(SkeletonAnimation skeletonAnimation, int index = 0, List<System.Action<Spine.Event>> lsComplete = null)
         {
+            // Debug.Log($"<color=green>SetAnimationHeroSkill: {lsComplete?.Count}");
             if (index < 0 || index >= NameAnimHero_Skill.Count)
             {
                 Debug.Log($"<color=red>Wrong index: {index}");
@@ -160,7 +162,47 @@ namespace HeroRoll
                 };
             }
         }
+        public static void SetAnimationMonsterSkill(SkeletonAnimation skeletonAnimation, int index = 0, List<System.Action<Spine.Event>> lsComplete = null)
+        {
+            Debug.Log($"<color=green>SetAnimationMonsterSkill: {lsComplete?.Count}");
+            if (index < 0 || index >= NameAnimMonster_Skill.Count)
+            {
+                Debug.Log($"<color=red>Wrong index: {index}");
+                return;
+            }
 
+            var state = skeletonAnimation.AnimationState;
+
+            for (int i = 0; i < NameAnimMonster_Skill[index].Count; i++)
+            {
+                int actionIndex = i;
+                string animName = NameAnimMonster_Skill[index][i];
+
+                Spine.TrackEntry entry;
+
+                if (i == 0)
+                {
+                    entry = state.SetAnimation(0, animName, false);
+                }
+                else
+                {
+                    entry = state.AddAnimation(0, animName, false, 0);
+                }
+
+                entry.Event += (trackEntry, spineEvent) =>
+                {
+                    Debug.Log($"<color=red>Event= {spineEvent.Data.Name} | " + $"<color=white>Int= {spineEvent.Int} | " + $"<color=green>Float= {spineEvent.Float} | " + $"<color=blue>String= {spineEvent.String}");
+                    if (spineEvent.Data.Name == "chuangjian")
+                    {
+                        state.AddAnimation(0, NameAnim_Idle, true, 0);
+                    }
+                    if (lsComplete != null && actionIndex < lsComplete.Count)
+                    {
+                        lsComplete[actionIndex]?.Invoke(spineEvent);
+                    }
+                };
+            }
+        }
 
         //// Death
         public static void SetAnimationDeath(SkeletonAnimation skeletonAnimation, System.Action complete = null)

@@ -25,9 +25,9 @@ namespace HeroRoll.Battle
             switch (_idCharacter)
             {
                 case "Xihe":
-                    onMove?.Invoke();
-                    onAttack?.Invoke();
-                    onComplete?.Invoke();
+                    // onMove?.Invoke();
+                    // onAttack?.Invoke();
+                    // onComplete?.Invoke();
                     break;
             }
 

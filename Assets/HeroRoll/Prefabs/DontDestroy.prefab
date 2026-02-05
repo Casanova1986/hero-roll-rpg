@@ -98,11 +98,13 @@ MonoBehaviour:
     - CaoYao
     - Xihe
     - Menghuai
+    - ShangZhang
     Values:
     - {fileID: 11400000, guid: 660454e5b9a79e346b843b42dc9d43d0, type: 2}
     - {fileID: 11400000, guid: 321f9469a97b66f418bb741b88c6b3be, type: 2}
     - {fileID: 11400000, guid: c5f9c065f37407a41b577b2b6c94fa0a, type: 2}
     - {fileID: 11400000, guid: a77f9781dc9e48a4d8a9f9c845aeea14, type: 2}
+    - {fileID: 11400000, guid: 7ef4e4ca8eca51f43912990eebd5c449, type: 2}
 --- !u!1 &4022040647296072885
 GameObject:
   m_ObjectHideFlags: 0

@@ -157,16 +157,19 @@ namespace HeroRoll.Battle
                         if (index == 0 && Event.Data.Name == "chufa_1" && !oneAction)
                         {
                             oneAction = true;
+                            // Debug.Log("=== Hero Skill Event: chufa_1 ===");
                             lsComplete[index]?.Invoke();
                         }
                         if (index > 0 && Event.Data.Name == "chufa" && !oneAction && countTrackAttack == 3)
                         {
                             oneAction = true;
+                            // Debug.Log("=== Hero Skill Event: chufa ===");
                             lsComplete[index]?.Invoke();
                         }
                         if (index > 0 && Event.Data.Name == "chufa_2" && !oneAction)
                         {
                             oneAction = true;
+                            // Debug.Log("=== Hero Skill Event: chufa_2 ===");
                             lsComplete[index]?.Invoke();
                         }
                         if (Event.Data.Name == "chufa")
@@ -183,21 +186,44 @@ namespace HeroRoll.Battle
             }
             else
             {
-                // List<System.Action<float>> lsActionComplete = new List<System.Action<float>>();
-                // foreach (System.Action action in lsComplete)
-                // {
-                //     System.Action<float> actionComplete = (duration) =>
-                //     {
-                //         DOVirtual.DelayedCall(duration, () =>
-                //         {
-                //             action?.Invoke();
-                //         });
-                //     };
+                List<System.Action<Spine.Event>> lsActionComplete = new List<System.Action<Spine.Event>>();
+                for (int i = 0; i < lsComplete.Count; i++)
+                {
+                    int index = i;
+                    bool oneAction = false;
+                    int countTrackAttack = 0;
 
-                //     lsActionComplete.Add(actionComplete);
-                // }
+                    if (index == 0 && !oneAction)
+                    {
+                        oneAction = true;
+                        // Debug.Log("=== Monster Skill Event: chufa_1 ===");
+                        lsComplete[index]?.Invoke();
+                    }
+                    System.Action<Spine.Event> actionComplete = (Event) =>
+                    {
+                        if (index > 0 && Event.Data.Name == "chufa" && !oneAction && countTrackAttack == 2)
+                        {
+                            oneAction = true;
+                            // Debug.Log("=== Monster Skill Event: chufa ===");
+                            lsComplete[index]?.Invoke();
+                        }
+                        if (index > 0 && Event.Data.Name == "chuangjian" && !oneAction)
+                        {
+                            oneAction = true;
+                            // Debug.Log("=== Monster Skill Event: chuangjian ===");
+                            lsComplete[index]?.Invoke();
+                        }
+                        if (Event.Data.Name == "chufa")
+                        {
+                            countTrackAttack++;
+                        }
+                    };
 
-                // ConfigAnimSkeleton.SetAnimationHeroSkill(_skeletonAnimation, 0, lsComplete: lsActionComplete);
+                    lsActionComplete.Add(actionComplete);
+                }
+
+
+                ConfigAnimSkeleton.SetAnimationMonsterSkill(_skeletonAnimation, 0, lsComplete: lsActionComplete);
             }
         }
 

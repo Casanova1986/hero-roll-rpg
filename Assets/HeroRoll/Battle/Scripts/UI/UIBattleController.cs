@@ -13,7 +13,7 @@ namespace HeroRoll.Battle
         [SerializeField] GameObject _sliderHpMonster;
         [SerializeField] GameObject _sliderHpMonsterDelay;
         [SerializeField] GameObject _sliderCooldownHero;
-
+        [SerializeField] GameObject _sliderCooldownMonster;
 
         public void UpdateDisplayHeath(float value, bool isHero)
         {
@@ -36,7 +36,7 @@ namespace HeroRoll.Battle
             }
             else
             {
-                _sliderCooldownHero.GetComponent<Slider>().DOValue(value, 0.15f);
+                _sliderCooldownMonster.GetComponent<Slider>().DOValue(value, 0.15f);
             }
         }
     }

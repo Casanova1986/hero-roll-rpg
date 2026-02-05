@@ -21,6 +21,7 @@ namespace HeroRoll.Battle
         public int _totalHealthHero = 0;
         public int _totalMaxHealthHero = 0;
         public float _heroCooldown = 0;
+        public float _monsterCooldown = 0;
         public bool _isTurnHero = true;
 
 
@@ -45,34 +46,34 @@ namespace HeroRoll.Battle
             {
                 SetCharacterBattle(new List<string>
                 {
-                    "Menghuai",
+                    "ShangZhang",
                 });
             }
             else if (numberMonster == 2)
             {
                 SetCharacterBattle(new List<string>
                 {
-                    "Menghuai",
-                    "Menghuai",
+                    "ShangZhang",
+                    "ShangZhang",
                 });
             }
             else if (numberMonster == 3)
             {
                 SetCharacterBattle(new List<string>
                 {
-                    "Menghuai",
-                    "Menghuai",
-                    "Menghuai"
+                    "ShangZhang",
+                    "ShangZhang",
+                    "ShangZhang"
                 });
             }
             else
             {
                 SetCharacterBattle(new List<string>
                 {
-                    "Menghuai",
-                    "Menghuai",
-                    "Menghuai",
-                    "Menghuai"
+                    "ShangZhang",
+                    "ShangZhang",
+                    "ShangZhang",
+                    "ShangZhang"
                 });
 
             }
@@ -143,11 +144,14 @@ namespace HeroRoll.Battle
                 {
                     if (_heroCooldown >= 1f)
                     {
-                        TestAnimHeroSkill(() =>
+                        DOVirtual.DelayedCall(0.5f, () =>
                         {
-                            isDoneTurn = true;
+                            TestAnimHeroSkill(() =>
+                            {
+                                Debug.Log("=== Complete Hero Skill ===");
+                                isDoneTurn = true;
+                            });
                         });
-
                     }
                     else
                     {
@@ -159,8 +163,21 @@ namespace HeroRoll.Battle
             {
                 TestMonsterAttack(() =>
                 {
-
-                    isDoneTurn = true;
+                    if (_monsterCooldown >= 1f)
+                    {
+                        DOVirtual.DelayedCall(0.5f, () =>
+                        {
+                            TestAnimMonsterSkill(() =>
+                            {
+                                Debug.Log("=== Complete Monster Skill ===");
+                                isDoneTurn = true;
+                            });
+                        });
+                    }
+                    else
+                    {
+                        isDoneTurn = true;
+                    }
                 });
             }
             yield return new WaitUntil(() => isDoneTurn);
@@ -197,6 +214,7 @@ namespace HeroRoll.Battle
                 float value = _totalHealthMonster / (float)_totalMaxHealthMonster;
                 _UIBattleController.UpdateDisplayHeath(value, isHero: false);
                 _UIBattleController.UpdateDisplayCooldown(_heroCooldown, true);
+                _UIBattleController.UpdateDisplayCooldown(_monsterCooldown, false);
             }, onComplete: completeTurn);
 
             void Calculate()
@@ -218,6 +236,7 @@ namespace HeroRoll.Battle
                 }
                 _totalHealthMonster -= dameAtk;
                 _heroCooldown += hero._infoCharacterBase.cooldown;
+                _monsterCooldown += monster._infoCharacterBase.cooldown * 0.5f;
             }
         }
         void TestMonsterAttack(System.Action completeTurn)
@@ -234,6 +253,7 @@ namespace HeroRoll.Battle
                 float value = _totalHealthHero / (float)_totalMaxHealthHero;
                 _UIBattleController.UpdateDisplayHeath(value, isHero: true);
                 _UIBattleController.UpdateDisplayCooldown(_heroCooldown, true);
+                _UIBattleController.UpdateDisplayCooldown(_monsterCooldown, false);
             }, onComplete: completeTurn);
 
             void Calculate()
@@ -254,6 +274,7 @@ namespace HeroRoll.Battle
                 }
                 _totalHealthHero -= dameAtk;
                 _heroCooldown += hero._infoCharacterBase.cooldown * 0.5f;
+                _monsterCooldown += monster._infoCharacterBase.cooldown;
             }
         }
 
@@ -273,7 +294,10 @@ namespace HeroRoll.Battle
                 _UIBattleController.UpdateDisplayHeath(value, isHero: false);
                 _UIBattleController.UpdateDisplayCooldown(0, true);
 
-            }, onComplete: completeTurn);
+            }, onComplete: () =>
+            {
+                completeTurn?.Invoke();
+            });
 
 
             void Calculate()
@@ -298,6 +322,50 @@ namespace HeroRoll.Battle
                     }
                     _totalHealthMonster -= dameAtk;
                 }
+            }
+        }
+        void TestAnimMonsterSkill(System.Action completeTurn)
+        {
+            List<GameObject> lsMonster = _lsMonster.FindAll(f => f.activeSelf && f.GetComponent<MonsterModelController>()._infoCharacterBase.hp > 0);
+            GameObject monsterSkill = NTHiep.Tool.RandomUtil.Pick(lsMonster);
+            HeroModelController hero = _hero.GetComponent<HeroModelController>();
+
+
+            MonsterSkill(monsterSkill,
+            onAttack: () =>
+            {
+                Calculate();
+                _monsterCooldown = 0;
+                float value = _totalHealthHero / (float)_totalMaxHealthHero;
+                _UIBattleController.UpdateDisplayHeath(value, isHero: true);
+                _UIBattleController.UpdateDisplayCooldown(0, false);
+
+            }, onComplete: () =>
+            {
+                completeTurn?.Invoke();
+            });
+
+
+            void Calculate()
+            {
+
+                MonsterModelController monster = monsterSkill.GetComponent<MonsterModelController>();
+                int dameAtk = monster.CalculateDame(monster._infoCharacterBase.atk, hero._infoCharacterBase.def);
+                int dameRemain = hero.UpdateHeath(-dameAtk);
+
+                if (dameRemain > 0)
+                {
+                    dameAtk -= dameRemain;
+
+                }
+                if (hero._infoCharacterBase.hp <= 0)
+                {
+                    hero.StartDeath(() =>
+                    {
+                        _hero.SetActive(false);
+                    });
+                }
+                _totalHealthMonster -= dameAtk;
             }
         }
         //// Character Attack
@@ -348,21 +416,45 @@ namespace HeroRoll.Battle
         void HeroSkill(GameObject monsterMove, System.Action onAttack, System.Action onComplete)
         {
             HeroModelController hero = _hero.GetComponent<HeroModelController>();
-
+            bool oneAction = false;
             hero.StartSkill(onMove: () =>
             {
                 hero.transform.DOMoveX(monsterMove.transform.position.x - 0.5f, 1.3f);
             },
+            onAttack: () =>
+            {
+                oneAction = true;
+                onAttack?.Invoke();
+            },
+            onComplete: () =>
+            {
+                if (oneAction)
+                {
+                    hero.transform.DOMoveX(hero.transform.parent.position.x, 0.15f).OnComplete(() =>
+                    {
+                        // Debug.Log("____________");
+                        onComplete?.Invoke();
+                    });
+                }
+            });
+        }
+        void MonsterSkill(GameObject monsterSkill, System.Action onAttack, System.Action onComplete)
+        {
+            MonsterModelController monster = monsterSkill.GetComponent<MonsterModelController>();
+
+            monster.StartSkill(onMove: () =>
+            {
+                monster.transform.DOMoveX(_hero.transform.position.x + 0.75f, 1.3f);
+            },
             onAttack: onAttack,
             onComplete: () =>
             {
-                hero.transform.DOMoveX(hero.transform.parent.position.x, 0.15f).OnComplete(() =>
+                monster.transform.DOMoveX(monster.transform.parent.position.x, 0.15f).OnComplete(() =>
                 {
                     onComplete?.Invoke();
                 });
             });
         }
-
 
         #endregion
 
@@ -415,6 +507,7 @@ namespace HeroRoll.Battle
             _totalHealthHero = 0;
             _totalMaxHealthHero = 0;
             _heroCooldown = 0;
+            _monsterCooldown = 0;
             _isTurnHero = true;
         }
         #endregion

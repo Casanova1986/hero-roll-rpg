@@ -147,6 +147,11 @@ namespace HeroRoll.Battle
                     foreach (DotItem dotItemAttack in BoardController.instance.GetAllDotAttack())
                     {
                         dotItemAttack._infoDotItem.numberEnemy--;
+                        if (dotItemAttack._infoDotItem.numberEnemy <= 0)
+                        {
+                            dotItemAttack._infoDotItem._typeDotSub = TypeDotSub.Empty;
+                            dotItemAttack._infoDotItem.numberEnemy = 0;
+                        }
                         dotItemAttack.UpdateDisplay();
                     }
                     yield break;
