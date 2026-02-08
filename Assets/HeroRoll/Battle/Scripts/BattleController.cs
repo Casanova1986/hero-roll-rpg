@@ -112,8 +112,9 @@ namespace HeroRoll.Battle
         }
         IEnumerator Thread_3()
         {
+            Debug.Log("=== Start Battle ===");
             yield return StartCoroutine(StartAttack());
-            Debug.Log("______");
+            Debug.Log("=== End Battle ===");
         }
         IEnumerator Thread_4()
         {
@@ -155,6 +156,7 @@ namespace HeroRoll.Battle
                     }
                     else
                     {
+                        Debug.Log("=== Complete Hero Attack ===");
                         isDoneTurn = true;
                     }
                 });
@@ -176,6 +178,7 @@ namespace HeroRoll.Battle
                     }
                     else
                     {
+                        Debug.Log("=== Complete Monster Attack ===");
                         isDoneTurn = true;
                     }
                 });
@@ -261,6 +264,8 @@ namespace HeroRoll.Battle
                 int dameAtk = monster.CalculateDame(monster._infoCharacterBase.atk, hero._infoCharacterBase.def);
                 int dameRemain = hero.UpdateHeath(-dameAtk);
                 PlayerController.instance.UpdateHp(-dameAtk);
+
+                // Debug.Log("Monster Attack Deal: " + dameAtk);
                 if (dameRemain > 0)
                 {
                     dameAtk -= dameRemain;
@@ -321,6 +326,7 @@ namespace HeroRoll.Battle
                         });
                     }
                     _totalHealthMonster -= dameAtk;
+                    _monsterCooldown += monster._infoCharacterBase.cooldown * 0.75f;
                 }
             }
         }
@@ -334,6 +340,7 @@ namespace HeroRoll.Battle
             MonsterSkill(monsterSkill,
             onAttack: () =>
             {
+                // Debug.Log("Monster Skill Attack");
                 Calculate();
                 _monsterCooldown = 0;
                 float value = _totalHealthHero / (float)_totalMaxHealthHero;
@@ -352,6 +359,7 @@ namespace HeroRoll.Battle
                 MonsterModelController monster = monsterSkill.GetComponent<MonsterModelController>();
                 int dameAtk = monster.CalculateDame(monster._infoCharacterBase.atk, hero._infoCharacterBase.def);
                 int dameRemain = hero.UpdateHeath(-dameAtk);
+                PlayerController.instance.UpdateHp(-dameAtk);
 
                 if (dameRemain > 0)
                 {
@@ -365,7 +373,8 @@ namespace HeroRoll.Battle
                         _hero.SetActive(false);
                     });
                 }
-                _totalHealthMonster -= dameAtk;
+                _totalHealthHero -= dameAtk;
+                _heroCooldown += hero._infoCharacterBase.cooldown * 0.75f;
             }
         }
         //// Character Attack

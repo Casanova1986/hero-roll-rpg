@@ -15,9 +15,9 @@ MonoBehaviour:
   _skeletonDataAsset: {fileID: 11400000, guid: 21e9ecd3c2e500d45b189a150f1fc628, type: 2}
   _idCharacter: ShangZhang
   _characterType: 1
-  _atk: 10
+  _atk: 6
   _hp: 30
-  _def: 0
+  _def: 5
   _accuracy: 0
   _trueDamage: 0
   _critRate: 0

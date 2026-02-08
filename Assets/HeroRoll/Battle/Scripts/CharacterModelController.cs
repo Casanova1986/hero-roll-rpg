@@ -201,6 +201,7 @@ namespace HeroRoll.Battle
                     }
                     System.Action<Spine.Event> actionComplete = (Event) =>
                     {
+                        // Debug.Log("countTrackAttack: " + countTrackAttack);
                         if (index > 0 && Event.Data.Name == "chufa" && !oneAction && countTrackAttack == 2)
                         {
                             oneAction = true;

@@ -15,7 +15,7 @@ MonoBehaviour:
   _skeletonDataAsset: {fileID: 11400000, guid: 8ed6fa0da4abd38499b224a8b38e44cd, type: 2}
   _idCharacter: Xihe
   _characterType: 0
-  _atk: 20
+  _atk: 6
   _hp: 30
   _def: 5
   _accuracy: 0

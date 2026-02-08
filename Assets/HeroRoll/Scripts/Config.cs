@@ -92,10 +92,15 @@ namespace HeroRoll
                 complete?.Invoke();
             };
 
+            bool onceTime = false;
             entry.Event += (trackEntry, spineEvent) =>
             {
-                // Debug.Log("<color=red>Event: " + spineEvent.Data.Name + " duration: " + trackEntry.AnimationTime);
-                onAttack?.Invoke();
+                if (!onceTime)
+                {
+                    onceTime = true;
+                    // Debug.Log("<color=red>Event: " + spineEvent.Data.Name + " duration: " + trackEntry.AnimationTime);
+                    onAttack?.Invoke();
+                }
             };
         }
         public static void SetAnimationMonsterAttack(
@@ -113,11 +118,15 @@ namespace HeroRoll
             {
                 complete?.Invoke();
             };
-
+            bool onceTime = false;
             entry.Event += (trackEntry, spineEvent) =>
             {
-                // Debug.Log("<color=red>Event: " + spineEvent.Data.Name + " duration: " + trackEntry.AnimationTime);
-                onAttack?.Invoke();
+                if (!onceTime)
+                {
+                    onceTime = true;
+                    // Debug.Log("<color=red>Event: " + spineEvent.Data.Name + " duration: " + trackEntry.AnimationTime);
+                    onAttack?.Invoke();
+                }
             };
         }
         //// Skill
@@ -150,7 +159,7 @@ namespace HeroRoll
 
                 entry.Event += (trackEntry, spineEvent) =>
                 {
-                    Debug.Log($"<color=red>Event= {spineEvent.Data.Name} | " + $"<color=white>Int= {spineEvent.Int} | " + $"<color=green>Float= {spineEvent.Float} | " + $"<color=blue>String= {spineEvent.String}");
+                    // Debug.Log($"<color=red>Event= {spineEvent.Data.Name} | " + $"<color=white>Int= {spineEvent.Int} | " + $"<color=green>Float= {spineEvent.Float} | " + $"<color=blue>String= {spineEvent.String}");
                     if (spineEvent.Data.Name == "chufa_2")
                     {
                         state.AddAnimation(0, NameAnim_Idle, true, 0);
@@ -164,7 +173,7 @@ namespace HeroRoll
         }
         public static void SetAnimationMonsterSkill(SkeletonAnimation skeletonAnimation, int index = 0, List<System.Action<Spine.Event>> lsComplete = null)
         {
-            Debug.Log($"<color=green>SetAnimationMonsterSkill: {lsComplete?.Count}");
+            // Debug.Log($"<color=green>SetAnimationMonsterSkill: {lsComplete?.Count}");
             if (index < 0 || index >= NameAnimMonster_Skill.Count)
             {
                 Debug.Log($"<color=red>Wrong index: {index}");
@@ -191,7 +200,7 @@ namespace HeroRoll
 
                 entry.Event += (trackEntry, spineEvent) =>
                 {
-                    Debug.Log($"<color=red>Event= {spineEvent.Data.Name} | " + $"<color=white>Int= {spineEvent.Int} | " + $"<color=green>Float= {spineEvent.Float} | " + $"<color=blue>String= {spineEvent.String}");
+                    // Debug.Log($"<color=red>Index: {actionIndex} | Event= {spineEvent.Data.Name} | " + $"<color=white>Int= {spineEvent.Int} | " + $"<color=green>Float= {spineEvent.Float} | " + $"<color=blue>String= {spineEvent.String}");
                     if (spineEvent.Data.Name == "chuangjian")
                     {
                         state.AddAnimation(0, NameAnim_Idle, true, 0);

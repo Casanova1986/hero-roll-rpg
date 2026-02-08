@@ -13,7 +13,7 @@ namespace HeroRoll.Battle
         [Header("Value")]
         public string _idCharacter;
         public int playerMaxHP = 0;
-        public virtual InfoCharacterBase _infoCharacterBase { get; private set; }
+        public InfoCharacterBase _infoCharacterBase;
 
 
         void Awake()
